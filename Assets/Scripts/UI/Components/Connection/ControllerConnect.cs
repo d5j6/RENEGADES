@@ -21,7 +21,7 @@ namespace RENEGADES.UI.Connection
             get { return glow ?? (glow = GetComponentInChildren<ConnectionGlow>()); }
         }
 
-        private Color32 activeColor = new Color32(0, 255, 244, 255);
+        private Color32 activeColor = new Color32(0, 255, 107, 255);
 
         private void Awake()
         {
