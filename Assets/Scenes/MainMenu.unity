@@ -340,7 +340,7 @@ MonoBehaviour:
   m_verticalMapping: 0
   m_pageToDisplay: 1
   m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isInputParsingRequired: 0
   m_inputSource: 0
   m_isNewTextObject: 0
@@ -660,7 +660,7 @@ MonoBehaviour:
   m_verticalMapping: 0
   m_pageToDisplay: 1
   m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isInputParsingRequired: 0
   m_inputSource: 0
   m_isNewTextObject: 0
@@ -1017,6 +1017,7 @@ Canvas:
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0

@@ -1,17 +1,15 @@
 ﻿//Unity
 using UnityEngine;
 
-//C#
-using System.Collections.Generic;
-
-namespace RENEGADES.Gameplay.Input
+namespace RENEGADES.Gameplay.PlayerInput
 {
     public class ControllerManager : MonoBehaviour
     {
-        public int count;
+        private int count = 0;
 
         private float CONNECTIONCHECK_REFRESHRATE = 0.35f;
 
+        
         private void Awake()
         {
             InvokeRepeating("CHECK_CONTROLLERS", 0, CONNECTIONCHECK_REFRESHRATE);
@@ -19,6 +17,12 @@ namespace RENEGADES.Gameplay.Input
 
         private void CHECK_CONTROLLERS()
         {
+            string[] joysticks =Input.GetJoystickNames();
+            count = 0;
+            foreach(string joystick in joysticks)
+            {
+                if (joystick.Length > 0) count++;
+            }
 
         }
 
