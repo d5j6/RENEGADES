@@ -45,5 +45,10 @@ namespace RENEGADES.UI.Effects
             grid.interactable = enable;
         }
 
+        private void OnDestroy()
+        {
+            grid = null;
+        }
+
     }
 }

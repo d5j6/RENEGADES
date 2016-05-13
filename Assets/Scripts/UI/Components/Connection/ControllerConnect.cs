@@ -25,7 +25,7 @@ namespace RENEGADES.UI.Connection
 
         private void Awake()
         {
-            CONNECTED();
+           
         }
 
         public void CONNECTED()
@@ -36,8 +36,14 @@ namespace RENEGADES.UI.Connection
 
         public void DISCONNECTED()
         {
-            ColChange.ColorTo(Color.white);
+            ColChange.ColorTo(Color.red);
             Glow.Disconnected();
+        }
+
+        private void OnDestroy()
+        {
+            colChange = null;
+            glow = null;
         }
     }
 }

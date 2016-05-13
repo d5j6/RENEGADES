@@ -55,5 +55,10 @@ namespace RENEGADES.UI.Effects
             PulseTo(VALUE);
         }
 
+        private void OnDestroy()
+        {
+            text = null;
+        }
+
     }
 }

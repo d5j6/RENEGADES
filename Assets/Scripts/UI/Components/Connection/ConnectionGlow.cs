@@ -39,5 +39,10 @@ namespace RENEGADES.UI.Connection
         {
             if (spin) transform.eulerAngles += new Vector3(0, 0, spinSpeed);
         }
+
+        private void OnDestroy()
+        {
+            grid = null;
+        }
     }
 }
