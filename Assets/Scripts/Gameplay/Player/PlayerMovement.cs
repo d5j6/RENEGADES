@@ -17,10 +17,10 @@ namespace RENEGADES.Gameplay.Player
         private float LeftJoyStickX;
         private float LeftJoyStickY;
 
-        private const float MaxSpeed = 3.5f;
-        private float ForceAdd = 35f;
+        private const float MaxSpeed = 2.5f;
+        private float ForceAdd = 300f;
 
-        private const float DRAG = 4.0f;
+        private const float DRAG = 30f;
 
         private void Awake()
         {
@@ -36,10 +36,9 @@ namespace RENEGADES.Gameplay.Player
         // Update is called once per frame
         private void FixedUpdate()
         {
-
-            PlayerRigidBody.velocity = Vector3.ClampMagnitude(PlayerRigidBody.velocity, MaxSpeed);
             PlayerRigidBody.AddForce((Vector2.right*LeftJoyStickX)* ForceAdd);
             PlayerRigidBody.AddForce((Vector2.up * LeftJoyStickY) * ForceAdd);
+            PlayerRigidBody.velocity = Vector3.ClampMagnitude(PlayerRigidBody.velocity, MaxSpeed);
 
         }
 
