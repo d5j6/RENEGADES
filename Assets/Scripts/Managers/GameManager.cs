@@ -1,5 +1,6 @@
 ﻿//App
 using RENEGADES.Common;
+using RENEGADES.Audio;
 using RENEGADES.Gameplay.PlayerInput;
 
 //Unity
@@ -21,6 +22,12 @@ namespace RENEGADES.Managers
         public LevelLoader LevelLoader
         {
             get { return levelLoader ?? (levelLoader = GetComponent<LevelLoader>()); }
+        }
+
+        private BaseSoundController audioManager;
+        public BaseSoundController AudioManager
+        {
+            get { return audioManager ?? (audioManager = FindObjectOfType<BaseSoundController>()); }
         }
 
         private void Awake()

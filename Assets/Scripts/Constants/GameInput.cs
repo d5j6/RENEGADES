@@ -11,7 +11,8 @@ namespace RENEGADES.Constants
             LeftJoyHorizontal,
             LeftJoyVertical,
             RightJoyHoriztonal,
-            RightJoyVertical
+            RightJoyVertical,
+            RightTrigger
         }
 
         private static Dictionary<PlayerInput, string> InputLookUp = new Dictionary<PlayerInput, string>()
@@ -19,7 +20,8 @@ namespace RENEGADES.Constants
             {PlayerInput.LeftJoyHorizontal,"LeftJoystickHorizontal" },
             {PlayerInput.LeftJoyVertical,"LeftJoystickVertical" },
             {PlayerInput.RightJoyHoriztonal,"RightJoyStickHorizontal" },
-            {PlayerInput.RightJoyVertical,"RightJoyStickVertical" }
+            {PlayerInput.RightJoyVertical,"RightJoyStickVertical" },
+            {PlayerInput.RightTrigger,"RightTrigger" }
         };
 
         public static string GetInput(PlayerInput input)

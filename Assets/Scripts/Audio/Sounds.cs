@@ -6,7 +6,8 @@ namespace RENEGADES.Audio
 
         public enum Sound
         {
-           MainMenuClick
+           MainMenuClick,
+           Bullet_Fire
         }
     }
 }
