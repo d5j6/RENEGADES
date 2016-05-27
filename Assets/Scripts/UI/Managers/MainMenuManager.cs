@@ -1,4 +1,7 @@
-﻿//Unity
+﻿//App
+using RENEGADES.Managers;
+
+//Unity
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,7 +11,7 @@ namespace RENEGADES.UI.Managers
     {
         public void LAUNCHGAME()
         {
-            SceneManager.LoadScene(1);
+            GameManager.Instance.LevelLoader.LoadLevel(LevelLoader.Levels.Game);
         }
 
     }
