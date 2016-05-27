@@ -283,6 +283,7 @@ GameObject:
   - 212: {fileID: 1661234102}
   - 50: {fileID: 1661234106}
   - 58: {fileID: 1661234107}
+  - 95: {fileID: 1661234108}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -327,7 +328,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300020, guid: eb3653d62088d6a4a8e661798eb33737, type: 3}
+  m_Sprite: {fileID: 21300040, guid: 2fd7338f41981ed428fb5d478807b116, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -397,6 +398,23 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.525
+--- !u!95 &1661234108
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1661234100}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: be6c5afa9053f0b478d1feb2f0f8f5e2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &2014093437
 GameObject:
   m_ObjectHideFlags: 0

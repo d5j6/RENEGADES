@@ -1,0 +1,605 @@
+fileFormatVersion: 2
+guid: 2fd7338f41981ed428fb5d478807b116
+timeCreated: 1464362315
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Slade_0
+    21300002: Slade_1
+    21300004: Slade_2
+    21300006: Slade_3
+    21300008: Slade_4
+    21300010: Slade_5
+    21300012: Slade_6
+    21300014: Slade_7
+    21300016: Slade_8
+    21300018: Slade_9
+    21300020: Slade_10
+    21300022: Slade_11
+    21300024: Slade_12
+    21300026: Slade_13
+    21300028: Slade_14
+    21300030: Slade_15
+    21300032: Slade_16
+    21300034: Slade_17
+    21300036: Slade_18
+    21300038: Slade_19
+    21300040: Slade_20
+    21300042: Slade_21
+    21300044: Slade_22
+    21300046: Slade_23
+    21300048: Slade_24
+    21300050: Slade_25
+    21300052: Slade_26
+    21300054: Slade_27
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Slade_0
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 351
+        width: 54
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17, y: 47.5}
+        - {x: -27, y: 40.5}
+        - {x: -27, y: -47.5}
+        - {x: 27, y: -47.5}
+        - {x: 27, y: 47.5}
+    - name: Slade_1
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 351
+        width: 54
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: 47.5}
+        - {x: -27, y: 38.5}
+        - {x: -27, y: -47.5}
+        - {x: 27, y: -47.5}
+        - {x: 27, y: 38.5}
+        - {x: 12, y: 47.5}
+    - name: Slade_2
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 351
+        width: 54
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17, y: 47.5}
+        - {x: -27, y: 40.5}
+        - {x: -27, y: -47.5}
+        - {x: 27, y: -47.5}
+        - {x: 27, y: 47.5}
+    - name: Slade_3
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 351
+        width: 54
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17, y: 47.5}
+        - {x: -27, y: 40.5}
+        - {x: -27, y: -47.5}
+        - {x: 27, y: -47.5}
+        - {x: 27, y: 47.5}
+    - name: Slade_4
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 351
+        width: 54
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17, y: 47.5}
+        - {x: -27, y: 39.5}
+        - {x: -27, y: -42.5}
+        - {x: -22, y: -47.5}
+        - {x: 25, y: -47.5}
+        - {x: 27, y: -44.5}
+        - {x: 27, y: 42.5}
+        - {x: 21, y: 47.5}
+    - name: Slade_5
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 351
+        width: 54
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17, y: 47.5}
+        - {x: -27, y: 40.5}
+        - {x: -27, y: -47.5}
+        - {x: 27, y: -47.5}
+        - {x: 27, y: 47.5}
+    - name: Slade_6
+      rect:
+        serializedVersion: 2
+        x: 940
+        y: 351
+        width: 54
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17, y: 47.5}
+        - {x: -27, y: 40.5}
+        - {x: -27, y: -47.5}
+        - {x: 27, y: -47.5}
+        - {x: 27, y: 47.5}
+    - name: Slade_7
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 234
+        width: 54
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 47.5}
+        - {x: -20, y: 44.5}
+        - {x: -27, y: 36.5}
+        - {x: -27, y: -44.5}
+        - {x: -22, y: -47.5}
+        - {x: 23, y: -47.5}
+        - {x: 27, y: -41.5}
+        - {x: 27, y: 36.5}
+        - {x: 17, y: 47.5}
+    - name: Slade_8
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 234
+        width: 54
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 47.5}
+        - {x: -20, y: 44.5}
+        - {x: -27, y: 36.5}
+        - {x: -27, y: -44.5}
+        - {x: -22, y: -47.5}
+        - {x: 23, y: -47.5}
+        - {x: 27, y: -41.5}
+        - {x: 27, y: 36.5}
+        - {x: 17, y: 47.5}
+    - name: Slade_9
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 234
+        width: 54
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 47.5}
+        - {x: -20, y: 44.5}
+        - {x: -27, y: 36.5}
+        - {x: -27, y: -44.5}
+        - {x: -22, y: -47.5}
+        - {x: 23, y: -47.5}
+        - {x: 27, y: -41.5}
+        - {x: 27, y: 36.5}
+        - {x: 17, y: 47.5}
+    - name: Slade_10
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 234
+        width: 54
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 47.5}
+        - {x: -20, y: 44.5}
+        - {x: -27, y: 36.5}
+        - {x: -27, y: -44.5}
+        - {x: -22, y: -47.5}
+        - {x: 23, y: -47.5}
+        - {x: 27, y: -41.5}
+        - {x: 27, y: 36.5}
+        - {x: 17, y: 47.5}
+    - name: Slade_11
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 234
+        width: 54
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 47.5}
+        - {x: -20, y: 44.5}
+        - {x: -27, y: 36.5}
+        - {x: -27, y: -44.5}
+        - {x: -22, y: -47.5}
+        - {x: 23, y: -47.5}
+        - {x: 27, y: -41.5}
+        - {x: 27, y: 36.5}
+        - {x: 17, y: 47.5}
+    - name: Slade_12
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 234
+        width: 54
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 47.5}
+        - {x: -20, y: 44.5}
+        - {x: -27, y: 36.5}
+        - {x: -27, y: -44.5}
+        - {x: -22, y: -47.5}
+        - {x: 23, y: -47.5}
+        - {x: 27, y: -41.5}
+        - {x: 27, y: 36.5}
+        - {x: 17, y: 47.5}
+    - name: Slade_13
+      rect:
+        serializedVersion: 2
+        x: 940
+        y: 234
+        width: 54
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 47.5}
+        - {x: -20, y: 44.5}
+        - {x: -27, y: 36.5}
+        - {x: -27, y: -44.5}
+        - {x: -22, y: -47.5}
+        - {x: 23, y: -47.5}
+        - {x: 27, y: -41.5}
+        - {x: 27, y: 36.5}
+        - {x: 17, y: 47.5}
+    - name: Slade_14
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 117
+        width: 67
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14.5, y: 46.5}
+        - {x: -19.5, y: 41.5}
+        - {x: -33.5, y: 8.5}
+        - {x: -33.5, y: -36.5}
+        - {x: -27.5, y: -46.5}
+        - {x: 33.5, y: -46.5}
+        - {x: 33.5, y: 46.5}
+    - name: Slade_15
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 117
+        width: 67
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14.5, y: 46}
+        - {x: -33.5, y: 27}
+        - {x: -33.5, y: -46}
+        - {x: 30.5, y: -46}
+        - {x: 33.5, y: -28}
+        - {x: 33.5, y: 32}
+        - {x: 21.5, y: 46}
+    - name: Slade_16
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 117
+        width: 67
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14.5, y: 46.5}
+        - {x: -19.5, y: 41.5}
+        - {x: -33.5, y: 8.5}
+        - {x: -33.5, y: -36.5}
+        - {x: -27.5, y: -46.5}
+        - {x: 33.5, y: -46.5}
+        - {x: 33.5, y: 46.5}
+    - name: Slade_17
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 117
+        width: 67
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14.5, y: 46.5}
+        - {x: -19.5, y: 41.5}
+        - {x: -33.5, y: 8.5}
+        - {x: -33.5, y: -36.5}
+        - {x: -27.5, y: -46.5}
+        - {x: 33.5, y: -46.5}
+        - {x: 33.5, y: 46.5}
+    - name: Slade_18
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 117
+        width: 67
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16.5, y: 46}
+        - {x: -23.5, y: 45}
+        - {x: -24.5, y: 21}
+        - {x: -33.5, y: -15}
+        - {x: -33.5, y: -32}
+        - {x: -21.5, y: -46}
+        - {x: 24.5, y: -46}
+        - {x: 33.5, y: -42}
+        - {x: 33.5, y: 46}
+    - name: Slade_19
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 117
+        width: 67
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14.5, y: 46.5}
+        - {x: -19.5, y: 41.5}
+        - {x: -33.5, y: 8.5}
+        - {x: -33.5, y: -36.5}
+        - {x: -27.5, y: -46.5}
+        - {x: 33.5, y: -46.5}
+        - {x: 33.5, y: 46.5}
+    - name: Slade_20
+      rect:
+        serializedVersion: 2
+        x: 933
+        y: 117
+        width: 67
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14.5, y: 46.5}
+        - {x: -19.5, y: 41.5}
+        - {x: -33.5, y: 8.5}
+        - {x: -33.5, y: -36.5}
+        - {x: -27.5, y: -46.5}
+        - {x: 33.5, y: -46.5}
+        - {x: 33.5, y: 46.5}
+    - name: Slade_21
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 0
+        width: 67
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 19.5, y: 46.5}
+        - {x: -23.5, y: 46.5}
+        - {x: -33.5, y: 38.5}
+        - {x: -33.5, y: -34.5}
+        - {x: -23.5, y: -46.5}
+        - {x: 24.5, y: -46.5}
+        - {x: 33.5, y: -33.5}
+        - {x: 33.5, y: 7.5}
+        - {x: 28.5, y: 30.5}
+    - name: Slade_22
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 0
+        width: 67
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24.5, y: 46}
+        - {x: -33.5, y: 39}
+        - {x: -33.5, y: -46}
+        - {x: 33.5, y: -46}
+        - {x: 33.5, y: -8}
+        - {x: 19.5, y: 46}
+    - name: Slade_23
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 0
+        width: 67
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 19.5, y: 46.5}
+        - {x: -23.5, y: 46.5}
+        - {x: -33.5, y: 38.5}
+        - {x: -33.5, y: -34.5}
+        - {x: -23.5, y: -46.5}
+        - {x: 24.5, y: -46.5}
+        - {x: 33.5, y: -33.5}
+        - {x: 33.5, y: 7.5}
+        - {x: 28.5, y: 30.5}
+    - name: Slade_24
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 0
+        width: 67
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 19.5, y: 46.5}
+        - {x: -23.5, y: 46.5}
+        - {x: -33.5, y: 38.5}
+        - {x: -33.5, y: -34.5}
+        - {x: -23.5, y: -46.5}
+        - {x: 24.5, y: -46.5}
+        - {x: 33.5, y: -33.5}
+        - {x: 33.5, y: 7.5}
+        - {x: 28.5, y: 30.5}
+    - name: Slade_25
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 0
+        width: 67
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24.5, y: 46}
+        - {x: -33.5, y: 40}
+        - {x: -33.5, y: -34}
+        - {x: -23.5, y: -46}
+        - {x: 21.5, y: -46}
+        - {x: 33.5, y: -38}
+        - {x: 33.5, y: 4}
+        - {x: 19.5, y: 46}
+    - name: Slade_26
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 0
+        width: 67
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 19.5, y: 46.5}
+        - {x: -23.5, y: 46.5}
+        - {x: -33.5, y: 38.5}
+        - {x: -33.5, y: -34.5}
+        - {x: -23.5, y: -46.5}
+        - {x: 24.5, y: -46.5}
+        - {x: 33.5, y: -33.5}
+        - {x: 33.5, y: 7.5}
+        - {x: 28.5, y: 30.5}
+    - name: Slade_27
+      rect:
+        serializedVersion: 2
+        x: 934
+        y: 0
+        width: 67
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 19.5, y: 46.5}
+        - {x: -23.5, y: 46.5}
+        - {x: -33.5, y: 38.5}
+        - {x: -33.5, y: -34.5}
+        - {x: -23.5, y: -46.5}
+        - {x: 24.5, y: -46.5}
+        - {x: 33.5, y: -33.5}
+        - {x: 33.5, y: 7.5}
+        - {x: 28.5, y: 30.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

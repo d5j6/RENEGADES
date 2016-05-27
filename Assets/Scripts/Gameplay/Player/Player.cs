@@ -8,7 +8,6 @@ namespace RENEGADES.Gameplay.Player
 {
     public class Player : MonoBehaviour
     {
-        private 
         
     }
 }
