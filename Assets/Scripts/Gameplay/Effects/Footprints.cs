@@ -1,5 +1,6 @@
 ﻿//App
 using RENEGADES.Gameplay.Players;
+using RENEGADES.Common;
 
 //Unity
 using UnityEngine;
@@ -18,6 +19,12 @@ namespace RENEGADES.Gameplay.Effects
         private PlayerMovement Movement
         {
             get { return movement ?? (movement = GetComponentInParent<PlayerMovement>()); }
+        }
+
+        private ObjectPooler pooler;
+        private ObjectPooler Pooler
+        {
+            get { return pooler ?? (pooler = GetComponent<ObjectPooler>()); }
         }
 
         private const float FOOTPRINT_TIMER = 0.1f;
@@ -48,8 +55,7 @@ namespace RENEGADES.Gameplay.Effects
 
         private void Spawn(float angle)
         {
-            Footprint print = Instantiate(footPrintPrefab);
-            print.transform.SetParent(GameObject.Find("Edge").transform, false);
+            Footprint print = Pooler.GetPooledObject().GetComponent<Footprint>();
 
             //determine our offsets
             float offSetY = 0.0f, offSetX = 0.0f;
@@ -73,7 +79,6 @@ namespace RENEGADES.Gameplay.Effects
         private float AngleBetweenVectors(Vector3 vec1, Vector3 vec2)
         {
             moveDifference = vec1 - vec2;
-            Debug.Log(moveDifference);
             float sign = (vec1.y < vec2.y) ? -1.0f : 1.0f;
             return (Vector3.Angle(Vector3.right, moveDifference) * sign) + 90;
         }

@@ -18,6 +18,16 @@ namespace RENEGADES.Gameplay.Effects
         private const float FADE_TIME = 1.0f;
         private const iTween.EaseType FADE_EASETYPE = iTween.EaseType.linear;
 
+        private void OnEnable()
+        {
+            SpriteRender.color = new Color32(255, 255, 255, 255);
+        }
+
+        private void OnDisable()
+        {
+
+        }
+
         public void SetContent(Sprite sprite, bool flip)
         {
             SpriteRender.sprite = sprite;
@@ -44,7 +54,7 @@ namespace RENEGADES.Gameplay.Effects
 
         private void FadeOut_OnComplete()
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 }

@@ -47,6 +47,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 407510}
   - 114: {fileID: 11446268}
+  - 114: {fileID: 11493140}
   m_Layer: 0
   m_Name: Footprints
   m_TagString: Untagged
@@ -199,6 +200,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd4ee0b08f59d614bbfee670b4d56963, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11493140
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 174534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52f5bac5fc7671d4589d74118364a1a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pooledObject: {fileID: 120326, guid: 01c38bbce0665f545869f21099b773ac, type: 2}
+  pooledAmount: 10
+  willGrow: 1
+  objectContainer: {fileID: 0}
 --- !u!212 &21210120
 SpriteRenderer:
   m_ObjectHideFlags: 1
