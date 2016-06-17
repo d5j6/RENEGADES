@@ -14,8 +14,8 @@ namespace RENEGADES.Gameplay.Effects
             get { return sprite ?? (sprite = GetComponent<SpriteRenderer>()); }
         }
 
-        private const float LIFETIME = 2.5f;
-        private const float FADE_TIME = 2.0f;
+        private const float LIFETIME = 0.25f;
+        private const float FADE_TIME = 1.0f;
         private const iTween.EaseType FADE_EASETYPE = iTween.EaseType.linear;
 
         public void SetContent(Sprite sprite, bool flip)

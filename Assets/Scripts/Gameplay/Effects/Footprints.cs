@@ -20,37 +20,85 @@ namespace RENEGADES.Gameplay.Effects
             get { return movement ?? (movement = GetComponentInParent<PlayerMovement>()); }
         }
 
-        private const float FOOTPRINT_TIMER = 0.25f;
-        private const float DISTANCE_THRESHOLD = 0.25f;
+        private const float FOOTPRINT_TIMER = 0.1f;
+        private const float DISTANCE_THRESHOLD = 0.05f;
 
         private Vector3 lastPosition;
+        private Vector3 moveDifference;
 
-        private bool flipPrint;
+        private bool alternateFeet;
+        private bool spriteFlip;
+
+        private const float FOOTPRINT_SEPERATION = 0.1f;
 
         private void Awake()
         {
-            InvokeRepeating("CheckFootPrint_OnUpdate", 0,FOOTPRINT_TIMER);
+            InvokeRepeating("CheckFootPrint_OnUpdate", 0, FOOTPRINT_TIMER);
             lastPosition = Movement.transform.position;
         }
 
         private void CheckFootPrint_OnUpdate()
         {
-            float distanceTraveled = Vector3.Distance(lastPosition, Movement.transform.position);
-            Debug.Log(distanceTraveled);
-            if (distanceTraveled > DISTANCE_THRESHOLD)
+            if (Movement.transform.position != lastPosition)
             {
-                Spawn();
+                Spawn(AngleBetweenVectors(lastPosition, Movement.transform.position));
             }
             lastPosition = Movement.transform.position;
         }
 
-        private void Spawn()
+        private void Spawn(float angle)
         {
             Footprint print = Instantiate(footPrintPrefab);
             print.transform.SetParent(GameObject.Find("Edge").transform, false);
-            print.transform.position = transform.position;
-            print.SetContent(footPrintSprite,flipPrint);
-            flipPrint = !flipPrint;
+
+            //determine our offsets
+            float offSetY = 0.0f, offSetX = 0.0f;
+            if (Mathf.Abs(moveDifference.x) > Mathf.Abs(moveDifference.y))
+            {
+                offSetY = alternateFeet ? FOOTPRINT_SEPERATION : -FOOTPRINT_SEPERATION;
+            }
+            else
+            {
+                offSetX = alternateFeet ? FOOTPRINT_SEPERATION : -FOOTPRINT_SEPERATION;
+            }
+
+            spriteFlip = DetermineSpriteFlip();
+
+            print.transform.position = new Vector3(transform.position.x + offSetX, transform.position.y + offSetY, 0);
+            print.transform.localEulerAngles = new Vector3(0, 0, angle);
+            print.SetContent(footPrintSprite, spriteFlip);
+            alternateFeet = !alternateFeet;
         }
+
+        private float AngleBetweenVectors(Vector3 vec1, Vector3 vec2)
+        {
+            moveDifference = vec1 - vec2;
+            Debug.Log(moveDifference);
+            float sign = (vec1.y < vec2.y) ? -1.0f : 1.0f;
+            return (Vector3.Angle(Vector3.right, moveDifference) * sign) + 90;
+        }
+
+        private bool DetermineSpriteFlip()
+        {
+            bool determiner = false;
+            if(moveDifference.x > 0)
+            {
+                return determiner = (alternateFeet) ? true : false;
+            }
+            if(moveDifference.x < 0)
+            {
+                return determiner = (alternateFeet) ? false : true;
+            }
+            if(moveDifference.y > 0)
+            {
+               return determiner = (alternateFeet) ? false : true;
+            }
+            if (moveDifference.y < 0)
+            {
+                return determiner = (alternateFeet) ? true : false;
+            }
+            return determiner;
+        }
+
     }
 }

@@ -38,6 +38,34 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &174534
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 407510}
+  - 114: {fileID: 11446268}
+  m_Layer: 0
+  m_Name: Footprints
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &407510
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 174534}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 440634}
+  m_RootOrder: 1
 --- !u!4 &440634
 Transform:
   m_ObjectHideFlags: 1
@@ -45,10 +73,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 156190}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.873, y: 1.304, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 486622}
+  - {fileID: 407510}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &486622
@@ -58,7 +87,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 168136}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.232, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 440634}
@@ -122,6 +151,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 290dfe83f46383b449af83d31eb8e651, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11446268
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 174534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0099d4433ae735347a1c88ef59e6f8bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  footPrintSprite: {fileID: 21300000, guid: 86f5af6d19a008649b38d16fb4eb8dfc, type: 3}
+  footPrintPrefab: {fileID: 11442040, guid: 01c38bbce0665f545869f21099b773ac, type: 2}
 --- !u!114 &11453514
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -145,6 +187,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   element: {fileID: 11453568, guid: 11f36b75b92f1084283f9fcf39d389cf, type: 2}
+  timer: 0
 --- !u!114 &11486860
 MonoBehaviour:
   m_ObjectHideFlags: 1
