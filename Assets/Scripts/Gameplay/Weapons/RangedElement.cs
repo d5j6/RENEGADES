@@ -26,14 +26,5 @@ namespace RENEGADES.Gameplay.Weapons
             Destroy(gameObject);
         }
 
-        void OnCollisionEnter2D(Collision2D coll)
-        {
-          if(coll.gameObject.tag == "Troll")
-            {
-                coll.gameObject.GetComponent<Troll>().Go();
-                Destroy();
-            }
-        }
-
     }
 }
