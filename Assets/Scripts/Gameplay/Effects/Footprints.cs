@@ -7,6 +7,7 @@ using UnityEngine;
 
 namespace RENEGADES.Gameplay.Effects
 {
+    //This script is used to create footprints behind a moving sprite character
     public class Footprints : MonoBehaviour
     {
         [Header("Sprite for Footprint")]
@@ -44,6 +45,7 @@ namespace RENEGADES.Gameplay.Effects
             lastPosition = Movement.transform.position;
         }
 
+        //Check footprints on update (invoke)
         private void CheckFootPrint_OnUpdate()
         {
             if (Movement.transform.position != lastPosition)
@@ -53,6 +55,7 @@ namespace RENEGADES.Gameplay.Effects
             lastPosition = Movement.transform.position;
         }
 
+        //Spawn our footprint at the appropriate position
         private void Spawn(float angle)
         {
             Footprint print = Pooler.GetPooledObject().GetComponent<Footprint>();
@@ -76,6 +79,7 @@ namespace RENEGADES.Gameplay.Effects
             alternateFeet = !alternateFeet;
         }
 
+        //Get our angle between two vectors
         private float AngleBetweenVectors(Vector3 vec1, Vector3 vec2)
         {
             moveDifference = vec1 - vec2;
@@ -83,6 +87,7 @@ namespace RENEGADES.Gameplay.Effects
             return (Vector3.Angle(Vector3.right, moveDifference) * sign) + 90;
         }
 
+        //flipping sprite for feet
         private bool DetermineSpriteFlip()
         {
             bool determiner = false;
