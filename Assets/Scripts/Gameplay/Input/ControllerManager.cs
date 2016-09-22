@@ -26,9 +26,14 @@ namespace RENEGADES.Gameplay.PlayerInput
 
         }
 
-        public int GetPlayerCount()
+        public int GetControllerCount()
         {
             return count;
+        }
+
+        public bool AnyControllersConnected()
+        {
+            return (count > 0) ? true : false;
         }
 
         private void OnDestroy()

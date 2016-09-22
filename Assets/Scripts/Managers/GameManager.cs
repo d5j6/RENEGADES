@@ -4,7 +4,6 @@ using RENEGADES.Audio;
 using RENEGADES.Gameplay.PlayerInput;
 
 //Unity
-using UnityEngine;
 
 
 namespace RENEGADES.Managers

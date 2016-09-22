@@ -1,5 +1,11 @@
-﻿//C#
-using System.Collections.Generic;
+﻿//UNity
+using RENEGADES.Managers;
+
+//C#
+using System;
+using System.Collections;
+
+//UNity
 
 namespace RENEGADES.Constants
 {
@@ -8,26 +14,38 @@ namespace RENEGADES.Constants
     {
         public enum PlayerInput
         {
-            LeftJoyHorizontal,
-            LeftJoyVertical,
-            RightJoyHoriztonal,
-            RightJoyVertical,
-            RightTrigger
+            MovementX,
+            MovementY,
+            DirectionX,
+            DirectionY,
+            Attack
         }
 
-        private static Dictionary<PlayerInput, string> InputLookUp = new Dictionary<PlayerInput, string>()
+        private static Hashtable XboxInput = new Hashtable()
         {
-            {PlayerInput.LeftJoyHorizontal,"LeftJoystickHorizontal" },
-            {PlayerInput.LeftJoyVertical,"LeftJoystickVertical" },
-            {PlayerInput.RightJoyHoriztonal,"RightJoyStickHorizontal" },
-            {PlayerInput.RightJoyVertical,"RightJoyStickVertical" },
-            {PlayerInput.RightTrigger,"RightTrigger" }
+            {PlayerInput.MovementX,"LeftJoystickHorizontal" },
+            {PlayerInput.MovementY,"LeftJoystickVertical" },
+            {PlayerInput.DirectionX,"RightJoyStickHorizontal" },
+            {PlayerInput.DirectionY,"RightJoyStickVertical" },
+            {PlayerInput.Attack,"RightTrigger" }
+        };
+
+        private static Hashtable PCInput = new Hashtable()
+        {
+            {PlayerInput.MovementX,"Left arrow" },
+            {PlayerInput.MovementY,"Right arrow" },
+            {PlayerInput.DirectionX,"Horizontal"},
+            {PlayerInput.DirectionY,"Vertical" },
+            {PlayerInput.Attack,"Space Bar" }
         };
 
         public static string GetInput(PlayerInput input)
         {
-            return InputLookUp[input];
+            if (GameManager.Instance.ControllerManager.AnyControllersConnected()) return (string)XboxInput[input];
+            return (string)PCInput[input];
         }
+
+       // pub
 
     }
 }

@@ -64,7 +64,7 @@ namespace RENEGADES.Gameplay.Players
 
         private void RangedAttackLoop()
         {
-            if (Input.GetAxis(GameInput.GetInput(GameInput.PlayerInput.RightTrigger)) > 0)
+            if (Input.GetAxis(GameInput.GetInput(GameInput.PlayerInput.Attack)) > 0)
             {
                 RangedAttack.FIRE(this);
             }
