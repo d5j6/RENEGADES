@@ -1,7 +1,7 @@
 ﻿//App
 using RENEGADES.Constants;
 using RENEGADES.Gameplay.Players;
-using RENEGADES.Managers;
+using RENEGADES.Common;
 
 //Unity
 using UnityEngine;
@@ -19,6 +19,12 @@ namespace RENEGADES.Gameplay.Weapons
         private bool coolingDown;
 
         private AnimationTriggers.AnimationTrigger currentTrigger;
+
+        private ObjectPooler pooler;
+        private ObjectPooler Pooler
+        {
+            get { return pooler ?? (pooler = GetComponent<ObjectPooler>()); }
+        }
 
         private void Update()
         {
@@ -46,40 +52,10 @@ namespace RENEGADES.Gameplay.Weapons
 
         private void Spawn()
         {
-            
-            RangedElement spawn = Instantiate(element);
-            spawn.transform.position = transform.position;
-            spawn.transform.localEulerAngles = SetPosition(spawn);
-            GameManager.Instance.AudioManager.PlaySound(Audio.Sounds.Sound.Bullet_Fire, spawn.transform.position);
+            RangedElement spawn = Pooler.GetPooledObject().GetComponent<RangedElement>();
+            spawn.Init(transform.position);
+            spawn.SetEulerAngles(currentTrigger);
         }
-
-        private Vector3 SetPosition(RangedElement spawn)
-        {
-            float eulerAngle = 0;
-            Vector3 moveDirection = Vector3.zero;
-            switch(currentTrigger)
-            {
-                case AnimationTriggers.AnimationTrigger.Down:
-                    eulerAngle = 180;
-                    moveDirection = Vector3.down;
-                    break;
-                case AnimationTriggers.AnimationTrigger.Left:
-                    eulerAngle =90;
-                    moveDirection = Vector3.left;
-                    break;
-                case AnimationTriggers.AnimationTrigger.Right:
-                    eulerAngle = 270;
-                    moveDirection = Vector3.right;
-                    break;
-                case AnimationTriggers.AnimationTrigger.Up:
-                    eulerAngle = 0;
-                    moveDirection = Vector3.up;
-                    break;
-            }
-            spawn.SetMoveDirection(moveDirection);
-            return new Vector3(spawn.transform.localEulerAngles.x, spawn.transform.localEulerAngles.y, eulerAngle);
-        }
-
        
     }
 }
