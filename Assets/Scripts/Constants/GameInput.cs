@@ -2,7 +2,6 @@
 using RENEGADES.Managers;
 
 //C#
-using System;
 using System.Collections;
 
 //UNity
@@ -44,8 +43,6 @@ namespace RENEGADES.Constants
             if (GameManager.Instance.ControllerManager.AnyControllersConnected()) return (string)XboxInput[input];
             return (string)PCInput[input];
         }
-
-       // pub
 
     }
 }

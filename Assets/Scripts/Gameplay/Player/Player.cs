@@ -1,5 +1,4 @@
 ﻿//App
-using RENEGADES.Gameplay.Effects;
 using RENEGADES.Gameplay.Weapons;
 using RENEGADES.Constants;
 
@@ -47,17 +46,19 @@ namespace RENEGADES.Gameplay.Players
 
         private void AnimationLoop()
         {
-            PlayerMovement.MoveParams moveParams = PlayerMove.Move();
-            if (Mathf.Abs(moveParams.rightJoyStickX) > Mathf.Abs(moveParams.rightJoyStickY))
+            PlayerMovement.LookParams looksParams = PlayerMove.Move();
+            if (Mathf.Abs(looksParams.rightJoyStickX) > Mathf.Abs(looksParams.rightJoyStickY))
             {
-                currentTrigger = PlayerAnim.SetAnimState(moveParams.rightJoyStickX > 0 ? AnimationTriggers.AnimationTrigger.Right : AnimationTriggers.AnimationTrigger.Left);
+                currentTrigger = PlayerAnim.SetAnimState(looksParams.rightJoyStickX > 0 ? AnimationTriggers.AnimationTrigger.Right : AnimationTriggers.AnimationTrigger.Left);
             }
-            else if (Mathf.Abs(moveParams.rightJoyStickX) < Mathf.Abs(moveParams.rightJoyStickY))
+            else if (Mathf.Abs(looksParams.rightJoyStickX) < Mathf.Abs(looksParams.rightJoyStickY))
             {
-                currentTrigger = PlayerAnim.SetAnimState(moveParams.rightJoyStickY > 0 ? AnimationTriggers.AnimationTrigger.Up : AnimationTriggers.AnimationTrigger.Down);
+                
+                currentTrigger = PlayerAnim.SetAnimState(looksParams.rightJoyStickY > 0 ? AnimationTriggers.AnimationTrigger.Up : AnimationTriggers.AnimationTrigger.Down);
             }
             else
             {
+                
                 currentTrigger = PlayerAnim.SetAnimState(); // idle
             }
         }

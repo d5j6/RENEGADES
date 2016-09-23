@@ -28,7 +28,7 @@ namespace RENEGADES.Gameplay.Effects
             get { return pooler ?? (pooler = GetComponent<ObjectPooler>()); }
         }
 
-        private const float FOOTPRINT_TIMER = 0.1f;
+        private const float FOOTPRINT_TIMER = 0.2f;
         private const float DISTANCE_THRESHOLD = 0.05f;
 
         private Vector3 lastPosition;
