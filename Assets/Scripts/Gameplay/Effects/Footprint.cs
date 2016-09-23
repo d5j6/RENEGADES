@@ -28,8 +28,9 @@ namespace RENEGADES.Gameplay.Effects
 
         }
 
-        public void SetContent(Sprite sprite, bool flip)
+        public void SetContent(Sprite sprite, bool flip,float size)
         {
+            transform.localScale = new Vector3(size, size, size);
             SpriteRender.sprite = sprite;
             SpriteRender.flipX = flip;
             Invoke("FadeOut", LIFETIME);

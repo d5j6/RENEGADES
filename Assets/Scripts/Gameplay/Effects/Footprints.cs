@@ -1,5 +1,4 @@
 ﻿//App
-using RENEGADES.Gameplay.Players;
 using RENEGADES.Common;
 
 //Unity
@@ -16,11 +15,9 @@ namespace RENEGADES.Gameplay.Effects
         [Header("Footprint GameObject")]
         public Footprint footPrintPrefab;
 
-        private PlayerMovement movement;
-        private PlayerMovement Movement
-        {
-            get { return movement ?? (movement = GetComponentInParent<PlayerMovement>()); }
-        }
+        [Header("Size")]
+        [Range(0.0F, 2.0F)]
+        public float size;
 
         private ObjectPooler pooler;
         private ObjectPooler Pooler
@@ -42,17 +39,17 @@ namespace RENEGADES.Gameplay.Effects
         private void Awake()
         {
             InvokeRepeating("CheckFootPrint_OnUpdate", 0, FOOTPRINT_TIMER);
-            lastPosition = Movement.transform.position;
+            lastPosition = transform.position;
         }
 
         //Check footprints on update (invoke)
         private void CheckFootPrint_OnUpdate()
         {
-            if (Movement.transform.position != lastPosition)
+            if (transform.position != lastPosition)
             {
-                Spawn(AngleBetweenVectors(lastPosition, Movement.transform.position));
+                Spawn(AngleBetweenVectors(lastPosition, transform.position));
             }
-            lastPosition = Movement.transform.position;
+            lastPosition = transform.position;
         }
 
         //Spawn our footprint at the appropriate position
@@ -75,7 +72,7 @@ namespace RENEGADES.Gameplay.Effects
 
             print.transform.position = new Vector3(transform.position.x + offSetX, transform.position.y + offSetY, 0);
             print.transform.localEulerAngles = new Vector3(0, 0, angle);
-            print.SetContent(footPrintSprite, spriteFlip);
+            print.SetContent(footPrintSprite, spriteFlip,size);
             alternateFeet = !alternateFeet;
         }
 
