@@ -490,7 +490,7 @@ GameObject:
   - 68: {fileID: 1051710749}
   - 114: {fileID: 1051710750}
   m_Layer: 9
-  m_Name: Edge
+  m_Name: Background
   m_TagString: PooledObjectContainer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -525,7 +525,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ee1fcb267dca6ed48a439efa9c44e57c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 294dedb44c319bc44b40f116a26bc046, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -555,11 +555,11 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   m_Points:
-  - {x: -5.74165, y: -3.1983528}
-  - {x: 5.770282, y: -3.2221923}
-  - {x: 5.7382755, y: 3.239276}
-  - {x: -5.7657504, y: 3.2445068}
-  - {x: -5.7355375, y: -3.1878965}
+  - {x: -6.3761344, y: -2.6247034}
+  - {x: 6.407887, y: -2.6537256}
+  - {x: 6.400409, y: 2.6104548}
+  - {x: -6.4372096, y: 2.6395164}
+  - {x: -6.436344, y: -2.6780007}
 --- !u!114 &1051710750
 MonoBehaviour:
   m_ObjectHideFlags: 0
