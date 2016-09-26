@@ -1,4 +1,7 @@
-﻿//Unity
+﻿//App
+using RENEGADES.UI.Gameplay;
+
+//Unity
 using UnityEngine;
 
 namespace RENEGADES.Gameplay.AI
@@ -33,19 +36,45 @@ namespace RENEGADES.Gameplay.AI
             get { return rigid ?? (rigid = GetComponent<Rigidbody2D>()); }
         }
 
+        public float HEALTH;
+
+        private EnemyHealth enemyHealth;
+        private EnemyHealth EnemyHealthUI
+        {
+            get { return enemyHealth ?? (enemyHealth = GetComponentInChildren<EnemyHealth>()); }
+        }
+
+        /// <summary>
+        /// Called on start
+        /// </summary>
         private void Awake()
         {
             attackingState = new AttackingState(this);
             walkingState = new WalkingState(this);
             currentState = walkingState;
+            Init();
         }
 
+        /// <summary>
+        /// Initialize
+        /// </summary>
+        private void Init()
+        {
+            SetHealth(0);
+        }
+
+        /// <summary>
+        /// Called every frame
+        /// </summary>
         private void Update()
         {
             currentState.UpdateState();
         }
 
-        //returns position
+        /// <summary>
+        /// Get enemy position
+        /// </summary>
+        /// <returns></returns>
         public Vector3 GetPosition()
         {
             return transform.position;
@@ -59,11 +88,33 @@ namespace RENEGADES.Gameplay.AI
             transform.rotation = q;
         }
 
-        // Set Position
+        /// <summary>
+        /// Move enemy by rigidbody
+        /// </summary>
+        /// <param name="SPEED"></param>
         public virtual void MOVE(float SPEED)
         {
             EnemyRigidBody.AddForce(-transform.up * SPEED);
             EnemyRigidBody.velocity = Vector3.ClampMagnitude(EnemyRigidBody.velocity, SPEED);
+        }
+
+        /// <summary>
+        /// Init Set health
+        /// </summary>
+        /// <param name="h"></param>
+        public virtual void SetHealth(float h)
+        {
+            HEALTH = h;
+            EnemyHealthUI.SetHealth(HEALTH);
+        }
+        /// <summary>
+        /// Update our health
+        /// </summary>
+        /// <param name="value"></param>
+        public void UpdateHealth(float value)
+        {
+            HEALTH += value;
+            EnemyHealthUI.UpdateHealth(HEALTH);
         }
     }
 }

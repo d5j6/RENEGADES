@@ -13,6 +13,13 @@ namespace RENEGADES.Gameplay.AI
 
         private readonly Enemy enemy;
 
+        private Vector3 playerPosition;
+
+        //Every 0.5f seconds the enemy will quickly determine what they want to go after
+        //This is used to save performance on searching for hot spots
+        private float FindPlayerTimer;
+        private const float WANDER = 0.5f;
+
         public WalkingState(Enemy enemy)
         {
             this.enemy = enemy;
@@ -25,7 +32,7 @@ namespace RENEGADES.Gameplay.AI
 
         public void ToWalkState()
         {
-          //We are already walking
+            //We are already walking
         }
 
         public void ToAttackState()
@@ -35,9 +42,14 @@ namespace RENEGADES.Gameplay.AI
 
         private void Movement()
         {
-            Vector3 playerPosition = FindClosest.Find<Player>(enemy.transform).transform.position;
+            FindPlayerTimer += Time.deltaTime;
+            if(FindPlayerTimer > WANDER)
+            {
+                FindPlayerTimer = 0;
+                playerPosition = FindClosest.Find<Player>(enemy.transform).transform.position;
+            }   
             TurnTowards(playerPosition);
-            MoveTowards(playerPosition);
+            MoveTowards();
         }
 
         private void TurnTowards(Vector3 playerPosition)
@@ -48,7 +60,7 @@ namespace RENEGADES.Gameplay.AI
 
         }
 
-        private void MoveTowards(Vector3 playerPosition)
+        private void MoveTowards()
         {
             enemy.MOVE(0);
         }
