@@ -45,20 +45,25 @@ namespace RENEGADES.Gameplay.Players
         }
 
         private void AnimationLoop()
-        {
+        { 
             PlayerMovement.LookParams looksParams = PlayerMove.Move();
-            if (Mathf.Abs(looksParams.rightJoyStickX) > Mathf.Abs(looksParams.rightJoyStickY))
+            if (looksParams.LeftJoyStickX == 0 && looksParams.LeftJoyStickY == 0)
+            {
+                currentTrigger = PlayerAnim.SetAnimState();
+                return;
+            }
+            else if (Mathf.Abs(looksParams.rightJoyStickX) > Mathf.Abs(looksParams.rightJoyStickY))
             {
                 currentTrigger = PlayerAnim.SetAnimState(looksParams.rightJoyStickX > 0 ? AnimationTriggers.AnimationTrigger.Right : AnimationTriggers.AnimationTrigger.Left);
             }
             else if (Mathf.Abs(looksParams.rightJoyStickX) < Mathf.Abs(looksParams.rightJoyStickY))
             {
-                
+
                 currentTrigger = PlayerAnim.SetAnimState(looksParams.rightJoyStickY > 0 ? AnimationTriggers.AnimationTrigger.Up : AnimationTriggers.AnimationTrigger.Down);
             }
             else
             {
-                
+
                 currentTrigger = PlayerAnim.SetAnimState(); // idle
             }
         }

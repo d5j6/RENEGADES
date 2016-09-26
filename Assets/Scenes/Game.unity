@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37356454, g: 0.38112053, b: 0.3588771, a: 1}
+  m_IndirectSpecularColor: {r: 0.3735643, g: 0.38112015, b: 0.35887682, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -533,6 +533,10 @@ Prefab:
     - target: {fileID: 4000014205850034, guid: cba7b3c60ab0f6a4aa994e68ba11980f, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011535310280, guid: cba7b3c60ab0f6a4aa994e68ba11980f, type: 2}
+      propertyPath: m_Name
+      value: Ghoul
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cba7b3c60ab0f6a4aa994e68ba11980f, type: 2}

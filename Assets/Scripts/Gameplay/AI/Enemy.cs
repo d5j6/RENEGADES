@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace RENEGADES.Gameplay.AI
 {
+    [RequireComponent(typeof(Rigidbody2D))]
     public class Enemy : MonoBehaviour
     {
         private IEnemyState currentState;
@@ -26,10 +27,17 @@ namespace RENEGADES.Gameplay.AI
             set { walkingState = value; }
         }
 
+        private Rigidbody2D rigid;
+        private Rigidbody2D EnemyRigidBody
+        {
+            get { return rigid ?? (rigid = GetComponent<Rigidbody2D>()); }
+        }
+
         private void Awake()
         {
             attackingState = new AttackingState(this);
             walkingState = new WalkingState(this);
+            currentState = walkingState;
         }
 
         private void Update()
@@ -37,5 +45,25 @@ namespace RENEGADES.Gameplay.AI
             currentState.UpdateState();
         }
 
+        //returns position
+        public Vector3 GetPosition()
+        {
+            return transform.position;
+        }
+
+        /// <summary>
+        /// Set rotation of enemy
+        /// </summary>
+        public void SetRotation(Quaternion q)
+        {
+            transform.rotation = q;
+        }
+
+        // Set Position
+        public virtual void MOVE(float SPEED)
+        {
+            EnemyRigidBody.AddForce(-transform.up * SPEED);
+            EnemyRigidBody.velocity = Vector3.ClampMagnitude(EnemyRigidBody.velocity, SPEED);
+        }
     }
 }

@@ -5,9 +5,9 @@
     {
         void UpdateState();
 
-        void Walking();
+        void ToWalkState();
 
-        void Attacking();
+        void ToAttackState();
 
     }
 }

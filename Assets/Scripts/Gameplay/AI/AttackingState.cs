@@ -14,12 +14,12 @@
 
         }
 
-        public void Walking()
+        public void ToWalkState()
         {
             enemy.CurrentState = enemy._WalkingState;
         }
 
-        public void Attacking()
+        public void ToAttackState()
         {
             //This is the attacking state!
         }

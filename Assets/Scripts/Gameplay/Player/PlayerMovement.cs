@@ -21,10 +21,11 @@ namespace RENEGADES.Gameplay.Players
         {
             public float rightJoyStickX { get; set; }
             public float rightJoyStickY { get; set; }
+            public float LeftJoyStickX { get; set; }
+            public float LeftJoyStickY { get; set; }
         }
 
-        private float LeftJoyStickX;
-        private float LeftJoyStickY;
+ 
 
         private const float MaxSpeed = 0.25f;
         private float ForceAdd = 200f;
@@ -58,15 +59,15 @@ namespace RENEGADES.Gameplay.Players
         private void Keyboard()
         {
             //left and right
-            if (Input.GetKey(KeyCode.A)) LeftJoyStickX = -1;
-            else if(Input.GetKey(KeyCode.D)) LeftJoyStickX = 1;
-            else { LeftJoyStickX = 0; }
+            if (Input.GetKey(KeyCode.A)) lookParams.LeftJoyStickX = -1;
+            else if(Input.GetKey(KeyCode.D)) lookParams.LeftJoyStickX = 1;
+            else { lookParams.LeftJoyStickX = 0; }
 
 
             //up and down
-            if (Input.GetKey(KeyCode.S)) LeftJoyStickY = -1;
-            else if (Input.GetKey(KeyCode.W)) LeftJoyStickY = 1;
-            else { LeftJoyStickY = 0; }
+            if (Input.GetKey(KeyCode.S)) lookParams.LeftJoyStickY = -1;
+            else if (Input.GetKey(KeyCode.W)) lookParams.LeftJoyStickY = 1;
+            else { lookParams.LeftJoyStickY = 0; }
 
             //determine look direction
             lookParams.rightJoyStickX = Camera.main.ScreenPointToRay(Input.mousePosition).origin.x - transform.position.x;
@@ -77,8 +78,8 @@ namespace RENEGADES.Gameplay.Players
         //movement controls for Xbox controller
         private void XboxController()
         {
-            LeftJoyStickX = Input.GetAxis(GameInput.GetInput(GameInput.PlayerInput.MovementX));
-            LeftJoyStickY = -Input.GetAxis(GameInput.GetInput(GameInput.PlayerInput.MovementY));
+            lookParams.LeftJoyStickX = Input.GetAxis(GameInput.GetInput(GameInput.PlayerInput.MovementX));
+            lookParams.LeftJoyStickY = -Input.GetAxis(GameInput.GetInput(GameInput.PlayerInput.MovementY));
             lookParams.rightJoyStickX = Input.GetAxis(GameInput.GetInput(GameInput.PlayerInput.DirectionX));
             lookParams.rightJoyStickY = -Input.GetAxis(GameInput.GetInput(GameInput.PlayerInput.DirectionY));
         }
@@ -86,8 +87,8 @@ namespace RENEGADES.Gameplay.Players
         //Called in player class
         public LookParams Move()
         {
-            PlayerRigidBody.AddForce((Vector2.right * LeftJoyStickX) * ForceAdd);
-            PlayerRigidBody.AddForce((Vector2.up * LeftJoyStickY) * ForceAdd);
+            PlayerRigidBody.AddForce((Vector2.right * lookParams.LeftJoyStickX) * ForceAdd);
+            PlayerRigidBody.AddForce((Vector2.up * lookParams.LeftJoyStickY) * ForceAdd);
             PlayerRigidBody.velocity = Vector3.ClampMagnitude(PlayerRigidBody.velocity, MaxSpeed);
             return lookParams;
         }
