@@ -116,5 +116,14 @@ namespace RENEGADES.Gameplay.AI
             HEALTH += value;
             EnemyHealthUI.UpdateHealth(HEALTH);
         }
+
+        /// <summary>
+        /// Collision Detection
+        /// </summary>
+        /// <param name="other"></param>
+        public virtual void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.gameObject.tag == "RangedElement") UpdateHealth(-5);
+        }
     }
 }
