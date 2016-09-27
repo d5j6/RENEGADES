@@ -14,5 +14,10 @@ namespace RENEGADES.UI.Managers
             GameManager.Instance._LevelLoad.LoadLevel(LevelLoader.Levels.Game);
         }
 
+        private void Update()
+        {
+            if(Input.anyKey) LAUNCHGAME();
+        }
+
     }
 }

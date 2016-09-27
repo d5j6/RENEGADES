@@ -27,6 +27,7 @@ namespace RENEGADES.Gameplay.AI
 
         public void UpdateState()
         {
+            if (enemy.HEALTH <= 0) ToDeadState();
             Movement();
         }
 
@@ -38,6 +39,11 @@ namespace RENEGADES.Gameplay.AI
         public void ToAttackState()
         {
             enemy.CurrentState = enemy._AttackingState;
+        }
+
+        public void ToDeadState()
+        {
+            enemy.CurrentState = enemy._DeadState;
         }
 
         private void Movement()

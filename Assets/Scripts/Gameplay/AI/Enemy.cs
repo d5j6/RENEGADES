@@ -31,6 +31,13 @@ namespace RENEGADES.Gameplay.AI
             set { walkingState = value; }
         }
 
+        private DeadState deadState;
+        public DeadState _DeadState
+        {
+            get { return deadState; }
+            set { deadState = value; }
+        }
+
         private Rigidbody2D rigid;
         private Rigidbody2D EnemyRigidBody
         {
@@ -52,6 +59,7 @@ namespace RENEGADES.Gameplay.AI
         {
             attackingState = new AttackingState(this);
             walkingState = new WalkingState(this);
+            deadState = new DeadState(this);
             currentState = walkingState;
             Init();
         }
@@ -130,6 +138,14 @@ namespace RENEGADES.Gameplay.AI
                 GameManager.Instance.EffectSpawner.Spawn(Controllers.Effects.EffectType.BloodSplat, other.transform.position);
                 UpdateHealth(-5);
             }
+        }
+
+        /// <summary>
+        /// Enemy is dead
+        /// </summary>
+        public virtual void RemoveFromBattleField()
+        {
+            Destroy(gameObject);
         }
     }
 }

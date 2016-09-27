@@ -1,6 +1,7 @@
 ﻿//App
 using RENEGADES.Gameplay.Weapons;
 using RENEGADES.Constants;
+using RENEGADES.Managers;
 
 //Unity
 using UnityEngine;
@@ -70,10 +71,18 @@ namespace RENEGADES.Gameplay.Players
 
         private void RangedAttackLoop()
         {
-            if (Input.GetAxis(GameInput.GetInput(GameInput.PlayerInput.Attack)) > 0)
+            if (GameManager.Instance._ControllerManager.AnyControllersConnected())
             {
-                RangedAttack.FIRE(this);
+                if (Input.GetAxis(GameInput.GetInput(GameInput.PlayerInput.Attack)) > 0)
+                {
+                    RangedAttack.FIRE(this);
+                }
             }
+            else
+            {
+                if(Input.GetKey(KeyCode.Space)) RangedAttack.FIRE(this);
+            }
+            
         }
     }
 }

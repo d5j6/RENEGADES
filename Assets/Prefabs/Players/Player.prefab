@@ -15,7 +15,7 @@ GameObject:
   - 50: {fileID: 5073856}
   - 95: {fileID: 9519158}
   - 61: {fileID: 6102638}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32,7 +32,7 @@ GameObject:
   - 4: {fileID: 486622}
   - 114: {fileID: 11468518}
   - 114: {fileID: 114000013236142272}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Attacks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49,7 +49,7 @@ GameObject:
   - 4: {fileID: 407510}
   - 114: {fileID: 11446268}
   - 114: {fileID: 11493140}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Footprints
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -1,4 +1,7 @@
-﻿//Unity
+﻿//App
+using RENEGADES.Managers;
+
+//Unity
 using UnityEngine;
 
 namespace RENEGADES.Gameplay.AI
@@ -23,6 +26,12 @@ namespace RENEGADES.Gameplay.AI
         public override void OnTriggerEnter2D(Collider2D other)
         {
             base.OnTriggerEnter2D(other);
+        }
+
+        public override void RemoveFromBattleField()
+        {
+            base.RemoveFromBattleField();
+            GameManager.Instance.AudioManager.PlaySound(Audio.Sounds.Sound.GhoulDeath);
         }
     }
 }

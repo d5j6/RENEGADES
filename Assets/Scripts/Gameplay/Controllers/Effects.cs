@@ -1,6 +1,5 @@
 ﻿//App
 using RENEGADES.Gameplay.Effects;
-using RENEGADES.Common;
 
 //Unity
 using UnityEngine;
@@ -14,7 +13,8 @@ namespace RENEGADES.Gameplay.Controllers
     {
         public enum EffectType
         {
-            BloodSplat
+            BloodSplat,
+            BloodExplosion
         }
 
         [System.Serializable]

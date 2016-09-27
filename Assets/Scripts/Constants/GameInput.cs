@@ -1,5 +1,4 @@
 ﻿//UNity
-using RENEGADES.Managers;
 
 //C#
 using System.Collections;
@@ -29,19 +28,9 @@ namespace RENEGADES.Constants
             {PlayerInput.Attack,"RightTrigger" }
         };
 
-        private static Hashtable PCInput = new Hashtable()
-        {
-            {PlayerInput.MovementX,"Left arrow" },
-            {PlayerInput.MovementY,"Right arrow" },
-            {PlayerInput.DirectionX,"Horizontal"},
-            {PlayerInput.DirectionY,"Vertical" },
-            {PlayerInput.Attack,"Space Bar" }
-        };
-
         public static string GetInput(PlayerInput input)
         {
-            if (GameManager.Instance._ControllerManager.AnyControllersConnected()) return (string)XboxInput[input];
-            return (string)PCInput[input];
+            return (string)XboxInput[input];
         }
 
     }

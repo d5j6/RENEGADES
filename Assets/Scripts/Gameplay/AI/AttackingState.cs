@@ -11,7 +11,7 @@
 
         public void UpdateState()
         {
-
+            if (enemy.HEALTH <= 0) ToDeadState();
         }
 
         public void ToWalkState()
@@ -22,6 +22,11 @@
         public void ToAttackState()
         {
             //This is the attacking state!
+        }
+
+        public void ToDeadState()
+        {
+            enemy.CurrentState = enemy._DeadState;
         }
 
     }

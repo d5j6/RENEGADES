@@ -9,5 +9,7 @@
 
         void ToAttackState();
 
+        void ToDeadState();
+
     }
 }

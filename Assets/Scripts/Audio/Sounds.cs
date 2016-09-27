@@ -8,7 +8,8 @@ namespace RENEGADES.Audio
         {
            MainMenuClick,
            Bullet_Fire,
-           BloodSplatter
+           BloodSplatter,
+           GhoulDeath
         }
     }
 }

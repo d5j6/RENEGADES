@@ -1,5 +1,6 @@
 ﻿//Unity
 using UnityEngine;
+using UnityEngine.Audio;
 
 //C#
 using System;
@@ -18,7 +19,7 @@ namespace RENEGADES.Audio
         public AudioClip clip;
         public string name;
 
-        public SoundObject(AudioClip aClip, string aName, float aVolume)
+        public SoundObject(AudioClip aClip, string aName, float aVolume,AudioMixerGroup group)
         {
             //in this (the constructor) we create a new audio source and store the details of the sound itself
             sourceGO = new GameObject("AudioSource_" + aName);
@@ -29,6 +30,7 @@ namespace RENEGADES.Audio
             source.playOnAwake = false;
             source.clip = aClip;
             source.volume = aVolume;
+            if(group != null) source.outputAudioMixerGroup = group;
             clip = aClip;
             name = aName;
         }
@@ -52,8 +54,16 @@ namespace RENEGADES.Audio
 
     public class BaseSoundController : MonoBehaviour
     {
+        [System.Serializable]
+        public class AudioToSpawn
+        {
+            public AudioClip clip;
+            public AudioMixerGroup group;
+        }
+
         [Header("Audio Clips")]
-        public AudioClip[] audioClips;
+        public AudioToSpawn[] audioClips;
+        
         private int totalSounds;
         private ArrayList soundObjectList;
         private SoundObject tempSoundObj;
@@ -64,11 +74,11 @@ namespace RENEGADES.Audio
         {
             soundObjectList = new ArrayList();
             easySearch = new Dictionary<Sounds.Sound, int>();
-
-            foreach (AudioClip theSound in audioClips)
+            
+            foreach (AudioToSpawn theSound in audioClips)
             {
-                easySearch.Add((Sounds.Sound)Enum.Parse(typeof(Sounds.Sound), theSound.name), totalSounds);
-                tempSoundObj = new SoundObject(theSound, theSound.name, 1);
+                easySearch.Add((Sounds.Sound)Enum.Parse(typeof(Sounds.Sound), theSound.clip.name), totalSounds);
+                tempSoundObj = new SoundObject(theSound.clip, theSound.clip.name, 1,theSound.group);
                 soundObjectList.Add(tempSoundObj);
                 totalSounds++;
             }

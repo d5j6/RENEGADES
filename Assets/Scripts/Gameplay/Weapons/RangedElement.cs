@@ -11,7 +11,13 @@ namespace RENEGADES.Gameplay.Weapons
     {
         private Vector3 moveDirection;
 
-        private const float MOVESPEED =12;
+        private const float MOVESPEED =150;
+
+        private Rigidbody2D rigid;
+        private Rigidbody2D ElementRigidBody
+        {
+            get { return rigid ?? (rigid = GetComponent<Rigidbody2D>()); }
+        }
 
         public void Init(Vector3 pos)
         {
@@ -32,11 +38,14 @@ namespace RENEGADES.Gameplay.Weapons
 
         public void Update()
         {
-            transform.position += moveDirection * Time.deltaTime* MOVESPEED;
+            ElementRigidBody.AddForce(moveDirection* MOVESPEED);
+            ElementRigidBody.velocity = Vector3.ClampMagnitude(ElementRigidBody.velocity, MOVESPEED);
         }
 
         private void Destroy()
         {
+            ElementRigidBody.velocity = new Vector2(0,0);
+            CancelInvoke("Destroy");
             gameObject.SetActive(false);
         }
 
@@ -65,6 +74,12 @@ namespace RENEGADES.Gameplay.Weapons
             }
             SetMoveDirection(moveDirection);
             return new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, eulerAngle);
+        }
+
+        public virtual void OnTriggerEnter2D(Collider2D other)
+        {
+            Debug.Log(other.name);
+            Destroy();
         }
 
     }
