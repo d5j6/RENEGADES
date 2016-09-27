@@ -43,7 +43,7 @@ namespace RENEGADES.Gameplay.Players
         private void Update()
         {
             //Xbox Controller
-            if (GameManager.Instance.ControllerManager.AnyControllersConnected())
+            if (GameManager.Instance._ControllerManager.AnyControllersConnected())
             {
                 XboxController();
             }

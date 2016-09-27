@@ -1,5 +1,6 @@
 ﻿//App
 using RENEGADES.UI.Gameplay;
+using RENEGADES.Managers;
 
 //Unity
 using UnityEngine;
@@ -36,13 +37,13 @@ namespace RENEGADES.Gameplay.AI
             get { return rigid ?? (rigid = GetComponent<Rigidbody2D>()); }
         }
 
-        public float HEALTH;
-
         private EnemyHealth enemyHealth;
         private EnemyHealth EnemyHealthUI
         {
             get { return enemyHealth ?? (enemyHealth = GetComponentInChildren<EnemyHealth>()); }
         }
+
+        public float HEALTH;
 
         /// <summary>
         /// Called on start
@@ -123,7 +124,12 @@ namespace RENEGADES.Gameplay.AI
         /// <param name="other"></param>
         public virtual void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.gameObject.tag == "RangedElement") UpdateHealth(-5);
+            if (other.gameObject.tag == "RangedElement")
+            {
+                //spawn blood splatter
+                GameManager.Instance.EffectSpawner.Spawn(Controllers.Effects.EffectType.BloodSplat, other.transform.position);
+                UpdateHealth(-5);
+            }
         }
     }
 }

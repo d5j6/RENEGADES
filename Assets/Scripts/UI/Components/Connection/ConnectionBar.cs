@@ -42,7 +42,7 @@ namespace RENEGADES.UI.Connection
         private void CheckConnection()
         {
             //check if our system has a new controller plugged in or out
-            int currentPlayers = GameManager.Instance.ControllerManager.GetControllerCount();
+            int currentPlayers = GameManager.Instance._ControllerManager.GetControllerCount();
             if (currentPlayers != CurrentplayerCount)
             {
                 CurrentplayerCount = currentPlayers;

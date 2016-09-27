@@ -40,7 +40,7 @@ namespace RENEGADES.Constants
 
         public static string GetInput(PlayerInput input)
         {
-            if (GameManager.Instance.ControllerManager.AnyControllersConnected()) return (string)XboxInput[input];
+            if (GameManager.Instance._ControllerManager.AnyControllersConnected()) return (string)XboxInput[input];
             return (string)PCInput[input];
         }
 

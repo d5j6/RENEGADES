@@ -1,4 +1,7 @@
-﻿namespace RENEGADES.Gameplay.AI
+﻿//Unity
+using UnityEngine;
+
+namespace RENEGADES.Gameplay.AI
 {
     public class Ghoul : Enemy
     {
@@ -14,6 +17,12 @@
         public override void SetHealth(float h)
         {
             base.SetHealth(GHOUL_HEALTH);
+        }
+
+        //in case we want anything extra to happen on collision for ghouls
+        public override void OnTriggerEnter2D(Collider2D other)
+        {
+            base.OnTriggerEnter2D(other);
         }
     }
 }

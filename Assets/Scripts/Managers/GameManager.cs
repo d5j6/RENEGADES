@@ -2,6 +2,7 @@
 using RENEGADES.Common;
 using RENEGADES.Audio;
 using RENEGADES.Gameplay.PlayerInput;
+using RENEGADES.Gameplay.Controllers;
 
 //Unity
 
@@ -12,13 +13,13 @@ namespace RENEGADES.Managers
     public class GameManager : Singleton<GameManager>
     {
         private ControllerManager controllerManager;
-        public ControllerManager ControllerManager
+        public ControllerManager _ControllerManager
         {
             get { return controllerManager ?? (controllerManager = GetComponent<ControllerManager>()); }
         }
 
         private LevelLoader levelLoader;
-        public LevelLoader LevelLoader
+        public LevelLoader _LevelLoad
         {
             get { return levelLoader ?? (levelLoader = GetComponent<LevelLoader>()); }
         }
@@ -27,6 +28,12 @@ namespace RENEGADES.Managers
         public BaseSoundController AudioManager
         {
             get { return audioManager ?? (audioManager = FindObjectOfType<BaseSoundController>()); }
+        }
+
+        private Effects effectSpawner;
+        public Effects EffectSpawner
+        {
+            get { return effectSpawner ?? (effectSpawner = FindObjectOfType<Effects>()); }
         }
 
         private void Awake()

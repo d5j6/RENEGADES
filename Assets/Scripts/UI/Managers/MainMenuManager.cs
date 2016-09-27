@@ -11,7 +11,7 @@ namespace RENEGADES.UI.Managers
     {
         public void LAUNCHGAME()
         {
-            GameManager.Instance.LevelLoader.LoadLevel(LevelLoader.Levels.Game);
+            GameManager.Instance._LevelLoad.LoadLevel(LevelLoader.Levels.Game);
         }
 
     }
