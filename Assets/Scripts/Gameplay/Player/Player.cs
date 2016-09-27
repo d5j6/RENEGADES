@@ -46,14 +46,13 @@ namespace RENEGADES.Gameplay.Players
         }
 
         private void AnimationLoop()
-        { 
+        {
             PlayerMovement.LookParams looksParams = PlayerMove.Move();
-            if (looksParams.LeftJoyStickX == 0 && looksParams.LeftJoyStickY == 0)
-            {
-                currentTrigger = PlayerAnim.SetAnimState();
-                return;
-            }
-            else if (Mathf.Abs(looksParams.rightJoyStickX) > Mathf.Abs(looksParams.rightJoyStickY))
+
+            float animSpeed = (Mathf.Abs(looksParams.LeftJoyStickX) > 0 || Mathf.Abs(looksParams.LeftJoyStickY) > 0) ? 1.0f : 0.0f;
+            PlayerAnim.SetAnimationSpeed(animSpeed);
+
+            if (Mathf.Abs(looksParams.rightJoyStickX) > Mathf.Abs(looksParams.rightJoyStickY))
             {
                 currentTrigger = PlayerAnim.SetAnimState(looksParams.rightJoyStickX > 0 ? AnimationTriggers.AnimationTrigger.Right : AnimationTriggers.AnimationTrigger.Left);
             }
@@ -62,11 +61,7 @@ namespace RENEGADES.Gameplay.Players
 
                 currentTrigger = PlayerAnim.SetAnimState(looksParams.rightJoyStickY > 0 ? AnimationTriggers.AnimationTrigger.Up : AnimationTriggers.AnimationTrigger.Down);
             }
-            else
-            {
 
-                currentTrigger = PlayerAnim.SetAnimState(); // idle
-            }
         }
 
         private void RangedAttackLoop()
@@ -80,9 +75,9 @@ namespace RENEGADES.Gameplay.Players
             }
             else
             {
-                if(Input.GetKey(KeyCode.Space)) RangedAttack.FIRE(this);
+                if (Input.GetKey(KeyCode.Space)) RangedAttack.FIRE(this);
             }
-            
+
         }
     }
 }

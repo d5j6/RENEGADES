@@ -20,9 +20,14 @@ namespace RENEGADES.Gameplay.AI
         private float FindPlayerTimer;
         private const float WANDER = 0.5f;
 
+        private float speed;
+        private Rigidbody2D enemyRigidBody;
+
         public WalkingState(Enemy enemy)
         {
             this.enemy = enemy;
+            speed = enemy.SPEED;
+            enemyRigidBody = enemy.EnemyRigidBody;
         }
 
         public void UpdateState()
@@ -68,7 +73,8 @@ namespace RENEGADES.Gameplay.AI
 
         private void MoveTowards()
         {
-            enemy.MOVE(0);
+            enemyRigidBody.AddForce(-enemy.transform.up * speed);
+            enemyRigidBody.velocity = Vector3.ClampMagnitude(enemyRigidBody.velocity, speed);
         }
     }
 }

@@ -603,6 +603,22 @@ Prefab:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 22473204, guid: 53f7a2695e73f5341842e7933e7cd2ae, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 478.19443
+      objectReference: {fileID: 0}
+    - target: {fileID: 22473204, guid: 53f7a2695e73f5341842e7933e7cd2ae, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 48.784725
+      objectReference: {fileID: 0}
+    - target: {fileID: 22459944, guid: 53f7a2695e73f5341842e7933e7cd2ae, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 1524.0507
+      objectReference: {fileID: 0}
+    - target: {fileID: 22459944, guid: 53f7a2695e73f5341842e7933e7cd2ae, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 455.6962
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 53f7a2695e73f5341842e7933e7cd2ae, type: 2}
   m_IsPrefabParent: 0

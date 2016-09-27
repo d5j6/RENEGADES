@@ -39,7 +39,7 @@ namespace RENEGADES.Gameplay.AI
         }
 
         private Rigidbody2D rigid;
-        private Rigidbody2D EnemyRigidBody
+        public Rigidbody2D EnemyRigidBody
         {
             get { return rigid ?? (rigid = GetComponent<Rigidbody2D>()); }
         }
@@ -51,17 +51,18 @@ namespace RENEGADES.Gameplay.AI
         }
 
         public float HEALTH;
+        public float SPEED;
 
         /// <summary>
         /// Called on start
         /// </summary>
         private void Awake()
         {
+            Init();
             attackingState = new AttackingState(this);
             walkingState = new WalkingState(this);
             deadState = new DeadState(this);
             currentState = walkingState;
-            Init();
         }
 
         /// <summary>
@@ -70,6 +71,7 @@ namespace RENEGADES.Gameplay.AI
         private void Init()
         {
             SetHealth(0);
+            SetSpeed(0);
         }
 
         /// <summary>
@@ -98,16 +100,6 @@ namespace RENEGADES.Gameplay.AI
         }
 
         /// <summary>
-        /// Move enemy by rigidbody
-        /// </summary>
-        /// <param name="SPEED"></param>
-        public virtual void MOVE(float SPEED)
-        {
-            EnemyRigidBody.AddForce(-transform.up * SPEED);
-            EnemyRigidBody.velocity = Vector3.ClampMagnitude(EnemyRigidBody.velocity, SPEED);
-        }
-
-        /// <summary>
         /// Init Set health
         /// </summary>
         /// <param name="h"></param>
@@ -116,6 +108,16 @@ namespace RENEGADES.Gameplay.AI
             HEALTH = h;
             EnemyHealthUI.SetHealth(HEALTH);
         }
+
+        /// <summary>
+        /// Set speed in child
+        /// </summary>
+        /// <param name="s"></param>
+        public virtual void SetSpeed(float s)
+        {
+            SPEED = s;
+        }
+
         /// <summary>
         /// Update our health
         /// </summary>

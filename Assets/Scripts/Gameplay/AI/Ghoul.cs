@@ -12,9 +12,9 @@ namespace RENEGADES.Gameplay.AI
         private const float GHOUL_SPEED = 5;
         private const int GHOUL_HEALTH = 10;
 
-        public override void MOVE(float s)
+        public override void SetSpeed(float s)
         {
-            base.MOVE(GHOUL_SPEED);
+            base.SetSpeed(GHOUL_SPEED);
         }
 
         public override void SetHealth(float h)

@@ -21,14 +21,16 @@ namespace RENEGADES.Gameplay.Players
             if (trigger == currentTrigger) return currentTrigger;
             currentTrigger = trigger;
             PlayerAnim.SetTrigger(AnimationTriggers.GetInput(trigger));
-            PlayerAnim.speed = 1.0f;
             return currentTrigger;
         }
 
-        public AnimationTriggers.AnimationTrigger SetAnimState()
+        /// <summary>
+        /// Set animation speed for idle
+        /// </summary>
+        /// <param name="speed"></param>
+        public void SetAnimationSpeed(float speed)
         {
-            PlayerAnim.speed = 0.0f;
-            return currentTrigger;
+            PlayerAnim.speed = speed;
         }
 
         private void OnDestroy()

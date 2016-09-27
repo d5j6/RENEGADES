@@ -7,7 +7,6 @@ TagManager:
   - PooledObjectContainer
   - BackgroundCAM
   - RangedElement
-  - Player
   layers:
   - Default
   - TransparentFX
