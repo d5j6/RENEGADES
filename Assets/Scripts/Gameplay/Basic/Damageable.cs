@@ -13,9 +13,20 @@ namespace RENEGADES.Gameplay.Basic
         {
             Init();
             SetHealth(0);
+            SetLayer();
         }
 
         public virtual void Init() {  }
+
+        public virtual void SetLayer()
+        {
+            gameObject.layer = 10; //Damageable layer
+        }
+
+        public int GetLayer()
+        {
+            return (1 << gameObject.layer);
+        }
 
         public virtual void SetHealth(float h)
         {

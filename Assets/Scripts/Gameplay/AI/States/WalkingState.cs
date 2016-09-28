@@ -20,7 +20,6 @@ namespace RENEGADES.Gameplay.AI
         private const float WANDER = 0.5f;
 
         private float speed;
-        private Rigidbody2D enemyRigidBody;
 
         private Damageable ObjectToChase;
 
@@ -28,7 +27,6 @@ namespace RENEGADES.Gameplay.AI
         {
             this.enemy = enemy;
             speed = enemy.Attributes.SPEED;
-            enemyRigidBody = enemy.EnemyRigidBody;
             ObjectToChase = FindClosest.Find<Damageable>(enemy.transform);
         }
 
@@ -57,8 +55,10 @@ namespace RENEGADES.Gameplay.AI
 
         private void CheckProximity()
         {
-            RaycastHit2D hit = Physics2D.Raycast(enemy.GetPosition(), -enemy.transform.up);
-            if (Vector3.Distance(enemy.GetPosition(), ObjectToChase.GetPosition()) < enemy.Attributes.ATTACK_RANGE)
+            Vector3 raycastDir = ObjectToChase.GetPosition() - enemy.GetPosition();
+            RaycastHit2D hit = Physics2D.Raycast(enemy.GetPosition(), raycastDir, Mathf.Infinity, ObjectToChase.GetLayer());
+            Debug.DrawRay(enemy.GetPosition(), raycastDir, Color.red);
+            if (Vector3.Distance(enemy.GetPosition(), hit.point) < enemy.Attributes.ATTACK_RANGE)
             {
                 ToAttackState();
             }
@@ -73,7 +73,7 @@ namespace RENEGADES.Gameplay.AI
                 ObjectToChase = FindClosest.Find<Damageable>(enemy.transform);
             }   
             TurnTowards(ObjectToChase.GetPosition());
-            MoveTowards();
+            MoveTowards(ObjectToChase.GetPosition());
         }
 
         private void TurnTowards(Vector3 playerPosition)
@@ -84,10 +84,9 @@ namespace RENEGADES.Gameplay.AI
 
         }
 
-        private void MoveTowards()
+        private void MoveTowards(Vector3 pos)
         {
-            enemyRigidBody.AddForce(-enemy.transform.up * speed);
-            enemyRigidBody.velocity = Vector3.ClampMagnitude(enemyRigidBody.velocity, speed);
+            enemy.transform.position = Vector3.MoveTowards(enemy.GetPosition(), pos, speed*Time.smoothDeltaTime);
         }
     }
 }

@@ -17,14 +17,12 @@ namespace RENEGADES.Gameplay.AI
         private const float WANDER = 0.2f;
 
         private float speed;
-        private Rigidbody2D enemyRigidBody;
 
         private Damageable ObjectToChase;
 
         public AttackingState (Enemy enemy)
         {
             this.enemy = enemy;
-            enemyRigidBody = enemy.EnemyRigidBody;
             ObjectToChase = FindClosest.Find<Damageable>(enemy.transform);
         }
 
@@ -66,8 +64,10 @@ namespace RENEGADES.Gameplay.AI
 
         private void CheckProximity()
         {
-            RaycastHit2D hit = Physics2D.Raycast(enemy.GetPosition(), -enemy.transform.up);
-            if (Vector3.Distance(enemy.GetPosition(), ObjectToChase.GetPosition()) > enemy.Attributes.ATTACK_RANGE)
+            Vector3 raycastDir = ObjectToChase.GetPosition() - enemy.GetPosition();
+            RaycastHit2D hit = Physics2D.Raycast(enemy.GetPosition(), raycastDir, Mathf.Infinity, ObjectToChase.GetLayer());
+            Debug.DrawRay(enemy.GetPosition(), raycastDir, Color.red);
+            if (Vector3.Distance(enemy.GetPosition(), hit.point) > enemy.Attributes.ATTACK_RANGE)
             {
                 ToWalkState();
             }

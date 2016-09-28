@@ -8,7 +8,7 @@ using UnityEngine;
 
 namespace RENEGADES.Gameplay.AI
 {
-    [RequireComponent(typeof(Rigidbody2D))]
+
     public class Enemy : MonoBehaviour
     {
         private IEnemyState currentState;
@@ -37,12 +37,6 @@ namespace RENEGADES.Gameplay.AI
         {
             get { return deadState; }
             set { deadState = value; }
-        }
-
-        private Rigidbody2D rigid;
-        public Rigidbody2D EnemyRigidBody
-        {
-            get { return rigid ?? (rigid = GetComponent<Rigidbody2D>()); }
         }
 
         private EnemyAnimator animator;
@@ -98,6 +92,15 @@ namespace RENEGADES.Gameplay.AI
         public Vector3 GetPosition()
         {
             return transform.position;
+        }
+
+        /// <summary>
+        /// set enemy position
+        /// </summary>
+        /// <param name="pos"></param>
+        public void SetPosition(Vector3 pos)
+        {
+            transform.position = pos;
         }
 
         /// <summary>
