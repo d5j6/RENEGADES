@@ -25,7 +25,7 @@ namespace RENEGADES.Gameplay.Weapons
             GameManager.Instance.AudioManager.PlaySound(Audio.Sounds.Sound.Bullet_Fire, transform.position);
         }
 
-        public void SetEulerAngles(AnimationTriggers.AnimationTrigger t)
+        public void SetEulerAngles(AnimationTriggers.PlayerAnimation t)
         {
             transform.localEulerAngles = SetPosition(t);
         }
@@ -49,25 +49,25 @@ namespace RENEGADES.Gameplay.Weapons
             gameObject.SetActive(false);
         }
 
-        public Vector3 SetPosition(AnimationTriggers.AnimationTrigger currentTrigger)
+        public Vector3 SetPosition(AnimationTriggers.PlayerAnimation currentTrigger)
         {
             float eulerAngle = 0;
             Vector3 moveDirection = Vector3.zero;
             switch (currentTrigger)
             {
-                case AnimationTriggers.AnimationTrigger.Down:
+                case AnimationTriggers.PlayerAnimation.Down:
                     eulerAngle = 180;
                     moveDirection = Vector3.down;
                     break;
-                case AnimationTriggers.AnimationTrigger.Left:
+                case AnimationTriggers.PlayerAnimation.Left:
                     eulerAngle = 90;
                     moveDirection = Vector3.left;
                     break;
-                case AnimationTriggers.AnimationTrigger.Right:
+                case AnimationTriggers.PlayerAnimation.Right:
                     eulerAngle = 270;
                     moveDirection = Vector3.right;
                     break;
-                case AnimationTriggers.AnimationTrigger.Up:
+                case AnimationTriggers.PlayerAnimation.Up:
                     eulerAngle = 0;
                     moveDirection = Vector3.up;
                     break;
@@ -78,7 +78,6 @@ namespace RENEGADES.Gameplay.Weapons
 
         public virtual void OnTriggerEnter2D(Collider2D other)
         {
-            Debug.Log(other.name);
             Destroy();
         }
 

@@ -6,7 +6,7 @@ namespace RENEGADES.Constants
 
     public class AnimationTriggers
     {
-        public enum AnimationTrigger
+        public enum PlayerAnimation
         {
             Down,
             Up,
@@ -14,18 +14,37 @@ namespace RENEGADES.Constants
             Right
         }
 
-
-        private static Dictionary<AnimationTrigger, string> InputLookUp = new Dictionary<AnimationTrigger, string>()
+        public enum EnemyAnimation
         {
-            {AnimationTrigger.Down,"Down"},
-            {AnimationTrigger.Left,"Left"},
-            {AnimationTrigger.Right,"Right"},
-            {AnimationTrigger.Up,"Up" }
+            Walk,
+            Attack
+        }
+
+
+        private static Dictionary<PlayerAnimation, string> PlayerAnimationLookup = new Dictionary<PlayerAnimation, string>()
+        {
+            {PlayerAnimation.Down,"Down"},
+            {PlayerAnimation.Left,"Left"},
+            {PlayerAnimation.Right,"Right"},
+            {PlayerAnimation.Up,"Up" }
         };
 
-        public static string GetInput(AnimationTrigger input)
+        private static Dictionary<EnemyAnimation, string> EnemyAnimationLookup = new Dictionary<EnemyAnimation, string>()
         {
-            return InputLookUp[input];
+            {EnemyAnimation.Walk,"Walking"},
+            {EnemyAnimation.Attack,"Swiping"},
+        };
+
+
+
+        public static string GetInput(PlayerAnimation input)
+        {
+            return PlayerAnimationLookup[input];
+        }
+
+        public static string GetInput(EnemyAnimation input)
+        {
+            return EnemyAnimationLookup[input];
         }
     }
 }

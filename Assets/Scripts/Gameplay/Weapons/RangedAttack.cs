@@ -18,7 +18,7 @@ namespace RENEGADES.Gameplay.Weapons
 
         private bool coolingDown;
 
-        private AnimationTriggers.AnimationTrigger currentTrigger;
+        private AnimationTriggers.PlayerAnimation currentTrigger;
 
         private ObjectPooler pooler;
         private ObjectPooler Pooler

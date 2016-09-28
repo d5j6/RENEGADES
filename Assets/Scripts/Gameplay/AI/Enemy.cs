@@ -1,6 +1,7 @@
 ﻿//App
 using RENEGADES.UI.Gameplay;
 using RENEGADES.Managers;
+using RENEGADES.Common;
 
 //Unity
 using UnityEngine;
@@ -44,14 +45,19 @@ namespace RENEGADES.Gameplay.AI
             get { return rigid ?? (rigid = GetComponent<Rigidbody2D>()); }
         }
 
+        private EnemyAnimator animator;
+        public EnemyAnimator _EnemyAnimator
+        {
+            get { return animator ?? (animator = GenComponent.ComponentCheck<EnemyAnimator>(gameObject)); }
+        }
+
         private EnemyHealth enemyHealth;
         private EnemyHealth EnemyHealthUI
         {
             get { return enemyHealth ?? (enemyHealth = GetComponentInChildren<EnemyHealth>()); }
         }
 
-        public float HEALTH;
-        public float SPEED;
+        public Attributes Attributes;
 
         /// <summary>
         /// Called on start
@@ -70,8 +76,11 @@ namespace RENEGADES.Gameplay.AI
         /// </summary>
         private void Init()
         {
+            Attributes = new Attributes();
             SetHealth(0);
             SetSpeed(0);
+            SetAttackRange(0);
+            SetAttackSpeed(0);
         }
 
         /// <summary>
@@ -105,8 +114,8 @@ namespace RENEGADES.Gameplay.AI
         /// <param name="h"></param>
         public virtual void SetHealth(float h)
         {
-            HEALTH = h;
-            EnemyHealthUI.SetHealth(HEALTH);
+            Attributes.HEALTH = h;
+            EnemyHealthUI.SetHealth(Attributes.HEALTH);
         }
 
         /// <summary>
@@ -115,7 +124,17 @@ namespace RENEGADES.Gameplay.AI
         /// <param name="s"></param>
         public virtual void SetSpeed(float s)
         {
-            SPEED = s;
+            Attributes.SPEED = s;
+        }
+
+        public virtual void SetAttackSpeed(float s)
+        {
+            Attributes.ATTACK_SPEED = s;
+        }
+
+        public virtual void SetAttackRange(float r)
+        {
+            Attributes.ATTACK_RANGE = r;
         }
 
         /// <summary>
@@ -124,8 +143,8 @@ namespace RENEGADES.Gameplay.AI
         /// <param name="value"></param>
         public void UpdateHealth(float value)
         {
-            HEALTH += value;
-            EnemyHealthUI.UpdateHealth(HEALTH);
+            Attributes.HEALTH += value;
+            EnemyHealthUI.UpdateHealth(Attributes.HEALTH);
         }
 
         /// <summary>
@@ -148,6 +167,11 @@ namespace RENEGADES.Gameplay.AI
         public virtual void RemoveFromBattleField()
         {
             Destroy(gameObject);
+        }
+
+        private void OnDestroy()
+        {
+            Attributes = null;
         }
     }
 }

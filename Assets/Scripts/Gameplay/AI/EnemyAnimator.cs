@@ -3,13 +3,13 @@ using RENEGADES.Constants;
 using RENEGADES.Common.Gameplay;
 
 
-namespace RENEGADES.Gameplay.Players
+namespace RENEGADES.Gameplay.AI
 {
-    public class PlayerAnimator : GenericAnimator
+    public class EnemyAnimator : GenericAnimator
     {
-        private AnimationTriggers.PlayerAnimation currentTrigger;
+        private AnimationTriggers.EnemyAnimation currentTrigger;
 
-        public AnimationTriggers.PlayerAnimation SetAnimState(AnimationTriggers.PlayerAnimation trigger)
+        public AnimationTriggers.EnemyAnimation SetAnimState(AnimationTriggers.EnemyAnimation trigger)
         {
             if (trigger == currentTrigger) return currentTrigger;
             currentTrigger = trigger;
@@ -17,6 +17,6 @@ namespace RENEGADES.Gameplay.Players
             return currentTrigger;
         }
 
-        
+
     }
 }

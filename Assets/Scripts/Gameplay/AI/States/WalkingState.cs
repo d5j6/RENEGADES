@@ -13,8 +13,6 @@ namespace RENEGADES.Gameplay.AI
 
         private readonly Enemy enemy;
 
-        private Vector3 playerPosition;
-
         //Every 0.5f seconds the enemy will quickly determine what they want to go after
         //This is used to save performance on searching for hot spots
         private float FindPlayerTimer;
@@ -23,17 +21,22 @@ namespace RENEGADES.Gameplay.AI
         private float speed;
         private Rigidbody2D enemyRigidBody;
 
+        private Player playerToGoAfter;
+
         public WalkingState(Enemy enemy)
         {
             this.enemy = enemy;
-            speed = enemy.SPEED;
+            speed = enemy.Attributes.SPEED;
             enemyRigidBody = enemy.EnemyRigidBody;
+            playerToGoAfter = FindClosest.Find<Player>(enemy.transform);
         }
 
         public void UpdateState()
         {
-            if (enemy.HEALTH <= 0) ToDeadState();
+            if (enemy.Attributes.HEALTH <= 0) ToDeadState();
+            enemy._EnemyAnimator.SetAnimState(Constants.AnimationTriggers.EnemyAnimation.Walk);
             Movement();
+            CheckProximity();
         }
 
         public void ToWalkState()
@@ -51,15 +54,23 @@ namespace RENEGADES.Gameplay.AI
             enemy.CurrentState = enemy._DeadState;
         }
 
+        private void CheckProximity()
+        {
+            if (Vector3.Distance(enemy.GetPosition(), playerToGoAfter.GetPosition()) < enemy.Attributes.ATTACK_RANGE)
+            {
+                ToAttackState();
+            }
+        }
+
         private void Movement()
         {
             FindPlayerTimer += Time.deltaTime;
             if(FindPlayerTimer > WANDER)
             {
                 FindPlayerTimer = 0;
-                playerPosition = FindClosest.Find<Player>(enemy.transform).transform.position;
+                playerToGoAfter = FindClosest.Find<Player>(enemy.transform);
             }   
-            TurnTowards(playerPosition);
+            TurnTowards(playerToGoAfter.GetPosition());
             MoveTowards();
         }
 

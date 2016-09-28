@@ -28,8 +28,8 @@ namespace RENEGADES.Gameplay.Players
             get { return rangedAttack ?? (rangedAttack = GetComponentInChildren<RangedAttack>()); }
         }
 
-        private AnimationTriggers.AnimationTrigger currentTrigger;
-        public AnimationTriggers.AnimationTrigger CurrentTrigger
+        private AnimationTriggers.PlayerAnimation currentTrigger;
+        public AnimationTriggers.PlayerAnimation CurrentTrigger
         {
             get { return currentTrigger; }
         }
@@ -45,6 +45,11 @@ namespace RENEGADES.Gameplay.Players
             RangedAttackLoop();
         }
 
+        public Vector3 GetPosition()
+        {
+            return transform.position;
+        }
+
         private void AnimationLoop()
         {
             PlayerMovement.LookParams looksParams = PlayerMove.Move();
@@ -54,12 +59,12 @@ namespace RENEGADES.Gameplay.Players
 
             if (Mathf.Abs(looksParams.rightJoyStickX) > Mathf.Abs(looksParams.rightJoyStickY))
             {
-                currentTrigger = PlayerAnim.SetAnimState(looksParams.rightJoyStickX > 0 ? AnimationTriggers.AnimationTrigger.Right : AnimationTriggers.AnimationTrigger.Left);
+                currentTrigger = PlayerAnim.SetAnimState(looksParams.rightJoyStickX > 0 ? AnimationTriggers.PlayerAnimation.Right : AnimationTriggers.PlayerAnimation.Left);
             }
             else if (Mathf.Abs(looksParams.rightJoyStickX) < Mathf.Abs(looksParams.rightJoyStickY))
             {
 
-                currentTrigger = PlayerAnim.SetAnimState(looksParams.rightJoyStickY > 0 ? AnimationTriggers.AnimationTrigger.Up : AnimationTriggers.AnimationTrigger.Down);
+                currentTrigger = PlayerAnim.SetAnimState(looksParams.rightJoyStickY > 0 ? AnimationTriggers.PlayerAnimation.Up : AnimationTriggers.PlayerAnimation.Down);
             }
 
         }
