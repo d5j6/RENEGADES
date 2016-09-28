@@ -1,4 +1,5 @@
 ﻿//App
+using RENEGADES.Gameplay.Basic;
 using RENEGADES.Gameplay.Weapons;
 using RENEGADES.Constants;
 using RENEGADES.Managers;
@@ -8,7 +9,7 @@ using UnityEngine;
 
 namespace RENEGADES.Gameplay.Players
 {
-    public class Player : MonoBehaviour
+    public class Player : Damageable
     {
         private PlayerAnimator animator;
         private PlayerAnimator PlayerAnim
@@ -34,8 +35,9 @@ namespace RENEGADES.Gameplay.Players
             get { return currentTrigger; }
         }
 
-        private void Awake()
+        public override void SetHealth(float h)
         {
+            base.SetHealth(100);
         }
 
         //player main game loop
@@ -45,10 +47,6 @@ namespace RENEGADES.Gameplay.Players
             RangedAttackLoop();
         }
 
-        public Vector3 GetPosition()
-        {
-            return transform.position;
-        }
 
         private void AnimationLoop()
         {

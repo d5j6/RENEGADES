@@ -1,6 +1,6 @@
 ﻿//App
 using RENEGADES.Common;
-using RENEGADES.Gameplay.Players;
+using RENEGADES.Gameplay.Basic;
 
 //Unity
 using UnityEngine;
@@ -19,13 +19,13 @@ namespace RENEGADES.Gameplay.AI
         private float speed;
         private Rigidbody2D enemyRigidBody;
 
-        private Player playerToGoAfter;
+        private Damageable ObjectToChase;
 
         public AttackingState (Enemy enemy)
         {
             this.enemy = enemy;
             enemyRigidBody = enemy.EnemyRigidBody;
-            playerToGoAfter = FindClosest.Find<Player>(enemy.transform);
+            ObjectToChase = FindClosest.Find<Damageable>(enemy.transform);
         }
 
         public void UpdateState()
@@ -57,16 +57,17 @@ namespace RENEGADES.Gameplay.AI
             if (FindPlayerTimer > WANDER)
             {
                 FindPlayerTimer = 0;
-                playerToGoAfter = FindClosest.Find<Player>(enemy.transform);
+                ObjectToChase = FindClosest.Find<Damageable>(enemy.transform);
             }
-            Vector3 moveDirection = enemy.GetPosition() - playerToGoAfter.GetPosition();
+            Vector3 moveDirection = enemy.GetPosition() - ObjectToChase.GetPosition();
             float viewAngle = Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg - 90;
             enemy.SetRotation(Quaternion.AngleAxis(viewAngle, Vector3.forward));
         }
 
         private void CheckProximity()
         {
-            if (Vector3.Distance(enemy.GetPosition(), playerToGoAfter.GetPosition()) > enemy.Attributes.ATTACK_RANGE)
+            RaycastHit2D hit = Physics2D.Raycast(enemy.GetPosition(), -enemy.transform.up);
+            if (Vector3.Distance(enemy.GetPosition(), ObjectToChase.GetPosition()) > enemy.Attributes.ATTACK_RANGE)
             {
                 ToWalkState();
             }
