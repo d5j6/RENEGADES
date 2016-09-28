@@ -55,7 +55,7 @@ namespace RENEGADES.Gameplay.AI
 
         private void CheckProximity()
         {
-            Vector3 raycastDir = ObjectToChase.GetPosition() - enemy.GetPosition();
+            Vector3 raycastDir = (ObjectToChase.GetPosition()) - enemy.GetPosition();
             RaycastHit2D hit = Physics2D.Raycast(enemy.GetPosition(), raycastDir, Mathf.Infinity, ObjectToChase.GetLayer());
             Debug.DrawRay(enemy.GetPosition(), raycastDir, Color.red);
             if (Vector3.Distance(enemy.GetPosition(), hit.point) < enemy.Attributes.ATTACK_RANGE)

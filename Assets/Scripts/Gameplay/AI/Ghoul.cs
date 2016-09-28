@@ -11,7 +11,7 @@ namespace RENEGADES.Gameplay.AI
         //set custom speed for ghoul
         private const float GHOUL_SPEED = 1;
         private const int GHOUL_HEALTH = 10;
-        private const float GHOUL_ATTACKRANGE = 0.4f;
+        private const float GHOUL_ATTACKRANGE = 0.3f;
         private const float GHOUL_ATTACKSPEED = 0.75f;
 
         public override void SetSpeed(float s)

@@ -7,6 +7,13 @@ namespace RENEGADES.Gameplay.Basic
     public class Damageable : MonoBehaviour
     {
 
+        private SpriteRenderer sprite;
+        private SpriteRenderer Sprite
+        {
+            get { return sprite ?? (sprite = GetComponent<SpriteRenderer>()); }
+        }
+
+
         public float HEALTH;
 
         private void Awake()
@@ -36,6 +43,11 @@ namespace RENEGADES.Gameplay.Basic
         public Vector3 GetPosition()
         {
             return transform.position;
+        }
+
+        public Vector3 GetBounds()
+        {
+            return Sprite.bounds.extents * (1 / 2);
         }
     }
 }
