@@ -45,9 +45,9 @@ namespace RENEGADES.Gameplay.Basic
             return transform.position;
         }
 
-        public Vector3 GetBounds()
+        public Bounds GetBounds()
         {
-            return Sprite.bounds.extents * (1 / 2);
+            return Sprite.bounds;
         }
     }
 }

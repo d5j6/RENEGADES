@@ -14,7 +14,7 @@ namespace RENEGADES.Gameplay.AI
         //Every 0.2f seconds the enemy will quickly determine what enemy they want to attack
         //This is used to save performance on searching for hot spots
         private float FindPlayerTimer;
-        private const float WANDER = 0.2f;
+        private const float WANDER = 3f;
 
         private float speed;
 
@@ -28,14 +28,15 @@ namespace RENEGADES.Gameplay.AI
 
         public void UpdateState()
         {
+            
             if (enemy.Attributes.HEALTH <= 0) ToDeadState();
-            enemy._EnemyAnimator.SetAnimState(Constants.AnimationTriggers.EnemyAnimation.Attack);
             Turning();
             CheckProximity();
         }
 
         public void ToWalkState()
         {
+            enemy._EnemyAnimator.SetAnimState(Constants.AnimationTriggers.EnemyAnimation.Walk);
             enemy.CurrentState = enemy._WalkingState;
         }
 
@@ -66,8 +67,7 @@ namespace RENEGADES.Gameplay.AI
         {
             Vector3 raycastDir = ObjectToChase.GetPosition() - enemy.GetPosition();
             RaycastHit2D hit = Physics2D.Raycast(enemy.GetPosition(), raycastDir, Mathf.Infinity, ObjectToChase.GetLayer());
-            Debug.DrawRay(enemy.GetPosition(), raycastDir, Color.red);
-            if (Vector3.Distance(enemy.GetPosition(), hit.point) > enemy.Attributes.ATTACK_RANGE)
+            if (hit.distance > enemy.Attributes.ATTACK_RANGE)
             {
                 ToWalkState();
             }

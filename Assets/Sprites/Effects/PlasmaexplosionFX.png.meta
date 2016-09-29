@@ -1,0 +1,555 @@
+fileFormatVersion: 2
+guid: f500190c3d145664e8f8ffa5fc2f213b
+timeCreated: 1475103169
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: PlasmaexplosionFX_0
+    21300002: PlasmaexplosionFX_1
+    21300004: PlasmaexplosionFX_2
+    21300006: PlasmaexplosionFX_3
+    21300008: PlasmaexplosionFX_4
+    21300010: PlasmaexplosionFX_5
+    21300012: PlasmaexplosionFX_6
+    21300014: PlasmaexplosionFX_7
+    21300016: PlasmaexplosionFX_8
+    21300018: PlasmaexplosionFX_9
+    21300020: PlasmaexplosionFX_10
+    21300022: PlasmaexplosionFX_11
+    21300024: PlasmaexplosionFX_12
+    21300026: PlasmaexplosionFX_13
+    21300028: PlasmaexplosionFX_14
+    21300030: PlasmaexplosionFX_15
+    21300032: PlasmaexplosionFX_16
+    21300034: PlasmaexplosionFX_17
+    21300036: PlasmaexplosionFX_18
+    21300038: PlasmaexplosionFX_19
+    21300040: PlasmaexplosionFX_20
+    21300042: PlasmaexplosionFX_21
+    21300044: PlasmaexplosionFX_22
+    21300046: PlasmaexplosionFX_23
+    21300048: PlasmaexplosionFX_24
+    21300050: PlasmaexplosionFX_25
+    21300052: PlasmaexplosionFX_26
+    21300054: PlasmaexplosionFX_27
+    21300056: PlasmaexplosionFX_28
+    21300058: PlasmaexplosionFX_29
+    21300060: PlasmaexplosionFX_30
+    21300062: PlasmaexplosionFX_31
+    21300064: PlasmaexplosionFX_32
+    21300066: PlasmaexplosionFX_33
+    21300068: PlasmaexplosionFX_34
+    21300070: PlasmaexplosionFX_35
+    21300072: PlasmaexplosionFX_36
+    21300074: PlasmaexplosionFX_37
+    21300076: PlasmaexplosionFX_38
+    21300078: PlasmaexplosionFX_39
+    21300080: PlasmaexplosionFX_40
+    21300082: PlasmaexplosionFX_41
+    21300084: PlasmaexplosionFX_42
+    21300086: PlasmaexplosionFX_43
+    21300088: PlasmaexplosionFX_44
+    21300090: PlasmaexplosionFX_45
+    21300092: PlasmaexplosionFX_46
+    21300094: PlasmaexplosionFX_47
+    21300096: PlasmaexplosionFX_48
+    21300098: PlasmaexplosionFX_49
+    21300100: PlasmaexplosionFX_50
+    21300102: PlasmaexplosionFX_51
+    21300104: PlasmaexplosionFX_52
+    21300106: PlasmaexplosionFX_53
+    21300108: PlasmaexplosionFX_54
+    21300110: PlasmaexplosionFX_55
+    21300112: PlasmaexplosionFX_56
+    21300114: PlasmaexplosionFX_57
+    21300116: PlasmaexplosionFX_58
+    21300118: PlasmaexplosionFX_59
+    21300120: PlasmaexplosionFX_60
+    21300122: PlasmaexplosionFX_61
+    21300124: PlasmaexplosionFX_62
+    21300126: PlasmaexplosionFX_63
+    21300128: PlasmaexplosionFX_64
+    21300130: PlasmaexplosionFX_65
+    21300132: PlasmaexplosionFX_66
+    21300134: PlasmaexplosionFX_67
+    21300136: PlasmaexplosionFX_68
+    21300138: PlasmaexplosionFX_69
+    21300140: PlasmaexplosionFX_70
+    21300142: PlasmaexplosionFX_71
+    21300144: PlasmaexplosionFX_72
+    21300146: PlasmaexplosionFX_73
+    21300148: PlasmaexplosionFX_74
+    21300150: PlasmaexplosionFX_75
+    21300152: PlasmaexplosionFX_76
+    21300154: PlasmaexplosionFX_77
+    21300156: PlasmaexplosionFX_78
+    21300158: PlasmaexplosionFX_79
+    21300160: PlasmaexplosionFX_80
+    21300162: PlasmaexplosionFX_81
+    21300164: PlasmaexplosionFX_82
+    21300166: PlasmaexplosionFX_83
+    21300168: PlasmaexplosionFX_84
+    21300170: PlasmaexplosionFX_85
+    21300172: PlasmaexplosionFX_86
+    21300174: PlasmaexplosionFX_87
+    21300176: PlasmaexplosionFX_88
+    21300178: PlasmaexplosionFX_89
+    21300180: PlasmaexplosionFX_90
+    21300182: PlasmaexplosionFX_91
+    21300184: PlasmaexplosionFX_92
+    21300186: PlasmaexplosionFX_93
+    21300188: PlasmaexplosionFX_94
+    21300190: PlasmaexplosionFX_95
+    21300192: PlasmaexplosionFX_96
+    21300194: PlasmaexplosionFX_97
+    21300196: PlasmaexplosionFX_98
+    21300198: PlasmaexplosionFX_99
+    21300200: PlasmaexplosionFX_100
+    21300202: PlasmaexplosionFX_101
+    21300204: PlasmaexplosionFX_102
+    21300206: PlasmaexplosionFX_103
+    21300208: PlasmaexplosionFX_104
+    21300210: PlasmaexplosionFX_105
+    21300212: PlasmaexplosionFX_106
+    21300214: PlasmaexplosionFX_107
+    21300216: PlasmaexplosionFX_108
+    21300218: PlasmaexplosionFX_109
+    21300220: PlasmaexplosionFX_110
+    21300222: PlasmaexplosionFX_111
+    21300224: PlasmaexplosionFX_112
+    21300226: PlasmaexplosionFX_113
+    21300228: PlasmaexplosionFX_114
+    21300230: PlasmaexplosionFX_115
+    21300232: PlasmaexplosionFX_116
+    21300234: PlasmaexplosionFX_117
+    21300236: PlasmaexplosionFX_118
+    21300238: PlasmaexplosionFX_119
+    21300240: PlasmaexplosionFX_120
+    21300242: PlasmaexplosionFX_121
+    21300244: PlasmaexplosionFX_122
+    21300246: PlasmaexplosionFX_123
+    21300248: PlasmaexplosionFX_124
+    21300250: PlasmaexplosionFX_125
+    21300252: PlasmaexplosionFX_126
+    21300254: PlasmaexplosionFX_127
+    21300256: PlasmaexplosionFX_128
+    21300258: PlasmaexplosionFX_129
+    21300260: PlasmaexplosionFX_130
+    21300262: PlasmaexplosionFX_131
+    21300264: PlasmaexplosionFX_132
+    21300266: PlasmaexplosionFX_133
+    21300268: PlasmaexplosionFX_134
+    21300270: PlasmaexplosionFX_135
+    21300272: PlasmaexplosionFX_136
+    21300274: PlasmaexplosionFX_137
+    21300276: PlasmaexplosionFX_138
+    21300278: PlasmaexplosionFX_139
+    21300280: PlasmaexplosionFX_140
+    21300282: PlasmaexplosionFX_141
+    21300284: PlasmaexplosionFX_142
+    21300286: PlasmaexplosionFX_143
+    21300288: PlasmaexplosionFX_144
+    21300290: PlasmaexplosionFX_145
+    21300292: PlasmaexplosionFX_146
+    21300294: PlasmaexplosionFX_147
+    21300296: PlasmaexplosionFX_148
+    21300298: PlasmaexplosionFX_149
+    21300300: PlasmaexplosionFX_150
+    21300302: PlasmaexplosionFX_151
+    21300304: PlasmaexplosionFX_152
+    21300306: PlasmaexplosionFX_153
+    21300308: PlasmaexplosionFX_154
+    21300310: PlasmaexplosionFX_155
+    21300312: PlasmaexplosionFX_156
+    21300314: PlasmaexplosionFX_157
+    21300316: PlasmaexplosionFX_158
+    21300318: PlasmaexplosionFX_159
+    21300320: PlasmaexplosionFX_160
+    21300322: PlasmaexplosionFX_161
+    21300324: PlasmaexplosionFX_162
+    21300326: PlasmaexplosionFX_163
+    21300328: PlasmaexplosionFX_164
+    21300330: PlasmaexplosionFX_165
+    21300332: PlasmaexplosionFX_166
+    21300334: PlasmaexplosionFX_167
+    21300336: PlasmaexplosionFX_168
+    21300338: PlasmaexplosionFX_169
+    21300340: PlasmaexplosionFX_170
+    21300342: PlasmaexplosionFX_171
+    21300344: PlasmaexplosionFX_172
+    21300346: PlasmaexplosionFX_173
+    21300348: PlasmaexplosionFX_174
+    21300350: PlasmaexplosionFX_175
+    21300352: PlasmaexplosionFX_176
+    21300354: PlasmaexplosionFX_177
+    21300356: PlasmaexplosionFX_178
+    21300358: PlasmaexplosionFX_179
+    21300360: PlasmaexplosionFX_180
+    21300362: PlasmaexplosionFX_181
+    21300364: PlasmaexplosionFX_182
+    21300366: PlasmaexplosionFX_183
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PlasmaexplosionFX_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlasmaexplosionFX_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlasmaexplosionFX_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlasmaexplosionFX_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlasmaexplosionFX_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlasmaexplosionFX_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlasmaexplosionFX_6
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlasmaexplosionFX_7
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlasmaexplosionFX_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlasmaexplosionFX_9
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlasmaexplosionFX_10
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlasmaexplosionFX_11
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlasmaexplosionFX_12
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlasmaexplosionFX_13
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlasmaexplosionFX_14
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlasmaexplosionFX_15
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlasmaexplosionFX_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlasmaexplosionFX_17
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlasmaexplosionFX_18
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlasmaexplosionFX_19
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlasmaexplosionFX_20
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlasmaexplosionFX_21
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlasmaexplosionFX_22
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlasmaexplosionFX_23
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

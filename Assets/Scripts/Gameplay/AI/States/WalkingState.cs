@@ -31,9 +31,8 @@ namespace RENEGADES.Gameplay.AI
         }
 
         public void UpdateState()
-        {
+        {  
             if (enemy.Attributes.HEALTH <= 0) ToDeadState();
-            enemy._EnemyAnimator.SetAnimState(Constants.AnimationTriggers.EnemyAnimation.Walk);
             Movement();
             CheckProximity();
         }
@@ -45,6 +44,7 @@ namespace RENEGADES.Gameplay.AI
 
         public void ToAttackState()
         {
+            enemy._EnemyAnimator.SetAnimState(Constants.AnimationTriggers.EnemyAnimation.Attack);
             enemy.CurrentState = enemy._AttackingState;
         }
 
@@ -57,8 +57,7 @@ namespace RENEGADES.Gameplay.AI
         {
             Vector3 raycastDir = (ObjectToChase.GetPosition()) - enemy.GetPosition();
             RaycastHit2D hit = Physics2D.Raycast(enemy.GetPosition(), raycastDir, Mathf.Infinity, ObjectToChase.GetLayer());
-            Debug.DrawRay(enemy.GetPosition(), raycastDir, Color.red);
-            if (Vector3.Distance(enemy.GetPosition(), hit.point) < enemy.Attributes.ATTACK_RANGE)
+            if (hit.distance < enemy.Attributes.ATTACK_RANGE)
             {
                 ToAttackState();
             }
@@ -86,7 +85,8 @@ namespace RENEGADES.Gameplay.AI
 
         private void MoveTowards(Vector3 pos)
         {
-            enemy.transform.position = Vector3.MoveTowards(enemy.GetPosition(), pos, speed*Time.smoothDeltaTime);
+            //enemy.transform.position = Vector3.MoveTowards(enemy.GetPosition(), pos, speed*Time.smoothDeltaTime);
+            enemy.transform.position += -enemy.transform.up* Time.smoothDeltaTime * speed;
         }
     }
 }
