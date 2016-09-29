@@ -30,6 +30,11 @@ namespace RENEGADES.Gameplay.AI
             ObjectToChase = FindClosest.Find<Damageable>(enemy.transform);
         }
 
+        public void SetUp()
+        {
+            enemy._EnemyAnimator.SetAnimState(Constants.AnimationTriggers.EnemyAnimation.Walk);
+        }
+
         public void UpdateState()
         {  
             if (enemy.Attributes.HEALTH <= 0) ToDeadState();
@@ -44,8 +49,9 @@ namespace RENEGADES.Gameplay.AI
 
         public void ToAttackState()
         {
-            enemy._EnemyAnimator.SetAnimState(Constants.AnimationTriggers.EnemyAnimation.Attack);
+            
             enemy.CurrentState = enemy._AttackingState;
+            enemy.CurrentState.SetUp();
         }
 
         public void ToDeadState()

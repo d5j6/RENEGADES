@@ -15,6 +15,11 @@ namespace RENEGADES.Gameplay.AI
             this.enemy = enemy;
         }
 
+        public void SetUp()
+        {
+
+        }
+
         public void UpdateState()
         {
             if (isDead) return;

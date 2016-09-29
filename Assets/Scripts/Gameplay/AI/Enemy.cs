@@ -63,6 +63,7 @@ namespace RENEGADES.Gameplay.AI
             walkingState = new WalkingState(this);
             deadState = new DeadState(this);
             currentState = walkingState;
+            currentState.SetUp();
         }
 
         /// <summary>

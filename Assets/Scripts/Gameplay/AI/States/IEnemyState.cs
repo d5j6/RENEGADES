@@ -11,5 +11,7 @@
 
         void ToDeadState();
 
+        void SetUp();
+
     }
 }
