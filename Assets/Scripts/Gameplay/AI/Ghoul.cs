@@ -6,13 +6,14 @@ using UnityEngine;
 
 namespace RENEGADES.Gameplay.AI
 {
-    public class Ghoul : Enemy
+    public class Ghoul : MonsterAI
     {
         //set custom speed for ghoul
         private const float GHOUL_SPEED = 1;
         private const int GHOUL_HEALTH = 10;
         private const float GHOUL_ATTACKRANGE = 0.3f;
-        private const float GHOUL_ATTACKSPEED = 0.75f;
+        private const float GHOUL_ATTACKSPEED = 0.5f;
+        private const float GHOUL_DAMAGE = 10.0f;
 
         public override void SetSpeed(float s)
         {
@@ -34,10 +35,9 @@ namespace RENEGADES.Gameplay.AI
             base.SetAttackSpeed(GHOUL_ATTACKSPEED);
         }
 
-        //in case we want anything extra to happen on collision for ghouls
-        public override void OnTriggerEnter2D(Collider2D other)
+        public override void SetDamage(float d)
         {
-            base.OnTriggerEnter2D(other);
+            base.SetDamage(GHOUL_DAMAGE);
         }
 
         public override void RemoveFromBattleField()

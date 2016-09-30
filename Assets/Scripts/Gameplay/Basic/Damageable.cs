@@ -18,16 +18,32 @@ namespace RENEGADES.Gameplay.Basic
 
         private void Awake()
         {
-            Init();
             SetHealth(0);
-            SetLayer();
+            SetLayer(0); 
+            Init();
+        }
+
+        private void Update()
+        {
+            OnUpdate();
         }
 
         public virtual void Init() {  }
 
-        public virtual void SetLayer()
+        public virtual void OnUpdate() { }
+
+        /// <summary>
+        /// Collision Detection
+        /// </summary>
+        /// <param name="other"></param>
+        public virtual void OnTriggerEnter2D(Collider2D other)
         {
-            gameObject.layer = 10; //Damageable layer
+           
+        }
+
+        public virtual void SetLayer(int layer)
+        {
+            gameObject.layer = layer; //Damageable layer
         }
 
         public int GetLayer()
@@ -48,6 +64,17 @@ namespace RENEGADES.Gameplay.Basic
         public Bounds GetBounds()
         {
             return Sprite.bounds;
+        }
+
+        public void UpdateHealth(float h)
+        {
+            HEALTH += h;
+            if (HEALTH <= 0) Destroyed();
+        }
+
+        public virtual void Destroyed()
+        {
+
         }
     }
 }

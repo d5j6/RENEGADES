@@ -1,7 +1,6 @@
 ﻿//App
 using RENEGADES.Gameplay.Basic;
 using RENEGADES.Common;
-using RENEGADES.Gameplay.Players;
 
 //Unity
 using UnityEngine;
@@ -12,7 +11,7 @@ namespace RENEGADES.Gameplay.AI
     public class WalkingState : IEnemyState
     {
 
-        private readonly Enemy enemy;
+        private readonly MonsterAI monster;
 
         //Every 0.5f seconds the enemy will quickly determine what they want to go after
         //This is used to save performance on searching for hot spots
@@ -21,23 +20,23 @@ namespace RENEGADES.Gameplay.AI
 
         private float speed;
 
-        private Damageable ObjectToChase;
+        private Friendly ObjectToChase;
 
-        public WalkingState(Enemy enemy)
+        public WalkingState(MonsterAI enemy)
         {
-            this.enemy = enemy;
-            speed = enemy.Attributes.SPEED;
-            ObjectToChase = FindClosest.Find<Damageable>(enemy.transform);
+            monster = enemy;
+            speed = enemy._Attributes.SPEED;
+            ObjectToChase = FindClosest.Find<Friendly>(monster.transform);
         }
 
         public void SetUp()
         {
-            enemy._EnemyAnimator.SetAnimState(Constants.AnimationTriggers.EnemyAnimation.Walk);
+            monster._EnemyAnimator.SetAnimState(Constants.AnimationTriggers.EnemyAnimation.Walk);
         }
 
         public void UpdateState()
         {  
-            if (enemy.Attributes.HEALTH <= 0) ToDeadState();
+            if (monster.HEALTH <= 0) ToDeadState();
             Movement();
             CheckProximity();
         }
@@ -50,20 +49,20 @@ namespace RENEGADES.Gameplay.AI
         public void ToAttackState()
         {
             
-            enemy.CurrentState = enemy._AttackingState;
-            enemy.CurrentState.SetUp();
+            monster.CurrentState = monster._AttackingState;
+            monster.CurrentState.SetUp();
         }
 
         public void ToDeadState()
         {
-            enemy.CurrentState = enemy._DeadState;
+            monster.CurrentState = monster._DeadState;
         }
 
         private void CheckProximity()
         {
-            Vector3 raycastDir = (ObjectToChase.GetPosition()) - enemy.GetPosition();
-            RaycastHit2D hit = Physics2D.Raycast(enemy.GetPosition(), raycastDir, Mathf.Infinity, ObjectToChase.GetLayer());
-            if (hit.distance < enemy.Attributes.ATTACK_RANGE)
+            Vector3 raycastDir = (ObjectToChase.GetPosition()) - monster.GetPosition();
+            RaycastHit2D hit = Physics2D.Raycast(monster.GetPosition(), raycastDir, Mathf.Infinity, ObjectToChase.GetLayer());
+            if (hit.distance < monster._Attributes.ATTACK_RANGE)
             {
                 ToAttackState();
             }
@@ -75,7 +74,7 @@ namespace RENEGADES.Gameplay.AI
             if(FindPlayerTimer > WANDER)
             {
                 FindPlayerTimer = 0;
-                ObjectToChase = FindClosest.Find<Damageable>(enemy.transform);
+                ObjectToChase = FindClosest.Find<Friendly>(monster.transform);
             }   
             TurnTowards(ObjectToChase.GetPosition());
             MoveTowards(ObjectToChase.GetPosition());
@@ -83,16 +82,15 @@ namespace RENEGADES.Gameplay.AI
 
         private void TurnTowards(Vector3 playerPosition)
         {
-            Vector3 moveDirection = enemy.GetPosition() - playerPosition;
+            Vector3 moveDirection = monster.GetPosition() - playerPosition;
             float viewAngle = Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg - 90;
-            enemy.SetRotation(Quaternion.AngleAxis(viewAngle, Vector3.forward));
+            monster.SetRotation(Quaternion.AngleAxis(viewAngle, Vector3.forward));
 
         }
 
         private void MoveTowards(Vector3 pos)
         {
-            //enemy.transform.position = Vector3.MoveTowards(enemy.GetPosition(), pos, speed*Time.smoothDeltaTime);
-            enemy.transform.position += -enemy.transform.up* Time.smoothDeltaTime * speed;
+            monster.transform.position += -monster.transform.up* Time.smoothDeltaTime * speed;
         }
     }
 }

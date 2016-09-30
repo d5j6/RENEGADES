@@ -2,6 +2,7 @@
 using RENEGADES.UI.Gameplay;
 using RENEGADES.Managers;
 using RENEGADES.Common;
+using RENEGADES.Gameplay.Basic;
 
 //Unity
 using UnityEngine;
@@ -9,7 +10,7 @@ using UnityEngine;
 namespace RENEGADES.Gameplay.AI
 {
 
-    public class Enemy : MonoBehaviour
+    public class MonsterAI : Enemy
     {
         private IEnemyState currentState;
         public IEnemyState CurrentState
@@ -51,14 +52,20 @@ namespace RENEGADES.Gameplay.AI
             get { return enemyHealth ?? (enemyHealth = GetComponentInChildren<EnemyHealth>()); }
         }
 
-        public Attributes Attributes;
+        public Attributes _Attributes;
 
         /// <summary>
-        /// Called on start
+        /// Initialize
         /// </summary>
-        private void Awake()
+        public override void Init()
         {
-            Init();
+            _Attributes = new Attributes();
+            SetSpeed(0);
+            SetAttackRange(0);
+            SetAttackSpeed(0);
+            SetDamage(0);
+            EnemyHealthUI.SetHealth(HEALTH);
+
             attackingState = new AttackingState(this);
             walkingState = new WalkingState(this);
             deadState = new DeadState(this);
@@ -67,32 +74,11 @@ namespace RENEGADES.Gameplay.AI
         }
 
         /// <summary>
-        /// Initialize
-        /// </summary>
-        private void Init()
-        {
-            Attributes = new Attributes();
-            SetHealth(0);
-            SetSpeed(0);
-            SetAttackRange(0);
-            SetAttackSpeed(0);
-        }
-
-        /// <summary>
         /// Called every frame
         /// </summary>
-        private void Update()
+        public override void OnUpdate()
         {
             currentState.UpdateState();
-        }
-
-        /// <summary>
-        /// Get enemy position
-        /// </summary>
-        /// <returns></returns>
-        public Vector3 GetPosition()
-        {
-            return transform.position;
         }
 
         /// <summary>
@@ -113,56 +99,48 @@ namespace RENEGADES.Gameplay.AI
         }
 
         /// <summary>
-        /// Init Set health
-        /// </summary>
-        /// <param name="h"></param>
-        public virtual void SetHealth(float h)
-        {
-            Attributes.HEALTH = h;
-            EnemyHealthUI.SetHealth(Attributes.HEALTH);
-        }
-
-        /// <summary>
         /// Set speed in child
         /// </summary>
         /// <param name="s"></param>
         public virtual void SetSpeed(float s)
         {
-            Attributes.SPEED = s;
+            _Attributes.SPEED = s;
         }
 
         public virtual void SetAttackSpeed(float s)
         {
-            Attributes.ATTACK_SPEED = s;
+            _Attributes.ATTACK_SPEED = s;
         }
 
         public virtual void SetAttackRange(float r)
         {
-            Attributes.ATTACK_RANGE = r;
+            _Attributes.ATTACK_RANGE = r;
         }
 
-        /// <summary>
-        /// Update our health
-        /// </summary>
-        /// <param name="value"></param>
-        public void UpdateHealth(float value)
+        public virtual void SetDamage(float d)
         {
-            Attributes.HEALTH += value;
-            EnemyHealthUI.UpdateHealth(Attributes.HEALTH);
+            _Attributes.DAMAGE = d;
         }
 
         /// <summary>
         /// Collision Detection
         /// </summary>
         /// <param name="other"></param>
-        public virtual void OnTriggerEnter2D(Collider2D other)
+        public override void OnTriggerEnter2D(Collider2D other)
         {
+            base.OnTriggerEnter2D(other);
             if (other.gameObject.tag == "RangedElement")
             {
-                //spawn blood splatter
-                GameManager.Instance.EffectSpawner.Spawn(Controllers.Effects.EffectType.BloodSplat, other.transform.position);
-                UpdateHealth(-5);
+                Hurt(other.transform.position);
             }
+        }
+
+        private void Hurt(Vector3 hitPosition)
+        {
+            //spawn blood splatter
+            GameManager.Instance.EffectSpawner.Spawn(Controllers.Effects.EffectType.BloodSplat, hitPosition);
+            UpdateHealth(-5);
+            EnemyHealthUI.UpdateHealth(HEALTH);
         }
 
         /// <summary>
@@ -175,7 +153,7 @@ namespace RENEGADES.Gameplay.AI
 
         private void OnDestroy()
         {
-            Attributes = null;
+            _Attributes = null;
         }
     }
 }

@@ -8,10 +8,10 @@ namespace RENEGADES.Gameplay.AI
     [System.Serializable]
     public class Attributes
     {
-        public float HEALTH;
         public float SPEED;
         public float ATTACK_RANGE;
         public float ATTACK_SPEED;
+        public float DAMAGE;
 
     }
 }

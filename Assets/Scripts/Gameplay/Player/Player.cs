@@ -9,7 +9,7 @@ using UnityEngine;
 
 namespace RENEGADES.Gameplay.Players
 {
-    public class Player : Damageable
+    public class Player : Friendly
     {
         private PlayerAnimator animator;
         private PlayerAnimator PlayerAnim
@@ -81,6 +81,13 @@ namespace RENEGADES.Gameplay.Players
                 if (Input.GetKey(KeyCode.Space)) RangedAttack.FIRE(this);
             }
 
+        }
+
+        public override void Destroyed()
+        {
+            base.Destroyed();
+            GameManager.Instance.EffectSpawner.Spawn(Controllers.Effects.EffectType.BloodExplosion, transform.position);
+            Destroy(gameObject);
         }
     }
 }

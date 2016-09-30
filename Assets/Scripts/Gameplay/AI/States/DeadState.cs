@@ -6,11 +6,11 @@ namespace RENEGADES.Gameplay.AI
     public class DeadState : IEnemyState
     {
 
-        private readonly Enemy enemy;
+        private readonly MonsterAI enemy;
 
         private bool isDead = false;
 
-        public DeadState(Enemy enemy)
+        public DeadState(MonsterAI enemy)
         {
             this.enemy = enemy;
         }
