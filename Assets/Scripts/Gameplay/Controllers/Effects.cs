@@ -14,7 +14,8 @@ namespace RENEGADES.Gameplay.Controllers
         public enum EffectType
         {
             BloodSplat,
-            BloodExplosion
+            BloodExplosion,
+            FireExplosion
         }
 
         [System.Serializable]

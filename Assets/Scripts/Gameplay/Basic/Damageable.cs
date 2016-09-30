@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace RENEGADES.Gameplay.Basic
 {
-    //Basic element that can be damaged by enemies (players and bases)
+    //Basic ACTOR element that can be damaged  (players,bases,AI)
     public class Damageable : MonoBehaviour
     {
 

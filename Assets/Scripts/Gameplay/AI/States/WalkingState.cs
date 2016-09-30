@@ -26,7 +26,6 @@ namespace RENEGADES.Gameplay.AI
         {
             monster = enemy;
             speed = enemy._Attributes.SPEED;
-            ObjectToChase = FindClosest.Find<Friendly>(monster.transform);
         }
 
         public void SetUp()
@@ -60,6 +59,8 @@ namespace RENEGADES.Gameplay.AI
 
         private void CheckProximity()
         {
+
+            if (ObjectToChase == null) FindObjectToChase();
             Vector3 raycastDir = (ObjectToChase.GetPosition()) - monster.GetPosition();
             RaycastHit2D hit = Physics2D.Raycast(monster.GetPosition(), raycastDir, Mathf.Infinity, ObjectToChase.GetLayer());
             if (hit.distance < monster._Attributes.ATTACK_RANGE)
@@ -70,11 +71,13 @@ namespace RENEGADES.Gameplay.AI
 
         private void Movement()
         {
+
+            if (ObjectToChase == null) FindObjectToChase();
             FindPlayerTimer += Time.deltaTime;
             if(FindPlayerTimer > WANDER)
             {
                 FindPlayerTimer = 0;
-                ObjectToChase = FindClosest.Find<Friendly>(monster.transform);
+                FindObjectToChase();
             }   
             TurnTowards(ObjectToChase.GetPosition());
             MoveTowards(ObjectToChase.GetPosition());
@@ -82,6 +85,8 @@ namespace RENEGADES.Gameplay.AI
 
         private void TurnTowards(Vector3 playerPosition)
         {
+
+            if (ObjectToChase == null) FindObjectToChase();
             Vector3 moveDirection = monster.GetPosition() - playerPosition;
             float viewAngle = Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg - 90;
             monster.SetRotation(Quaternion.AngleAxis(viewAngle, Vector3.forward));
@@ -91,6 +96,14 @@ namespace RENEGADES.Gameplay.AI
         private void MoveTowards(Vector3 pos)
         {
             monster.transform.position += -monster.transform.up* Time.smoothDeltaTime * speed;
+        }
+
+        /// <summary>
+        /// Find something for this bastard to go after
+        /// </summary>
+        private void FindObjectToChase()
+        {
+            ObjectToChase = FindClosest.Find<Friendly>(monster.transform);
         }
     }
 }
