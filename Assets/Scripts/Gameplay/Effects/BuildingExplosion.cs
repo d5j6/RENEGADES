@@ -7,7 +7,7 @@ namespace RENEGADES.Gameplay.Effects
     {
 
         //explode
-        private const float LIFETIME = 2f;
+        private const float LIFETIME = 3f;
         private float timer;
         private float fadeOutTimer = 1;
 

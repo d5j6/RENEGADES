@@ -18,6 +18,7 @@ namespace RENEGADES.Gameplay.Props
         {
             base.Destroyed();
             GameManager.Instance.EffectSpawner.Spawn(Controllers.Effects.EffectType.FireExplosion, transform.position);
+            GameManager.Instance.AudioManager.PlaySound(Audio.Sounds.Sound.Explosion);
             Destroy(gameObject);
 
         }
