@@ -29,7 +29,6 @@ namespace RENEGADES.Gameplay.AI
 
         public void SetUp()
         {
-            Debug.Log("ATTACKING");
             attackTimer = 0;
             monster._EnemyAnimator.SetAnimState(Constants.AnimationTriggers.EnemyAnimation.Attack);
         }

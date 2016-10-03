@@ -85,8 +85,6 @@ namespace RENEGADES.Gameplay.AI
 
         private void TurnTowards(Vector3 playerPosition)
         {
-
-            if (ObjectToChase == null) FindObjectToChase();
             Vector3 moveDirection = monster.GetPosition() - playerPosition;
             float viewAngle = Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg - 90;
             monster.SetRotation(Quaternion.AngleAxis(viewAngle, Vector3.forward));
