@@ -15,6 +15,12 @@ namespace RENEGADES.Gameplay.Controllers
             get { return world ?? (world = FindObjectOfType<Background.WORLD>().transform); }
         }
 
+        private Transform hud;
+        private Transform HUD
+        {
+            get { return hud ?? (hud = FindObjectOfType<Canvas>().transform); }
+        }
+
         private void Awake()
         {
             Init();
@@ -44,6 +50,17 @@ namespace RENEGADES.Gameplay.Controllers
         {
             T g = Instantiate(obj, Vector3.zero, Quaternion.identity, WORLD) as T;
             return g;
+        }
+
+        /// <summary>
+        /// Spawn UI no return
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="obj"></param>
+        /// <param name="pos"></param>
+        public virtual void SpawnUI<T>(T obj) where T : Component
+        {
+            T g = Instantiate(obj, HUD) as T;
         }
 
     }

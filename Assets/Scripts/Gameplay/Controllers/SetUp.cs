@@ -37,16 +37,21 @@ namespace RENEGADES.Gameplay.Controllers
             //spawns a default player
             if (Players.Count == 0)
             {
-                Players.Add(Spawn(playerPrefab));
+                CreatePlayer();
             }
             //spawns the rest of the players based on if there are more than one controller
             if(GameManager.Instance._ControllerManager.GetControllerCount() > 1)
             {
                 for(int i=1; i < GameManager.Instance._ControllerManager.GetControllerCount(); i++)
                 {
-                    Players.Add(Spawn(playerPrefab));
+                    CreatePlayer();
                 }
             }
+        }
+
+        private void CreatePlayer()
+        {
+            Players.Add(Spawn(playerPrefab));
         }
 
 

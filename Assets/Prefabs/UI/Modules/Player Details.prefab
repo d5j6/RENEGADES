@@ -366,6 +366,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7199dc9d29a9882459e43420e37e8aa8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  highHealth:
+    serializedVersion: 2
+    rgba: 4279041792
+  averageHealth:
+    serializedVersion: 2
+    rgba: 4278253823
+  lowHealth:
+    serializedVersion: 2
+    rgba: 4278190335
 --- !u!114 &114000011081282656
 MonoBehaviour:
   m_ObjectHideFlags: 1

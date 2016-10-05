@@ -3,6 +3,7 @@ using RENEGADES.Common;
 using RENEGADES.Audio;
 using RENEGADES.Gameplay.PlayerInput;
 using RENEGADES.Gameplay.Controllers;
+using RENEGADES.UI.Managers;
 
 //Unity
 
@@ -35,6 +36,13 @@ namespace RENEGADES.Managers
         {
             get { return effectSpawner ?? (effectSpawner = FindObjectOfType<Effects>()); }
         }
+
+        private WidgetCreator uiSpawner;
+        public WidgetCreator UISpawner
+        {
+            get { return uiSpawner ?? (uiSpawner = FindObjectOfType<WidgetCreator>()); }
+        }
+
 
         private void Awake()
         {

@@ -36,22 +36,22 @@ namespace RENEGADES.Gameplay.Players
             get { return currentTrigger; }
         }
 
-        public HealthSlider healthUI;
-        public HealthSlider HealthUI
+        private PlayerModule playerHUD;
+        private PlayerModule PlayerHUD
         {
-            set { healthUI = value; }
+            get { return playerHUD; } set { playerHUD = value; }
         }
 
         public override void SetHealth(float h)
         {
             base.SetHealth(100);
-            healthUI.SetMaxValue(100);
+            //healthUI.SetMaxValue(100);
         }
 
         public override void Hurt(float health)
         {
             base.Hurt(health);
-            healthUI.UpdateHealth(HEALTH);
+           // healthUI.UpdateHealth(HEALTH);
         }
 
         //player main game loop
