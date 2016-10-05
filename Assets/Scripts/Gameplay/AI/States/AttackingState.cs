@@ -88,7 +88,7 @@ namespace RENEGADES.Gameplay.AI
             attackTimer += Time.deltaTime;
             if(attackTimer > monster._Attributes.ATTACK_SPEED)
             {
-                ObjectToChase.UpdateHealth(-monster._Attributes.DAMAGE);
+                ObjectToChase.Hurt(-monster._Attributes.DAMAGE);
                 attackTimer = 0; //reset attack
             }
         }

@@ -46,10 +46,10 @@ namespace RENEGADES.Gameplay.AI
             get { return animator ?? (animator = GenComponent.ComponentCheck<EnemyAnimator>(gameObject)); }
         }
 
-        private EnemyHealth enemyHealth;
-        private EnemyHealth EnemyHealthUI
+        private HealthSlider enemyHealth;
+        private HealthSlider EnemyHealthUI
         {
-            get { return enemyHealth ?? (enemyHealth = GetComponentInChildren<EnemyHealth>()); }
+            get { return enemyHealth ?? (enemyHealth = GetComponentInChildren<HealthSlider>()); }
         }
 
         public Attributes _Attributes;

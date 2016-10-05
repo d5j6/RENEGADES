@@ -101,6 +101,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 224: {fileID: 224000012492513024}
+  - 114: {fileID: 114000011008161724}
   - 114: {fileID: 114000011081282656}
   m_Layer: 5
   m_Name: Health
@@ -354,6 +355,17 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114000011008161724
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011400943722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7199dc9d29a9882459e43420e37e8aa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000011081282656
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -850,7 +862,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 29.04596, y: 0}
+  m_AnchoredPosition: {x: 30.88, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!224 &224000010617382184
@@ -1020,7 +1032,7 @@ RectTransform:
   m_RootOrder: 3
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -70.99, y: 91.35}
+  m_AnchoredPosition: {x: -70.8, y: 88.2}
   m_SizeDelta: {x: 47.8, y: 33.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224000013124726646

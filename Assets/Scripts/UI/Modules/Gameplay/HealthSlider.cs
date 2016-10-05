@@ -6,11 +6,18 @@ using UnityEngine;
 
 namespace RENEGADES.UI.Gameplay
 {
-    public class EnemyHealth : GenericSlider
+    public class HealthSlider : GenericSlider
     {
-        private Color32 green = new Color32(0, 255, 12, 255);
-        private Color32 red = new Color32(255, 0, 0, 255);
-        private Color32 yellow = new Color32(255, 248, 0, 255);
+        [Header("Colors for Health Amount")]
+        public Color32 highHealth = new Color32(0, 255, 12, 255);
+        public Color32 averageHealth = new Color32(255, 248, 0, 255);
+        public Color32 lowHealth = new Color32(255, 0, 0, 255);
+
+        public override void Init()
+        {
+            base.Init();
+            UpdateColor(highHealth);
+        }
 
         public void SetHealth(float m)
         {
@@ -28,15 +35,15 @@ namespace RENEGADES.UI.Gameplay
             float percentage = health / GetMaxValue();
             if(percentage < 1 && percentage >= 0.75)
             {
-                return green;
+                return highHealth;
             }
             else if(percentage < 0.75 && percentage >= 0.4f)
             {
-                return yellow;
+                return averageHealth;
             }
             else
             {
-                return red;
+                return lowHealth;
             }
         }
 

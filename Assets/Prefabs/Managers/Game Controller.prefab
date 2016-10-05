@@ -19,6 +19,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000010795775042}
+  - 114: {fileID: 114000014281973800}
   - 114: {fileID: 114000011253065918}
   m_Layer: 0
   m_Name: Game Controller
@@ -56,3 +57,16 @@ MonoBehaviour:
     effect: {fileID: 114000010179768536, guid: ca9b7daf5926f324b988ca885ce80b61, type: 2}
   - type: 1
     effect: {fileID: 114000010008737904, guid: 28ece7588de1ec34491afb6fdfba22d4, type: 2}
+  - type: 2
+    effect: {fileID: 114000014249366320, guid: 695d2276c1112954baccf84e29091ffb, type: 2}
+--- !u!114 &114000014281973800
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014008792774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 580be322e46af9b4b905361965e7e2e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

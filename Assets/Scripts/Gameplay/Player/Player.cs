@@ -1,4 +1,5 @@
 ﻿//App
+using RENEGADES.UI.Gameplay;
 using RENEGADES.Gameplay.Basic;
 using RENEGADES.Gameplay.Weapons;
 using RENEGADES.Constants;
@@ -35,9 +36,22 @@ namespace RENEGADES.Gameplay.Players
             get { return currentTrigger; }
         }
 
+        public HealthSlider healthUI;
+        public HealthSlider HealthUI
+        {
+            set { healthUI = value; }
+        }
+
         public override void SetHealth(float h)
         {
             base.SetHealth(100);
+            healthUI.SetMaxValue(100);
+        }
+
+        public override void Hurt(float health)
+        {
+            base.Hurt(health);
+            healthUI.UpdateHealth(HEALTH);
         }
 
         //player main game loop

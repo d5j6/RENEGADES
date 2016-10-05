@@ -51,6 +51,10 @@ namespace RENEGADES.Gameplay.Basic
             return (1 << gameObject.layer);
         }
 
+        /// <summary>
+        /// Set starting health
+        /// </summary>
+        /// <param name="h"></param>
         public virtual void SetHealth(float h)
         {
             HEALTH = h;
@@ -70,6 +74,11 @@ namespace RENEGADES.Gameplay.Basic
         {
             HEALTH += h;
             if (HEALTH <= 0) Destroyed();
+        }
+
+        public virtual void Hurt(float h)
+        {
+            UpdateHealth(h);
         }
 
         public virtual void Destroyed()
