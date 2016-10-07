@@ -1,15 +1,34 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿//App
+using RENEGADES.Gameplay.AI;
 
-public class EnemyGenerator : MonoBehaviour {
+//C#
+using System.Collections.Generic;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+//Unity
+using UnityEngine;
+
+namespace RENEGADES.Gameplay.Controllers
+{
+    public class EnemyGenerator : Spawner
+    {
+        public enum EnemyType { Ghoul}
+
+        [System.Serializable]
+        public struct EnemyBlueprint
+        {
+            public EnemyType type;
+            public MonsterAI monster;
+        }
+
+        public List<EnemyBlueprint> Enemies;
+
+        public override void Init(){ }
+
+        public void CreateMonster(EnemyType type,Vector3 pos)
+        {
+            int index = Enemies.FindIndex(x => x.type == type);
+            Spawn(Enemies[index].monster, pos);
+        }
+
+    }
 }

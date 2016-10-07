@@ -3,7 +3,6 @@ using RENEGADES.Managers;
 
 //Unity
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 namespace RENEGADES.UI.Managers
 {

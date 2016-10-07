@@ -31,10 +31,10 @@ namespace RENEGADES.UI.Managers
 
         public override void Init(){ }
 
-        public void CreateWidget(WidgetToSpawn type)
+        public UIWidget CreateWidget(WidgetToSpawn type)
         {
             int index = WIDGETS.FindIndex(x => x.type == type);
-            SpawnUI(WIDGETS[index].widget);
+            return SpawnUI(WIDGETS[index].widget);
         }
 
     }

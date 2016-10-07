@@ -15,7 +15,9 @@ namespace RENEGADES.Gameplay.Controllers
         {
             BloodSplat,
             BloodExplosion,
-            FireExplosion
+            FireExplosion,
+            Spawn,
+            EnemySpawn
         }
 
         [System.Serializable]
@@ -35,12 +37,7 @@ namespace RENEGADES.Gameplay.Controllers
             
         }
 
-        public override void Spawn<T>(T obj, Vector3 pos)
-        {
-            base.Spawn<T>(obj, pos);
-        }
-
-        public void Spawn(EffectType t,Vector3 pos)
+        public void CreateEffect(EffectType t,Vector3 pos)
         {
             int index = EffectsToSpawn.FindIndex(x => x.type == t);
             Spawn(EffectsToSpawn[index].effect, pos);

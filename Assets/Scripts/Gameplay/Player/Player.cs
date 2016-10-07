@@ -37,7 +37,7 @@ namespace RENEGADES.Gameplay.Players
         }
 
         private PlayerModule playerHUD;
-        private PlayerModule PlayerHUD
+        public PlayerModule PlayerHUD
         {
             get { return playerHUD; } set { playerHUD = value; }
         }
@@ -45,13 +45,13 @@ namespace RENEGADES.Gameplay.Players
         public override void SetHealth(float h)
         {
             base.SetHealth(100);
-            //healthUI.SetMaxValue(100);
+            if(playerHUD != null) PlayerHUD.SetMaxHealth(100);
         }
 
         public override void Hurt(float health)
         {
             base.Hurt(health);
-           // healthUI.UpdateHealth(HEALTH);
+            if (playerHUD != null) PlayerHUD.UpdateHealth(HEALTH);
         }
 
         //player main game loop
@@ -100,7 +100,7 @@ namespace RENEGADES.Gameplay.Players
         public override void Destroyed()
         {
             base.Destroyed();
-            GameManager.Instance.EffectSpawner.Spawn(Controllers.Effects.EffectType.BloodExplosion, transform.position);
+            GameManager.Instance.EffectSpawner.CreateEffect(Controllers.Effects.EffectType.BloodExplosion, transform.position);
             Destroy(gameObject);
         }
     }

@@ -31,6 +31,12 @@ namespace RENEGADES.Managers
             get { return audioManager ?? (audioManager = FindObjectOfType<BaseSoundController>()); }
         }
 
+        private EnemyGenerator monsterSpawner;
+        public EnemyGenerator MonsterSpawner
+        {
+            get { return monsterSpawner ?? (monsterSpawner = FindObjectOfType<EnemyGenerator>()); }
+        }
+
         private Effects effectSpawner;
         public Effects EffectSpawner
         {

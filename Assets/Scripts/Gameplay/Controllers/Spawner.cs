@@ -1,5 +1,6 @@
 ﻿//Unity
 using UnityEngine;
+using RENEGADES.UI.Managers;
 
 //C#
 
@@ -18,7 +19,7 @@ namespace RENEGADES.Gameplay.Controllers
         private Transform hud;
         private Transform HUD
         {
-            get { return hud ?? (hud = FindObjectOfType<Canvas>().transform); }
+            get { return hud ?? (hud = FindObjectOfType<MainCanvas>().transform); }
         }
 
         private void Awake()
@@ -58,9 +59,11 @@ namespace RENEGADES.Gameplay.Controllers
         /// <typeparam name="T"></typeparam>
         /// <param name="obj"></param>
         /// <param name="pos"></param>
-        public virtual void SpawnUI<T>(T obj) where T : Component
+        public virtual T SpawnUI<T>(T obj) where T : Component
         {
-            T g = Instantiate(obj, HUD) as T;
+            Debug.Log(HUD.name);
+            T ui = Instantiate(obj, HUD,false) as T;
+            return ui;
         }
 
     }

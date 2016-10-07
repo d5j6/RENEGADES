@@ -1,5 +1,6 @@
 ﻿//App
 using RENEGADES.Gameplay.Players;
+using RENEGADES.UI.Gameplay;
 using RENEGADES.Managers;
 
 //Unity
@@ -31,7 +32,6 @@ namespace RENEGADES.Gameplay.Controllers
             SetUpPlayers();
         }
 
-
         private void SetUpPlayers()
         {
             //spawns a default player
@@ -51,7 +51,12 @@ namespace RENEGADES.Gameplay.Controllers
 
         private void CreatePlayer()
         {
-            Players.Add(Spawn(playerPrefab));
+            Player newPlayer = Spawn(playerPrefab);
+            Players.Add(newPlayer);
+            GameManager.Instance.EffectSpawner.CreateEffect(Effects.EffectType.Spawn, newPlayer.GetPosition());
+            PlayerModule hud = GameManager.Instance.UISpawner.CreateWidget(UI.Managers.WidgetCreator.WidgetToSpawn.PlayerModule) as PlayerModule;
+            newPlayer.PlayerHUD = hud;
+
         }
 
 

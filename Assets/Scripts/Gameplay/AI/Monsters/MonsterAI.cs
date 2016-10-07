@@ -138,7 +138,7 @@ namespace RENEGADES.Gameplay.AI
         private void Hurt(Vector3 hitPosition)
         {
             //spawn blood splatter
-            GameManager.Instance.EffectSpawner.Spawn(Controllers.Effects.EffectType.BloodSplat, hitPosition);
+            GameManager.Instance.EffectSpawner.CreateEffect(Controllers.Effects.EffectType.BloodSplat, hitPosition);
             UpdateHealth(-5);
             EnemyHealthUI.UpdateHealth(HEALTH);
         }
