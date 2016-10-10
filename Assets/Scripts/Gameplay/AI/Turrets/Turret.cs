@@ -3,6 +3,7 @@ using RENEGADES.Common.Gameplay;
 using RENEGADES.Gameplay.Basic;
 using RENEGADES.Managers;
 using RENEGADES.UI.Gameplay;
+using RENEGADES.Common;
 
 //UNity
 using UnityEngine;
@@ -22,6 +23,12 @@ namespace RENEGADES.Gameplay.AI
         private HealthSlider HealthUI
         {
             get { return healthUI ?? (healthUI = GetComponentInChildren<HealthSlider>()); }
+        }
+
+        private Launcher launcher;
+        private Launcher _Launcher
+        {
+            get { return launcher ?? (launcher = GenComponent.ComponentCheck<Launcher>(gameObject)); }
         }
 
         private float reDirectTimer;
@@ -77,6 +84,7 @@ namespace RENEGADES.Gameplay.AI
         private void Fire()
         {
             cooldownTimer = Blueprint.fireRate; //recharge
+            _Launcher.FIRE(Blueprint);
         }
 
         public override void Hurt(float h)

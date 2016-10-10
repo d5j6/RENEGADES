@@ -4,6 +4,9 @@ using UnityEngine;
 //C#
 using System.Collections.Generic;
 
+//App
+using RENEGADES.Gameplay.Weapons;
+
 namespace RENEGADES.Gameplay.AI
 {
     [CreateAssetMenu]
@@ -26,6 +29,9 @@ namespace RENEGADES.Gameplay.AI
             public float health;
             public float range;
             public float turnSpeed;
+            public Projectile projectilePrefab;
+            public float projectileSpeed;
+            public float projectileDamage;
         }
 
         public List<TurretBlueprint> TurretTypes;
