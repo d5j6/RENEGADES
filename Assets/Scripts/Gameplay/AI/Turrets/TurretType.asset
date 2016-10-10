@@ -11,4 +11,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d984f4c5975ddf949b380c0f6fabd290, type: 3}
   m_Name: TurretType
   m_EditorClassIdentifier: 
-  TurretTypes: []
+  TurretTypes:
+  - name: Basic
+    key: 0
+    sprite: {fileID: 21300000, guid: 36349a868b016ea40a344b4ef937e2f8, type: 3}
+    fireRate: 1
+    health: 100
+    range: 25
+    turnSpeed: 4

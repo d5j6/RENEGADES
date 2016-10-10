@@ -1,7 +1,8 @@
 ﻿//App
 using RENEGADES.Common.Gameplay;
 using RENEGADES.Gameplay.Basic;
-using RENEGADES.Gameplay.Players;
+using RENEGADES.Managers;
+using RENEGADES.UI.Gameplay;
 
 //UNity
 using UnityEngine;
@@ -15,12 +16,20 @@ namespace RENEGADES.Gameplay.AI
 
         private TurretType.TurretBlueprint Blueprint;
 
-        private Player enemyToLookAt;
+        private Enemy enemyToLookAt;
+
+        private HealthSlider healthUI;
+        private HealthSlider HealthUI
+        {
+            get { return healthUI ?? (healthUI = GetComponentInChildren<HealthSlider>()); }
+        }
 
         private float reDirectTimer;
         private float DIRECT_TIME = 1.0f;
 
         private float turnAngle;
+
+        private float cooldownTimer = 0;
 
         public override void Init()
         {
@@ -32,6 +41,7 @@ namespace RENEGADES.Gameplay.AI
         {
             Blueprint = type.TurretTypes.Find(x => x.key == key);
             SetHealth(Blueprint.health);
+            HealthUI.SetMaxValue(Blueprint.health);
             SetSprite(Blueprint.sprite);
         }
 
@@ -40,23 +50,39 @@ namespace RENEGADES.Gameplay.AI
             base.OnUpdate();
             Search();
             TurnTowards();
+            TargetInSight();
         }
 
         private void TurnTowards()
         {
             if (enemyToLookAt == null) return;
-            Vector3 targetDir = enemyToLookAt.GetPosition() - GetPosition();
-            if (targetDir.x > 0)
-            {
-
-            }
-            else
-            {
-                turnAngle = 
-            }
-
-            float currentAngle = Mathf.Lerp(transform.eulerAngles.z, turnAngle, 5 * Time.deltaTime);
+            float theta = Mathf.Atan2(enemyToLookAt.GetPosition().x - GetPosition().x, enemyToLookAt.GetPosition().y - GetPosition().y);
+            theta = (theta > 0 ? theta : (2 * Mathf.PI + theta)) * Mathf.Rad2Deg - 360;
+            turnAngle = Mathf.Abs(theta);
+            float currentAngle = Mathf.Lerp(transform.eulerAngles.z, turnAngle, Blueprint.turnSpeed * Time.deltaTime);
             transform.eulerAngles = new Vector3(0, 0, currentAngle);
+        }
+
+        private void TargetInSight()
+        {
+            if (cooldownTimer > 0)
+            {
+                cooldownTimer -= Time.deltaTime;
+            }
+            if (enemyToLookAt == null) return;
+            RaycastHit2D InLineOfCannon = Physics2D.Raycast(GetPosition(), transform.up, Mathf.Infinity, enemyToLookAt.GetLayer());
+            if (InLineOfCannon == true & CannonRecharged()) Fire();
+        }
+
+        private void Fire()
+        {
+            cooldownTimer = Blueprint.fireRate; //recharge
+        }
+
+        public override void Hurt(float h)
+        {
+            base.Hurt(h);
+            HealthUI.UpdateHealth(HEALTH);
         }
 
         private void Search()
@@ -71,7 +97,21 @@ namespace RENEGADES.Gameplay.AI
 
         public void FindEnemy()
         {
-            enemyToLookAt = FindClosest.Find<Player>(transform, Blueprint.range);
+            enemyToLookAt = FindClosest.Find<Enemy>(transform, Blueprint.range);
+        }
+
+        private bool CannonRecharged()
+        {
+            return cooldownTimer <= 0;
+        }
+
+        public override void Destroyed()
+        {
+            base.Destroyed();
+            GameManager.Instance.EffectSpawner.CreateEffect(Controllers.Effects.EffectType.FireExplosion, transform.position);
+            GameManager.Instance.AudioManager.PlaySound(Audio.Sounds.Sound.Explosion);
+            Destroy(gameObject);
+
         }
 
     }
