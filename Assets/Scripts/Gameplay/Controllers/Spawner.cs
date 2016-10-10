@@ -61,7 +61,6 @@ namespace RENEGADES.Gameplay.Controllers
         /// <param name="pos"></param>
         public virtual T SpawnUI<T>(T obj) where T : Component
         {
-            Debug.Log(HUD.name);
             T ui = Instantiate(obj, HUD,false) as T;
             return ui;
         }

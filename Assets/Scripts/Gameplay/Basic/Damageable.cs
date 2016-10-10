@@ -16,6 +16,8 @@ namespace RENEGADES.Gameplay.Basic
 
         public float HEALTH;
 
+        private float maxHealth;
+
         private void Awake()
         {
             SetHealth(0);
@@ -58,6 +60,7 @@ namespace RENEGADES.Gameplay.Basic
         public virtual void SetHealth(float h)
         {
             HEALTH = h;
+            maxHealth = HEALTH;
         }
 
         public Vector3 GetPosition()
@@ -81,9 +84,26 @@ namespace RENEGADES.Gameplay.Basic
             UpdateHealth(h);
         }
 
+        public void SetColor(Color col)
+        {
+            Sprite.color = col;
+        }
+
+        public float GetMaxHealth()
+        {
+            return maxHealth;
+        }
+
+        public void SetSprite(Sprite s)
+        {
+            Sprite.sprite = s;
+        }
+
         public virtual void Destroyed()
         {
 
         }
+
+
     }
 }

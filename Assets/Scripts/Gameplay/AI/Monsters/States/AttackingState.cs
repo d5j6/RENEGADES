@@ -1,5 +1,5 @@
 ﻿//App
-using RENEGADES.Common;
+using RENEGADES.Common.Gameplay;
 using RENEGADES.Gameplay.Basic;
 
 //Unity

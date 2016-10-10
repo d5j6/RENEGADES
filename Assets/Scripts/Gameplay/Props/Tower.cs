@@ -1,13 +1,22 @@
 ﻿//Game
 using RENEGADES.Managers;
-
-//Game
 using RENEGADES.Gameplay.Basic;
+
+//Unity
+using UnityEngine;
 
 namespace RENEGADES.Gameplay.Props
 {
     public class Tower : Friendly
     {
+        private float colorCalc;
+
+        public override void OnUpdate()
+        {
+            base.OnUpdate();
+            colorCalc = HEALTH / (GetMaxHealth());
+            SetColor(Color.Lerp(Color.red, Color.white, colorCalc));
+        }
 
         public override void SetHealth(float h)
         {

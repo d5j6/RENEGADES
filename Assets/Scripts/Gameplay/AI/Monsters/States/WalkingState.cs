@@ -1,6 +1,6 @@
 ﻿//App
 using RENEGADES.Gameplay.Basic;
-using RENEGADES.Common;
+using RENEGADES.Common.Gameplay;
 
 //Unity
 using UnityEngine;
