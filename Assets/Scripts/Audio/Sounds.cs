@@ -6,12 +6,21 @@ namespace RENEGADES.Audio
 
         public enum Sound
         {
-           MainMenuClick,
-           Bullet_Fire,
-           BloodSplatter,
-           GhoulDeath,
-           Explosion,
-           BasicTankFire
+            //-------------------------------------------------
+            //UI
+            MainMenuClick,
+            Bullet_Fire,
+            //-------------------------------------------------
+            //Effects
+            BloodSplatter,
+            Explosion,
+            //-------------------------------------------------
+            //Monsters
+            GhoulDeath,
+            //-------------------------------------------------
+            //tanks
+            BasicTankFire,
+            LancerTankFire
         }
     }
 }

@@ -22,4 +22,15 @@ MonoBehaviour:
     projectilePrefab: {fileID: 114000013363417180, guid: 538a95546332e17498566d159fec49ae,
       type: 2}
     projectileSpeed: 15
+    projectileDamage: 5
+  - name: Lancer
+    key: 1
+    sprite: {fileID: 21300004, guid: 36349a868b016ea40a344b4ef937e2f8, type: 3}
+    fireRate: 4
+    health: 100
+    range: 50
+    turnSpeed: 2.5
+    projectilePrefab: {fileID: 114000014148991610, guid: 653c7a6c8a7347948b9cdc09f629f6c5,
+      type: 2}
+    projectileSpeed: 200
     projectileDamage: 10

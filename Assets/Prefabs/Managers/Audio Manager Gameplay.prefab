@@ -161,3 +161,9 @@ MonoBehaviour:
     group: {fileID: 243000012385325922, guid: a782712b34ec6a94db907ce00a2b198d, type: 2}
   - clip: {fileID: 8300000, guid: 266ec9e5f20e4d84f953a5fce9358608, type: 3}
     group: {fileID: 243000010203460432, guid: a782712b34ec6a94db907ce00a2b198d, type: 2}
+  - clip: {fileID: 8300000, guid: 36fec26cfd3bb2f4db43fac9fbbbf4bc, type: 3}
+    group: {fileID: 243000011948447476, guid: a782712b34ec6a94db907ce00a2b198d, type: 2}
+  - clip: {fileID: 8300000, guid: 09dc5bbf5b22954408d826b9399067dc, type: 3}
+    group: {fileID: 243000012385325922, guid: a782712b34ec6a94db907ce00a2b198d, type: 2}
+  - clip: {fileID: 8300000, guid: 0d1d1ce75f8c0714ea9f7fe8f66b7364, type: 3}
+    group: {fileID: 243000012385325922, guid: a782712b34ec6a94db907ce00a2b198d, type: 2}

@@ -62,6 +62,12 @@ namespace RENEGADES.Gameplay.Weapons
                 Dispose();
                 lifeTimeTimer = 0;
             }
+            OnUpdate();
+        }
+
+        public virtual void OnUpdate()
+        {
+
         }
 
         public virtual void OnTriggerEnter2D(Collider2D other)

@@ -15,7 +15,7 @@ namespace RENEGADES.Gameplay.AI.Turrets
         public enum TurretKey
         {
             Basic,
-            Laser,
+            Lancer,
             Rocket
         }
 
