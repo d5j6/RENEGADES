@@ -10,14 +10,14 @@ namespace RENEGADES.Gameplay.Weapons
             get { return rigid ?? (rigid = GetComponent<Rigidbody2D>()); }
         }
 
-
         private const float lifeTime = 3.0f;
+        private float lifeTimeTimer;
         private float moveSpeed;
         private Vector3 moveDirection;
 
         private void Awake()
         {
-            Invoke("Dispose", lifeTime);
+            
         }
 
         public void SetPosition(Vector3 pos)
@@ -44,6 +44,12 @@ namespace RENEGADES.Gameplay.Weapons
         {
             ElementRigidBody.AddForce(moveDirection * moveSpeed);
             ElementRigidBody.velocity = Vector3.ClampMagnitude(ElementRigidBody.velocity, moveSpeed);
+            lifeTimeTimer += Time.deltaTime;
+            if(lifeTimeTimer > lifeTime)
+            {
+                Dispose();
+                lifeTimeTimer = 0;
+            }
         }
 
         public virtual void OnTriggerEnter2D(Collider2D other)
@@ -52,9 +58,9 @@ namespace RENEGADES.Gameplay.Weapons
         }
 
 
-        public void Dispose()
+        public virtual void Dispose()
         {
-            Destroy(gameObject);
+
         }
 
         private void OnDestory()

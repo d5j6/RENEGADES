@@ -11,7 +11,7 @@ namespace RENEGADES.Gameplay.Weapons
     public class RangedAttack : MonoBehaviour
     {
 
-        public RangedElement element;
+        public Projectile element;
 
         private const float COOLDOWN = 0.25f;
         public float timer;
@@ -52,8 +52,9 @@ namespace RENEGADES.Gameplay.Weapons
 
         private void Spawn()
         {
-            RangedElement spawn = Pooler.GetPooledObject().GetComponent<RangedElement>();
+            Plasma spawn = Pooler.GetPooledObject().GetComponent<Plasma>();
             spawn.Init(transform.position);
+            spawn.SetMoveSpeed(100);
             spawn.SetEulerAngles(currentTrigger);
         }
        

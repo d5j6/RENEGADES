@@ -7,17 +7,9 @@ using UnityEngine;
 
 namespace RENEGADES.Gameplay.Weapons
 {
-    public class RangedElement : MonoBehaviour
+    public class Plasma : Projectile
     {
-        private Vector3 moveDirection;
-
         private const float MOVESPEED =150;
-
-        private Rigidbody2D rigid;
-        private Rigidbody2D ElementRigidBody
-        {
-            get { return rigid ?? (rigid = GetComponent<Rigidbody2D>()); }
-        }
 
         public void Init(Vector3 pos)
         {
@@ -30,55 +22,43 @@ namespace RENEGADES.Gameplay.Weapons
             transform.localEulerAngles = SetPosition(t);
         }
 
-        public void SetMoveDirection(Vector3 v)
+        public override void OnTriggerEnter2D(Collider2D other)
         {
-            moveDirection = v;
-            Invoke("Destroy", 2.0f);
-        }
-
-        public void Update()
-        {
-            ElementRigidBody.AddForce(moveDirection* MOVESPEED);
-            ElementRigidBody.velocity = Vector3.ClampMagnitude(ElementRigidBody.velocity, MOVESPEED);
-        }
-
-        private void Destroy()
-        {
-            ElementRigidBody.velocity = new Vector2(0,0);
-            CancelInvoke("Destroy");
-            gameObject.SetActive(false);
+            base.OnTriggerEnter2D(other);
+            Dispose();
         }
 
         public Vector3 SetPosition(AnimationTriggers.PlayerAnimation currentTrigger)
         {
             float eulerAngle = 0;
-            Vector3 moveDirection = Vector3.zero;
+            Vector3 direction = Vector3.zero;
             switch (currentTrigger)
             {
                 case AnimationTriggers.PlayerAnimation.Down:
                     eulerAngle = 180;
-                    moveDirection = Vector3.down;
+                    direction = Vector3.down;
                     break;
                 case AnimationTriggers.PlayerAnimation.Left:
                     eulerAngle = 90;
-                    moveDirection = Vector3.left;
+                    direction = Vector3.left;
                     break;
                 case AnimationTriggers.PlayerAnimation.Right:
                     eulerAngle = 270;
-                    moveDirection = Vector3.right;
+                    direction = Vector3.right;
                     break;
                 case AnimationTriggers.PlayerAnimation.Up:
                     eulerAngle = 0;
-                    moveDirection = Vector3.up;
+                    direction = Vector3.up;
                     break;
             }
-            SetMoveDirection(moveDirection);
+            SetMoveDirection(direction);
             return new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, eulerAngle);
         }
 
-        public virtual void OnTriggerEnter2D(Collider2D other)
+        public override void Dispose()
         {
-            Destroy();
+            base.Dispose();
+            gameObject.SetActive(false);
         }
 
     }

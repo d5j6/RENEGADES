@@ -38,7 +38,7 @@ namespace RENEGADES.Gameplay.Controllers
         /// <param name="pos"></param>
         public virtual void Spawn<T>(T obj,Vector3 pos) where T :Component
         {
-            T g = Instantiate(obj,pos,Quaternion.identity,WORLD) as T;
+            Instantiate(obj,pos,Quaternion.identity,WORLD);
         }
 
         /// <summary>
