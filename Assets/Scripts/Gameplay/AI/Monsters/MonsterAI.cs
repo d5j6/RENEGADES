@@ -124,23 +124,19 @@ namespace RENEGADES.Gameplay.AI
 
         /// <summary>
         /// Collision Detection
+        /// if a monster is hit by a projectile
         /// </summary>
         /// <param name="other"></param>
         public override void OnTriggerEnter2D(Collider2D other)
         {
             base.OnTriggerEnter2D(other);
-            if (other.gameObject.tag == "RangedElement")
+            Weapons.Projectile p = other.GetComponent<Weapons.Projectile>();
+            if (p != null)
             {
-                Hurt(other.transform.position);
+                GameManager.Instance.EffectSpawner.CreateEffect(Controllers.Effects.EffectType.BloodSplat, p.transform.position);
+                Hurt(-p.GetDamage());
+                EnemyHealthUI.UpdateHealth(HEALTH);
             }
-        }
-
-        private void Hurt(Vector3 hitPosition)
-        {
-            //spawn blood splatter
-            GameManager.Instance.EffectSpawner.CreateEffect(Controllers.Effects.EffectType.BloodSplat, hitPosition);
-            UpdateHealth(-5);
-            EnemyHealthUI.UpdateHealth(HEALTH);
         }
 
         /// <summary>

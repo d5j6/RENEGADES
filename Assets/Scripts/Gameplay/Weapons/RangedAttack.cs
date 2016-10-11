@@ -56,6 +56,7 @@ namespace RENEGADES.Gameplay.Weapons
             spawn.Init(transform.position);
             spawn.SetMoveSpeed(100);
             spawn.SetEulerAngles(currentTrigger);
+            spawn.SetDamage(5);
         }
        
     }

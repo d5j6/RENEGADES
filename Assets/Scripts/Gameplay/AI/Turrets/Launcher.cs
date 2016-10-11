@@ -23,6 +23,7 @@ namespace RENEGADES.Gameplay.AI.Turrets
             spawn.SetEulerAngle(transform.eulerAngles.z);
             spawn.SetMoveSpeed(blueprint.projectileSpeed);
             spawn.SetMoveDirection(transform.up);
+            spawn.SetDamage(blueprint.projectileDamage);
         }
     }
 }

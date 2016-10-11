@@ -15,6 +15,8 @@ namespace RENEGADES.Gameplay.Weapons
         private float moveSpeed;
         private Vector3 moveDirection;
 
+        private float DAMAGE;
+
         private void Awake()
         {
             
@@ -38,6 +40,16 @@ namespace RENEGADES.Gameplay.Weapons
         public void SetMoveDirection(Vector3 v)
         {
             moveDirection = v;
+        }
+
+        public void SetDamage(float d)
+        {
+            DAMAGE = d;
+        }
+
+        public float GetDamage()
+        {
+            return DAMAGE;
         }
 
         public void Update()
