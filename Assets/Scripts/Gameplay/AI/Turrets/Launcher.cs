@@ -5,7 +5,7 @@ using RENEGADES.Gameplay.Weapons;
 //UNity
 using UnityEngine;
 
-namespace RENEGADES.Gameplay.AI
+namespace RENEGADES.Gameplay.AI.Turrets
 {
     //will control firing for the turrets
     public class Launcher : Spawner

@@ -7,7 +7,7 @@ using System.Collections.Generic;
 //App
 using RENEGADES.Gameplay.Weapons;
 
-namespace RENEGADES.Gameplay.AI
+namespace RENEGADES.Gameplay.AI.Turrets
 {
     [CreateAssetMenu]
     public class TurretType : ScriptableObject

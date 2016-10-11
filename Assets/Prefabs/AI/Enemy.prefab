@@ -24,7 +24,7 @@ GameObject:
   - 95: {fileID: 95000011635665530}
   - 61: {fileID: 61000013414901316}
   - 50: {fileID: 50000013655575428}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -152,7 +152,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011535310280}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.102, y: -0.44, z: 0}
+  m_LocalPosition: {x: 1.102, y: -1.486, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -276,11 +276,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af4dda76d123fe244bab4c4d3b432718, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Attributes:
-    HEALTH: 0
+  HEALTH: 0
+  _Attributes:
     SPEED: 0
     ATTACK_RANGE: 0
     ATTACK_SPEED: 0
+    DAMAGE: 0
 --- !u!114 &114000012429614588
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -292,6 +293,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7199dc9d29a9882459e43420e37e8aa8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  highHealth:
+    serializedVersion: 2
+    rgba: 4279041792
+  averageHealth:
+    serializedVersion: 2
+    rgba: 4278253823
+  lowHealth:
+    serializedVersion: 2
+    rgba: 4278190335
 --- !u!114 &114000012441501332
 MonoBehaviour:
   m_ObjectHideFlags: 1

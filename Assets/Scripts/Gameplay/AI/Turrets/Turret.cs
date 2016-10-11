@@ -8,7 +8,7 @@ using RENEGADES.Common;
 //UNity
 using UnityEngine;
 
-namespace RENEGADES.Gameplay.AI
+namespace RENEGADES.Gameplay.AI.Turrets
 {
 
     public class Turret : Friendly
@@ -41,7 +41,6 @@ namespace RENEGADES.Gameplay.AI
         public override void Init()
         {
             base.Init();
-            BuildTurret(TurretType.TurretKey.Basic);
         }
 
         public void BuildTurret(TurretType.TurretKey key)
@@ -81,7 +80,7 @@ namespace RENEGADES.Gameplay.AI
             if (InLineOfCannon == true & CannonRecharged()) Fire();
         }
 
-        private void Fire()
+        public virtual void Fire()
         {
             cooldownTimer = Blueprint.fireRate; //recharge
             _Launcher.FIRE(Blueprint);

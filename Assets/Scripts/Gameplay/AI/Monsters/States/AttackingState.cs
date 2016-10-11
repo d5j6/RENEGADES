@@ -35,7 +35,7 @@ namespace RENEGADES.Gameplay.AI
 
         public void UpdateState()
         {
-            if (monster.HEALTH <= 0) ToDeadState();
+            if (monster.HEALTH <= 0) { ToDeadState(); }
             Turning();
             CheckProximity();
             DamageTimer();

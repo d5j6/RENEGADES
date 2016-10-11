@@ -2,7 +2,6 @@
 using RENEGADES.Managers;
 
 //Unity
-using UnityEngine;
 
 namespace RENEGADES.Gameplay.AI
 {
@@ -11,7 +10,7 @@ namespace RENEGADES.Gameplay.AI
         //set custom speed for ghoul
         private const float GHOUL_SPEED = 1;
         private const int GHOUL_HEALTH = 10;
-        private const float GHOUL_ATTACKRANGE = 0.3f;
+        private const float GHOUL_ATTACKRANGE = 0.5f;
         private const float GHOUL_ATTACKSPEED = 0.5f;
         private const float GHOUL_DAMAGE = 10.0f;
 

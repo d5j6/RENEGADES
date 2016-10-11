@@ -19,7 +19,7 @@ MonoBehaviour:
     health: 50
     range: 25
     turnSpeed: 4
-    projectilePrefab: {fileID: 114000010794638100, guid: 538a95546332e17498566d159fec49ae,
+    projectilePrefab: {fileID: 114000013363417180, guid: 538a95546332e17498566d159fec49ae,
       type: 2}
     projectileSpeed: 15
     projectileDamage: 10

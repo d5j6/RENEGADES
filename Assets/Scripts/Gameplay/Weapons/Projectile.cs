@@ -48,12 +48,11 @@ namespace RENEGADES.Gameplay.Weapons
 
         public virtual void OnTriggerEnter2D(Collider2D other)
         {
-            Dispose();
-            Debug.Log("HERE");
+            
         }
 
 
-        private void Dispose()
+        public void Dispose()
         {
             Destroy(gameObject);
         }

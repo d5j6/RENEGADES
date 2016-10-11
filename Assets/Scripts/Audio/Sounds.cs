@@ -10,7 +10,8 @@ namespace RENEGADES.Audio
            Bullet_Fire,
            BloodSplatter,
            GhoulDeath,
-           Explosion
+           Explosion,
+           BasicTankFire
         }
     }
 }
