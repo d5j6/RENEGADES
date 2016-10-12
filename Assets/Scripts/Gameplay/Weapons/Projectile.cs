@@ -78,7 +78,7 @@ namespace RENEGADES.Gameplay.Weapons
 
         public virtual void Dispose()
         {
-
+            gameObject.SetActive(false);
         }
 
         private void OnDestory()

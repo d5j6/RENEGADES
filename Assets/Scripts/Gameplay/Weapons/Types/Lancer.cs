@@ -11,17 +11,5 @@ namespace RENEGADES.Gameplay.Weapons
            
         }
 
-        public override void OnUpdate()
-        {
-            base.OnUpdate();
-        //    RaycastHit2D hit = Physics2D.Raycast(transform.position, -transform.forward, Mathf.Infinity, 1 << 12);
-
-        }
-
-        public override void Dispose()
-        {
-            Destroy(gameObject);
-        }
-
     }
 }
