@@ -6,7 +6,7 @@ namespace RENEGADES.Gameplay.Effects
     public class Effect : MonoBehaviour
     {
 
-        private float effectAlpha=1;
+        private float effectAlpha;
         public bool fadeOut = false;
 
         private SpriteRenderer sprite;
@@ -20,6 +20,7 @@ namespace RENEGADES.Gameplay.Effects
         private void Awake()
         {
             SetLifetime(2);
+            effectAlpha = 1;
         }
 
         private void Update()
@@ -46,7 +47,11 @@ namespace RENEGADES.Gameplay.Effects
         public void Deactivate()
         {
             gameObject.SetActive(false);
-            Destroy(gameObject);
+        }
+
+        public void SetPosition(Vector3 pos)
+        {
+            transform.position = pos;
         }
 
         private void SetAlpha(float alpha)
