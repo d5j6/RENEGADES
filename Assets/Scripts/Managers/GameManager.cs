@@ -3,6 +3,7 @@ using RENEGADES.Common;
 using RENEGADES.Audio;
 using RENEGADES.Gameplay.PlayerInput;
 using RENEGADES.Gameplay.Controllers;
+using RENEGADES.Gameplay.Effects;
 using RENEGADES.UI.Managers;
 
 //Unity
@@ -37,10 +38,10 @@ namespace RENEGADES.Managers
             get { return monsterSpawner ?? (monsterSpawner = FindObjectOfType<EnemyGenerator>()); }
         }
 
-        private Effects effectSpawner;
-        public Effects EffectSpawner
+        private EffectGenerator effectSpawner;
+        public EffectGenerator EffectSpawner
         {
-            get { return effectSpawner ?? (effectSpawner = FindObjectOfType<Effects>()); }
+            get { return effectSpawner ?? (effectSpawner = FindObjectOfType<EffectGenerator>()); }
         }
 
         private WidgetCreator uiSpawner;

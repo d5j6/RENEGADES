@@ -1,5 +1,5 @@
 ﻿//App
-using RENEGADES.Gameplay.Effects;
+using RENEGADES.Gameplay.Controllers;
 
 //Unity
 using UnityEngine;
@@ -7,9 +7,9 @@ using UnityEngine;
 //C#
 using System.Collections.Generic;
 
-namespace RENEGADES.Gameplay.Controllers
+namespace RENEGADES.Gameplay.Effects
 {
-    public class Effects : Spawner
+    public class EffectGenerator : Spawner
     {
         public enum EffectType
         {

@@ -18,7 +18,7 @@ namespace RENEGADES.Gameplay.Basic
         private void Generate()
         {
             GameManager.Instance.MonsterSpawner.CreateMonster(Controllers.EnemyGenerator.EnemyType.Ghoul, transform.position);
-            GameManager.Instance.EffectSpawner.CreateEffect(Controllers.Effects.EffectType.EnemySpawn, transform.position);
+            GameManager.Instance.EffectSpawner.CreateEffect(Effects.EffectGenerator.EffectType.EnemySpawn, transform.position);
         }
     }
 }

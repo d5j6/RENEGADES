@@ -3,6 +3,7 @@ using RENEGADES.UI.Gameplay;
 using RENEGADES.Managers;
 using RENEGADES.Common;
 using RENEGADES.Gameplay.Basic;
+using RENEGADES.Gameplay.Effects;
 
 //Unity
 using UnityEngine;
@@ -133,7 +134,7 @@ namespace RENEGADES.Gameplay.AI
             Weapons.Projectile p = other.GetComponent<Weapons.Projectile>();
             if (p != null)
             {
-                GameManager.Instance.EffectSpawner.CreateEffect(Controllers.Effects.EffectType.BloodSplat, p.transform.position);
+                GameManager.Instance.EffectSpawner.CreateEffect(EffectGenerator.EffectType.BloodSplat,p.transform.position);
                 Hurt(-p.GetDamage());
                 EnemyHealthUI.UpdateHealth(HEALTH);
             }
