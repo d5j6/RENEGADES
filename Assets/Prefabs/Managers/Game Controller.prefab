@@ -60,6 +60,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1000013523020264
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000013985255750}
+  - 114: {fileID: 114000012427651060}
+  m_Layer: 0
+  m_Name: Item Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1000013563019934
 GameObject:
   m_ObjectHideFlags: 0
@@ -106,6 +122,7 @@ Transform:
   - {fileID: 4000012132708596}
   - {fileID: 4000012669790046}
   - {fileID: 4000011341097894}
+  - {fileID: 4000013985255750}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &4000011341097894
@@ -161,6 +178,19 @@ Transform:
   - {fileID: 4000012076989694}
   m_Father: {fileID: 4000010795775042}
   m_RootOrder: 1
+--- !u!4 &4000013985255750
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013523020264}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 4000010795775042}
+  m_RootOrder: 3
 --- !u!114 &114000011539858430
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -189,6 +219,18 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 5
+--- !u!114 &114000012427651060
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013523020264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fd741e9b851cc54eb157fed85c05202, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parent: {fileID: 0}
 --- !u!114 &114000012672778320
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -227,6 +269,8 @@ MonoBehaviour:
     effect: {fileID: 114000014249366320, guid: 695d2276c1112954baccf84e29091ffb, type: 2}
   - type: 3
     effect: {fileID: 114000011088499344, guid: 78da4b9160c858545b6d18db642b64ad, type: 2}
+  - type: 4
+    effect: {fileID: 114000012112559074, guid: a22a54db3f5c2a04092156b720217a52, type: 2}
 --- !u!114 &114000013587986518
 MonoBehaviour:
   m_ObjectHideFlags: 1

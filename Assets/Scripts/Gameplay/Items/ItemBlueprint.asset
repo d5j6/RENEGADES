@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3eef84522f452c34b853e1c867d95891, type: 3}
+  m_Name: ItemBlueprint
+  m_EditorClassIdentifier: 
+  ItemTypes:
+  - name: Coin
+    rarity: 0
+    type: 0
+    Prefab: {fileID: 114000012125131244, guid: 36088c3ef7d4b1044a7b171d1a5a8ebc, type: 2}
+  - name: Health Potion
+    rarity: 0
+    type: 1
+    Prefab: {fileID: 114000012467058216, guid: 62ef2b100152b6b469c5da52262cf61e, type: 2}

@@ -5,12 +5,13 @@ using RENEGADES.Common.Gameplay;
 //Unity
 using UnityEngine;
 
+
+
 namespace RENEGADES.Gameplay.Items
 {
     public class Item : MonoBehaviour
     {
         private Player player;
-
 
         private float FindPlayerTimer;
         private const float SEARCH = 0.2f;
@@ -28,7 +29,7 @@ namespace RENEGADES.Gameplay.Items
                 FindPlayerTimer = 0;
                 FindPlayerInRange();
             }
-            GravitateTowards();
+           // GravitateTowards();
         }
 
         public virtual void OnUpdate() { }
@@ -43,5 +44,11 @@ namespace RENEGADES.Gameplay.Items
         {
             player = FindClosest.Find<Player>(transform,RANGE);
         }
+
+        public virtual void Remove()
+        {
+
+        }
+
     }
 }
