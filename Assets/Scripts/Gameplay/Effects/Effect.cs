@@ -47,6 +47,7 @@ namespace RENEGADES.Gameplay.Effects
         public void Deactivate()
         {
             gameObject.SetActive(false);
+            Destroy(gameObject);
         }
 
         public void SetPosition(Vector3 pos)
