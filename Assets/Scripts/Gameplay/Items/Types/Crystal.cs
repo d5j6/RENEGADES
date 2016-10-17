@@ -1,7 +1,7 @@
 ﻿
 namespace RENEGADES.Gameplay.Items
 {
-    public class Coin : Item
+    public class Crystal : Item
     {
 
     }

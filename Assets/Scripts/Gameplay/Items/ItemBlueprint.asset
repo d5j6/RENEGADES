@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Name: ItemBlueprint
   m_EditorClassIdentifier: 
   ItemTypes:
-  - name: Coin
+  - name: Crystal
     rarity: 0
     type: 0
-    Prefab: {fileID: 114000012125131244, guid: 36088c3ef7d4b1044a7b171d1a5a8ebc, type: 2}
+    Prefab: {fileID: 114000013599669268, guid: cfdad9575ae0c044bafa5fc8d0b629c5, type: 2}
   - name: Health Potion
     rarity: 0
     type: 1

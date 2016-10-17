@@ -6,9 +6,9 @@ namespace RENEGADES.Gameplay.Effects
     public class BloodExplosion : Effect
     {
         //lifetime a bit longer here to stay on ground
-        private const float LIFETIME = 7f;
+        private const float LIFETIME = 15f;
         private float timer;
-        private float fadeOutTimer = 5;
+        private float fadeOutTimer =12;
 
         public override void SetLifetime(float time)
         {

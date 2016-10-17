@@ -13,7 +13,7 @@ namespace RENEGADES.Gameplay.Items
     public class ItemGenerator : Spawner
     {
         public enum RARITY { Common, Uncommon, Rare, Legendary, Epic }
-        public enum TYPE { Coin, HealthPotion }
+        public enum TYPE { Crystal, HealthPotion }
 
         public ItemBlueprint itemBlueprint;
 
