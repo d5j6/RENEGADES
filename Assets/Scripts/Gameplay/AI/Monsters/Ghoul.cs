@@ -39,6 +39,11 @@ namespace RENEGADES.Gameplay.AI
             base.SetDamage(GHOUL_DAMAGE);
         }
 
+        public override void SetDifficulty(DIFFICULTY d)
+        {
+            base.SetDifficulty(DIFFICULTY.Easy);
+        }
+
         public override void RemoveFromBattleField()
         {
             base.RemoveFromBattleField();

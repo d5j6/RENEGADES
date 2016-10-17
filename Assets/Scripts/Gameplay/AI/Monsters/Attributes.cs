@@ -5,6 +5,8 @@ namespace RENEGADES.Gameplay.AI
     /// Class will hold data particular to an enemy
     /// </summary>
     /// 
+    public enum DIFFICULTY { Easy,Normal,Hard,Nightmare}
+
     [System.Serializable]
     public class Attributes
     {
@@ -12,6 +14,7 @@ namespace RENEGADES.Gameplay.AI
         public float ATTACK_RANGE;
         public float ATTACK_SPEED;
         public float DAMAGE;
+        public DIFFICULTY difficulty;
 
     }
 }

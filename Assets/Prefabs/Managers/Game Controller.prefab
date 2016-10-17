@@ -230,7 +230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fd741e9b851cc54eb157fed85c05202, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parent: {fileID: 0}
+  itemBlueprint: {fileID: 11400000, guid: 6b85a1f5b6633be479d3a844b158b4b6, type: 2}
 --- !u!114 &114000012672778320
 MonoBehaviour:
   m_ObjectHideFlags: 1

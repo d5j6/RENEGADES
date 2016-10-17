@@ -3,6 +3,7 @@ using RENEGADES.Common;
 using RENEGADES.Audio;
 using RENEGADES.Gameplay.PlayerInput;
 using RENEGADES.Gameplay.Controllers;
+using RENEGADES.Gameplay.Items;
 using RENEGADES.Gameplay.Effects;
 using RENEGADES.UI.Managers;
 
@@ -48,6 +49,12 @@ namespace RENEGADES.Managers
         public WidgetCreator UISpawner
         {
             get { return uiSpawner ?? (uiSpawner = FindObjectOfType<WidgetCreator>()); }
+        }
+
+        private ItemGenerator itemSpawner;
+        public ItemGenerator ItemSpawner
+        {
+            get { return itemSpawner ?? (itemSpawner = FindObjectOfType<ItemGenerator>()); }
         }
 
 

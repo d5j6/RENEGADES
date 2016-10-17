@@ -65,6 +65,7 @@ namespace RENEGADES.Gameplay.AI
             SetAttackRange(0);
             SetAttackSpeed(0);
             SetDamage(0);
+            SetDifficulty(DIFFICULTY.Easy);
             EnemyHealthUI.SetHealth(HEALTH);
 
             attackingState = new AttackingState(this);
@@ -123,6 +124,11 @@ namespace RENEGADES.Gameplay.AI
             _Attributes.DAMAGE = d;
         }
 
+        public virtual void SetDifficulty(DIFFICULTY d)
+        {
+            _Attributes.difficulty = d;
+        }
+
         /// <summary>
         /// Collision Detection
         /// if a monster is hit by a projectile
@@ -145,6 +151,7 @@ namespace RENEGADES.Gameplay.AI
         /// </summary>
         public virtual void RemoveFromBattleField()
         {
+            GameManager.Instance.ItemSpawner.SpawnCluster(_Attributes.difficulty, GetPosition());
             Destroy(gameObject);
         }
 
