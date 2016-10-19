@@ -1,7 +1,5 @@
 ﻿//C#
 using System;
-using System.Linq;
-using System.Collections;
 using System.Collections.Generic;
 
 namespace RENEGADES.Gameplay.Items
@@ -10,7 +8,7 @@ namespace RENEGADES.Gameplay.Items
     {
 
         public enum RARITY { Common, Uncommon, Rare, Legendary, Exotic }
-        public enum TYPE { Crystal, HealthPotion }
+        public enum TYPE { Crystal, HealthPotion,RareCrystal,UltraCrystal }
 
         public class ItemData
         {
@@ -67,6 +65,7 @@ namespace RENEGADES.Gameplay.Items
         {
             if (list == null || list.Count == 0) return default(T);
             if (!CumulativesCalculated) SetCumlatives();
+
             double randomValue = R.Next(0, 100) / 100.0f;
 
             for(int i=0; i<= list.Count; i++)

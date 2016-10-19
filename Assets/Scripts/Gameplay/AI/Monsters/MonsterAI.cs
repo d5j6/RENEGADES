@@ -141,7 +141,7 @@ namespace RENEGADES.Gameplay.AI
             if (p != null)
             {
                 GameManager.Instance.EffectSpawner.CreateEffect(EffectGenerator.EffectType.BloodSplat,p.transform.position);
-                Hurt(-p.GetDamage());
+                UpdateHealth(-p.GetDamage());
                 EnemyHealthUI.UpdateHealth(HEALTH);
             }
         }
@@ -151,7 +151,7 @@ namespace RENEGADES.Gameplay.AI
         /// </summary>
         public virtual void RemoveFromBattleField()
         {
-            GameManager.Instance.ItemSpawner.SpawnCluster(_Attributes.difficulty, GetPosition());
+            GameManager.Instance.ItemSpawner.SpawnCluster(_Attributes.difficulty, GetPosition()); //SPAWN CLUSTER OF ITEMS
             Destroy(gameObject);
         }
 

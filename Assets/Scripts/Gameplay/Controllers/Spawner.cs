@@ -9,6 +9,7 @@ namespace RENEGADES.Gameplay.Controllers
 {
     public abstract class Spawner : MonoBehaviour
     {
+        public Transform idealTransform;
 
         private Transform world;
         public Transform WORLD
@@ -25,6 +26,7 @@ namespace RENEGADES.Gameplay.Controllers
         private void Awake()
         {
             Init();
+            if (idealTransform == null) idealTransform = WORLD;
         }
 
         //abstract class for initilization
@@ -38,7 +40,7 @@ namespace RENEGADES.Gameplay.Controllers
         /// <param name="pos"></param>
         public virtual void Spawn<T>(T obj,Vector3 pos) where T :Component
         {
-            Instantiate(obj,pos,Quaternion.identity,WORLD);
+            Instantiate(obj,pos,Quaternion.identity, idealTransform);
         }
 
         /// <summary>
@@ -49,7 +51,7 @@ namespace RENEGADES.Gameplay.Controllers
         /// <returns></returns>
         public virtual T Spawn<T>(T obj) where T : Component
         {
-            T g = Instantiate(obj, Vector3.zero, Quaternion.identity, WORLD) as T;
+            T g = Instantiate(obj, Vector3.zero, Quaternion.identity, idealTransform) as T;
             return g;
         }
 

@@ -28,7 +28,7 @@ namespace RENEGADES.Gameplay.Players
  
 
         private const float MaxSpeed = 0.25f;
-        private float ForceAdd = 100f;
+        private float ForceAdd = 50f;
 
         private const float DRAG = 30f;
 

@@ -72,7 +72,12 @@ namespace RENEGADES.Gameplay.Items
             player = FindClosest.Find<Player>(transform,RANGE);
         }
 
-        public virtual void OnTriggerEnter2D()
+        public void OnTriggerEnter2D()
+        {
+            PickUP();
+        }
+
+        public virtual void PickUP()
         {
             Remove();
         }

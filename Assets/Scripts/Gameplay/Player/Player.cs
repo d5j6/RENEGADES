@@ -42,16 +42,24 @@ namespace RENEGADES.Gameplay.Players
             get { return playerHUD; } set { playerHUD = value; }
         }
 
+        public int CRYSTALS;
+
         public override void SetHealth(float h)
         {
             base.SetHealth(100);
             if(playerHUD != null) PlayerHUD.SetMaxHealth(100);
         }
 
-        public override void Hurt(float health)
+        public override void ChangeHealth(float health)
         {
-            base.Hurt(health);
+            base.ChangeHealth(health);
             if (playerHUD != null) PlayerHUD.UpdateHealth(HEALTH);
+        }
+
+        public void UpdateCrystals(int amount)
+        {
+            CRYSTALS += amount;
+            PlayerHUD.UpdateCrystal(CRYSTALS);
         }
 
         //player main game loop

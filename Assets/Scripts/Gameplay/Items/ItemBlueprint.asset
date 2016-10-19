@@ -20,3 +20,11 @@ MonoBehaviour:
     key: 1
     Prefab: {fileID: 114000012467058216, guid: 62ef2b100152b6b469c5da52262cf61e, type: 2}
     rarity: 1
+  - name: Rare Crystal
+    key: 2
+    Prefab: {fileID: 114000012913127316, guid: 705047c9f8b327a4f81867981962834e, type: 2}
+    rarity: 1
+  - name: Ultra Crystal
+    key: 3
+    Prefab: {fileID: 114000010645660802, guid: 3a2d504b9b527cc45aa5b4133ad62536, type: 2}
+    rarity: 2

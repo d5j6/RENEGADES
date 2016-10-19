@@ -86,9 +86,9 @@ namespace RENEGADES.Gameplay.AI.Turrets
             _Launcher.FIRE(Blueprint);
         }
 
-        public override void Hurt(float h)
+        public override void ChangeHealth(float h)
         {
-            base.Hurt(h);
+            base.ChangeHealth(h);
             HealthUI.UpdateHealth(HEALTH);
         }
 

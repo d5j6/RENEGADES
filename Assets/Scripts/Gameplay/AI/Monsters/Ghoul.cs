@@ -41,7 +41,7 @@ namespace RENEGADES.Gameplay.AI
 
         public override void SetDifficulty(DIFFICULTY d)
         {
-            base.SetDifficulty(DIFFICULTY.Easy);
+            base.SetDifficulty(DIFFICULTY.Hard);
         }
 
         public override void RemoveFromBattleField()

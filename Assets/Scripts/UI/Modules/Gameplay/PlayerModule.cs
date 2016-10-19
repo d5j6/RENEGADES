@@ -12,6 +12,12 @@ namespace RENEGADES.UI.Gameplay
             get { return healthSlider ?? (healthSlider = GetComponentInChildren<HealthSlider>()); }
         }
 
+        private CrystalText crystalText;
+        private CrystalText _CrystalText
+        {
+            get { return crystalText ?? (crystalText = GetComponentInChildren<CrystalText>()); }
+        }
+
         public void SetMaxHealth(float h)
         {
             _HealthSlider.SetMaxValue(h);
@@ -20,6 +26,11 @@ namespace RENEGADES.UI.Gameplay
         public void UpdateHealth(float h)
         {
             _HealthSlider.UpdateHealth(h);
+        }
+
+        public void UpdateCrystal(float c)
+        {
+            _CrystalText.SetText(c.ToString());
         }
     }
 }

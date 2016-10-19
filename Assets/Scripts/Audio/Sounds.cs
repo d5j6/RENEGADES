@@ -20,7 +20,10 @@ namespace RENEGADES.Audio
             //-------------------------------------------------
             //tanks
             BasicTankFire,
-            LancerTankFire
+            LancerTankFire,
+            //-------------------------------------------------
+            //Items
+            Burp
         }
     }
 }

@@ -33,7 +33,7 @@ namespace RENEGADES.UI.Gameplay
         private Color32 DetermineColor(float health)
         {
             float percentage = health / GetMaxValue();
-            if(percentage < 1 && percentage >= 0.75)
+            if(percentage <= 1 && percentage >= 0.75)
             {
                 return highHealth;
             }

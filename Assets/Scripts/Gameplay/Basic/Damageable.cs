@@ -75,11 +75,11 @@ namespace RENEGADES.Gameplay.Basic
 
         public void UpdateHealth(float h)
         {
-            HEALTH += h;
+            HEALTH = Mathf.Clamp(HEALTH+=h, 0, maxHealth);
             if (HEALTH <= 0) Destroyed();
         }
 
-        public virtual void Hurt(float h)
+        public virtual void ChangeHealth(float h)
         {
             UpdateHealth(h);
         }

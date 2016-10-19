@@ -55,7 +55,7 @@ namespace RENEGADES.Gameplay.Items
         //Get the number of items to spawn,potentialy none
         private int GetSpawnCount()
         {
-            return Mathf.Clamp(UnityEngine.Random.Range(-3, 5), 0, 4);
+            return Mathf.Clamp(UnityEngine.Random.Range(-6, 5), 0, 4);
         }
 
     }
