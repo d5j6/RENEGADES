@@ -14,9 +14,9 @@ namespace RENEGADES.Gameplay.Items
         public struct Blueprint
         {
             public string name;
-            public ItemGenerator.RARITY rarity;
-            public ItemGenerator.TYPE type;
-            public Item Prefab;   
+            public ItemDeterminer.TYPE key;
+            public Item Prefab;
+            public ItemDeterminer.RARITY rarity;
         }
 
         public List<Blueprint> ItemTypes;

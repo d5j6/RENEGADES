@@ -13,10 +13,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemTypes:
   - name: Crystal
-    rarity: 0
-    type: 0
+    key: 0
     Prefab: {fileID: 114000013599669268, guid: cfdad9575ae0c044bafa5fc8d0b629c5, type: 2}
-  - name: Health Potion
     rarity: 0
-    type: 1
+  - name: Health Potion
+    key: 1
     Prefab: {fileID: 114000012467058216, guid: 62ef2b100152b6b469c5da52262cf61e, type: 2}
+    rarity: 1

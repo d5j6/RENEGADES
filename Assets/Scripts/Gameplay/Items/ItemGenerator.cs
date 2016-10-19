@@ -5,16 +5,13 @@ using RENEGADES.Gameplay.Controllers;
 using UnityEngine;
 
 //C#
-using System;
+using System.Linq;
 using System.Collections.Generic;
 
 namespace RENEGADES.Gameplay.Items
 {
     public class ItemGenerator : Spawner
     {
-        public enum RARITY { Common, Uncommon, Rare, Legendary, Epic }
-        public enum TYPE { Crystal, HealthPotion }
-
         public ItemBlueprint itemBlueprint;
 
         private const float SPAWN_RANGE = 0.5f;
@@ -23,16 +20,18 @@ namespace RENEGADES.Gameplay.Items
 
         private void Update()
         {
-            if (Input.GetKey(KeyCode.X)) Debug.Log(GetSpawnCount());
+          
         }
 
         public void SpawnCluster(AI.DIFFICULTY difficulty,Vector3 origin)
         {
             int itemCount = GetSpawnCount();
+            
             for (int i = 0; i < itemCount; i++)
             {
-                int itemIndex = 0;
-                Spawn(itemBlueprint.ItemTypes[itemIndex].Prefab, (DeterminePosition(i, itemCount, origin)));
+                ItemDeterminer.RARITY rarity = ItemDeterminer.GetItem(difficulty);
+                List<ItemBlueprint.Blueprint> rareTypes = itemBlueprint.ItemTypes.Where(x => x.rarity == rarity).ToList();
+                if(rareTypes.Count > 0)Spawn(rareTypes[Random.Range(0, rareTypes.Count)].Prefab, (DeterminePosition(i, itemCount, origin)));
             }
         }
 
@@ -53,9 +52,10 @@ namespace RENEGADES.Gameplay.Items
 
         }
 
+        //Get the number of items to spawn,potentialy none
         private int GetSpawnCount()
         {
-            return Mathf.Clamp(UnityEngine.Random.Range(-6, 4), 0, 3) + 1;
+            return Mathf.Clamp(UnityEngine.Random.Range(-3, 5), 0, 4);
         }
 
     }
