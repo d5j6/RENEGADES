@@ -59,7 +59,7 @@ namespace RENEGADES.Gameplay.Players
         public void UpdateCrystals(int amount)
         {
             CRYSTALS += amount;
-            PlayerHUD.UpdateCrystal(CRYSTALS);
+            if (playerHUD != null) PlayerHUD.UpdateCrystal(CRYSTALS);
         }
 
         //player main game loop

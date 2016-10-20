@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 85b7b8988ba2aae4a9f8bb9ec61ceb95
+timeCreated: 1476979332
+licenseType: Pro
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - speedMAT: {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

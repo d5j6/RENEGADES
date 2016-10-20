@@ -8,7 +8,7 @@ namespace RENEGADES.Gameplay.Items
     {
 
         public enum RARITY { Common, Uncommon, Rare, Legendary, Exotic }
-        public enum TYPE { Crystal, HealthPotion,RareCrystal,UltraCrystal }
+        public enum TYPE { Crystal, HealthPotion,RareCrystal,UltraCrystal,SpeedPotion }
 
         public class ItemData
         {

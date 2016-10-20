@@ -40,6 +40,11 @@ namespace RENEGADES.Gameplay.Players
             lookParams = new LookParams();
         }
 
+        public void SetForce(bool fast)
+        {
+            ForceAdd = fast ? 100 : 50;
+        }
+
         private void Update()
         {
             //Xbox Controller

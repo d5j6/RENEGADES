@@ -23,7 +23,8 @@ namespace RENEGADES.Audio
             LancerTankFire,
             //-------------------------------------------------
             //Items
-            Burp
+            Burp,
+            Woosh
         }
     }
 }

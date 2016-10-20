@@ -31,6 +31,9 @@ namespace RENEGADES.Gameplay.Effects
         [Tooltip("All Effects that can be spawned in the game")]
         public List<EffectToSpawn> EffectsToSpawn;
 
+        [Header("Default Materials")]
+        public Material defaultParticleMAT;
+
         //Called on start
         public override void Init()
         {

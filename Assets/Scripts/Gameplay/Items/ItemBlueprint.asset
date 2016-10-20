@@ -28,3 +28,7 @@ MonoBehaviour:
     key: 3
     Prefab: {fileID: 114000010645660802, guid: 3a2d504b9b527cc45aa5b4133ad62536, type: 2}
     rarity: 2
+  - name: Speed Potion
+    key: 4
+    Prefab: {fileID: 114000014110203906, guid: 3b4d97e5a7ae8314ab1e86de47fd1aac, type: 2}
+    rarity: 1

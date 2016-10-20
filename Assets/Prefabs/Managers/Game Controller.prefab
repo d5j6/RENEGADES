@@ -202,6 +202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f6dabe1bb5ecf645965fd774aa2668b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idealTransform: {fileID: 0}
   WIDGETS:
   - type: 0
     widget: {fileID: 114000011320290498, guid: 36c3d64dc0b421e4fa57d4d92a036844, type: 2}
@@ -230,6 +231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fd741e9b851cc54eb157fed85c05202, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idealTransform: {fileID: 0}
   itemBlueprint: {fileID: 11400000, guid: 6b85a1f5b6633be479d3a844b158b4b6, type: 2}
 --- !u!114 &114000012672778320
 MonoBehaviour:
@@ -260,6 +262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ecd2599ef44ebd4d81e6f56928f7f94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idealTransform: {fileID: 0}
   EffectsToSpawn:
   - type: 0
     effect: {fileID: 114000010179768536, guid: ca9b7daf5926f324b988ca885ce80b61, type: 2}
@@ -271,6 +274,7 @@ MonoBehaviour:
     effect: {fileID: 114000011088499344, guid: 78da4b9160c858545b6d18db642b64ad, type: 2}
   - type: 4
     effect: {fileID: 114000012112559074, guid: a22a54db3f5c2a04092156b720217a52, type: 2}
+  defaultParticleMAT: {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!114 &114000013587986518
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -282,6 +286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a97c98222bddef1448f95b73466c3e72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idealTransform: {fileID: 0}
   Enemies:
   - type: 0
     monster: {fileID: 114000012417446580, guid: cba7b3c60ab0f6a4aa994e68ba11980f,
@@ -297,4 +302,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 580be322e46af9b4b905361965e7e2e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idealTransform: {fileID: 0}
   playerPrefab: {fileID: 11486860, guid: 68ffc3bd83d442442b95e897651e0dbb, type: 2}
