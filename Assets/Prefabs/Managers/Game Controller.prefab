@@ -264,16 +264,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   idealTransform: {fileID: 0}
   EffectsToSpawn:
-  - type: 0
+  - name: Blood Splat
+    type: 0
     effect: {fileID: 114000010179768536, guid: ca9b7daf5926f324b988ca885ce80b61, type: 2}
-  - type: 1
+  - name: Blood Explosion
+    type: 1
     effect: {fileID: 114000010008737904, guid: 28ece7588de1ec34491afb6fdfba22d4, type: 2}
-  - type: 2
+  - name: Fire Explosion
+    type: 2
     effect: {fileID: 114000014249366320, guid: 695d2276c1112954baccf84e29091ffb, type: 2}
-  - type: 3
+  - name: Spawn
+    type: 3
     effect: {fileID: 114000011088499344, guid: 78da4b9160c858545b6d18db642b64ad, type: 2}
-  - type: 4
+  - name: Enemy Spawn
+    type: 4
     effect: {fileID: 114000012112559074, guid: a22a54db3f5c2a04092156b720217a52, type: 2}
+  - name: Plasma Explosion
+    type: 5
+    effect: {fileID: 114000014176308770, guid: 22677bdf3e5e2e94d8f22fba213d9501, type: 2}
   defaultParticleMAT: {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!114 &114000013587986518
 MonoBehaviour:
@@ -303,4 +311,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   idealTransform: {fileID: 0}
-  playerPrefab: {fileID: 11486860, guid: 68ffc3bd83d442442b95e897651e0dbb, type: 2}
+  playerPrefab: {fileID: 114000012127280626, guid: b2301a18a7cb18149822d1e61826b88d,
+    type: 2}

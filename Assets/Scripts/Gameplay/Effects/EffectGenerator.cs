@@ -17,12 +17,14 @@ namespace RENEGADES.Gameplay.Effects
             BloodExplosion,
             FireExplosion,
             Spawn,
-            EnemySpawn
+            EnemySpawn,
+            PlasmaExplosion
         }
 
         [System.Serializable]
         public class EffectToSpawn
         {
+            public string name;
             public EffectType type;
             public Effect effect;
         }

@@ -73,7 +73,7 @@ namespace RENEGADES.Gameplay.Basic
             return Sprite.bounds;
         }
 
-        public void UpdateHealth(float h)
+        private void UpdateHealth(float h)
         {
             HEALTH = Mathf.Clamp(HEALTH+=h, 0, maxHealth);
             if (HEALTH <= 0) Destroyed();

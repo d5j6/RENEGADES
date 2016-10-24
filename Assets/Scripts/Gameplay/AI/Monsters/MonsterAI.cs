@@ -141,9 +141,14 @@ namespace RENEGADES.Gameplay.AI
             if (p != null)
             {
                 GameManager.Instance.EffectSpawner.CreateEffect(EffectGenerator.EffectType.BloodSplat,p.transform.position);
-                UpdateHealth(-p.GetDamage());
-                EnemyHealthUI.UpdateHealth(HEALTH);
+                ChangeHealth(-p.GetDamage());
             }
+        }
+
+        public override void ChangeHealth(float h)
+        {
+            base.ChangeHealth(h);
+            EnemyHealthUI.UpdateHealth(HEALTH);
         }
 
         /// <summary>

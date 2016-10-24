@@ -1,6 +1,9 @@
 ﻿//UnityEngine
 using UnityEngine;
 
+//C#
+using System.Collections.Generic;
+
 namespace RENEGADES.Common.Gameplay
 {
     public class FindClosest
@@ -43,6 +46,25 @@ namespace RENEGADES.Common.Gameplay
             }
             if (closestDistance > range) return default(T);
             return closest;
+        }
+
+        //fill find closest to the transform of with a range
+        public static Dictionary<T,float> Find_Group<T>(Transform t, float range) where T : Component
+        {
+            T[] elements = Object.FindObjectsOfType<T>();
+            Dictionary<T, float> hash = new Dictionary<T, float>();
+            foreach (T e in elements)
+            {
+                float distance = (t.position - e.transform.position).sqrMagnitude;
+
+                if (distance < range)
+                {
+                    hash.Add(e, distance);
+                    
+                }
+            }
+
+            return hash;
         }
     }
 }

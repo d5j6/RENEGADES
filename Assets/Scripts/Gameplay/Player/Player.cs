@@ -1,7 +1,6 @@
 ﻿//App
 using RENEGADES.UI.Gameplay;
 using RENEGADES.Gameplay.Basic;
-using RENEGADES.Gameplay.Weapons;
 using RENEGADES.Constants;
 using RENEGADES.Managers;
 
@@ -24,12 +23,6 @@ namespace RENEGADES.Gameplay.Players
             get { return playerMovement ?? (playerMovement = GetComponent<PlayerMovement>()); }
         }
 
-        private RangedAttack rangedAttack;
-        private RangedAttack RangedAttack
-        {
-            get { return rangedAttack ?? (rangedAttack = GetComponentInChildren<RangedAttack>()); }
-        }
-
         private AnimationTriggers.PlayerAnimation currentTrigger;
         public AnimationTriggers.PlayerAnimation CurrentTrigger
         {
@@ -42,11 +35,12 @@ namespace RENEGADES.Gameplay.Players
             get { return playerHUD; } set { playerHUD = value; }
         }
 
-        public int CRYSTALS;
+        private int CRYSTALS;
 
         public override void SetHealth(float h)
         {
             base.SetHealth(100);
+            UpdateCrystals(200);
             if(playerHUD != null) PlayerHUD.SetMaxHealth(100);
         }
 
@@ -62,11 +56,15 @@ namespace RENEGADES.Gameplay.Players
             if (playerHUD != null) PlayerHUD.UpdateCrystal(CRYSTALS);
         }
 
+        public float GetCrystals()
+        {
+            return CRYSTALS;
+        }
+
         //player main game loop
         private void FixedUpdate()
         {
             AnimationLoop();
-            RangedAttackLoop();
         }
 
 
@@ -89,21 +87,6 @@ namespace RENEGADES.Gameplay.Players
 
         }
 
-        private void RangedAttackLoop()
-        {
-            if (GameManager.Instance._ControllerManager.AnyControllersConnected())
-            {
-                if (Input.GetAxis(GameInput.GetInput(GameInput.PlayerInput.Attack)) > 0)
-                {
-                    RangedAttack.FIRE(this);
-                }
-            }
-            else
-            {
-                if (Input.GetKey(KeyCode.Space)) RangedAttack.FIRE(this);
-            }
-
-        }
 
         public override void Destroyed()
         {
