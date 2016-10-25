@@ -1,0 +1,409 @@
+fileFormatVersion: 2
+guid: 9780cdeaa29a8c74f9234aea6eec0a80
+timeCreated: 1477427074
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: ComeIn_2_0
+    21300002: ComeIn_2_1
+    21300004: ComeIn_2_2
+    21300006: ComeIn_2_3
+    21300008: ComeIn_2_4
+    21300010: ComeIn_2_5
+    21300012: ComeIn_2_6
+    21300014: ComeIn_2_7
+    21300016: ComeIn_2_8
+    21300018: ComeIn_2_9
+    21300020: ComeIn_2_10
+    21300022: ComeIn_2_11
+    21300024: ComeIn_2_12
+    21300026: ComeIn_2_13
+    21300028: ComeIn_2_14
+    21300030: ComeIn_2_15
+    21300032: ComeIn_2_16
+    21300034: ComeIn_2_17
+    21300036: ComeIn_2_18
+    21300038: ComeIn_2_19
+    21300040: ComeIn_2_20
+    21300042: ComeIn_2_21
+    21300044: ComeIn_2_22
+    21300046: ComeIn_2_23
+    21300048: ComeIn_2_24
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ComeIn_2_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 786
+        width: 136
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ComeIn_2_1
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 793
+        width: 138
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ComeIn_2_2
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 796
+        width: 123
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ComeIn_2_3
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 797
+        width: 124
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ComeIn_2_4
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 785
+        width: 140
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ComeIn_2_5
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 605
+        width: 130
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ComeIn_2_6
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 605
+        width: 131
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ComeIn_2_7
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 604
+        width: 127
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ComeIn_2_8
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 593
+        width: 148
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ComeIn_2_9
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 604
+        width: 140
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ComeIn_2_10
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 396
+        width: 136
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ComeIn_2_11
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 408
+        width: 140
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ComeIn_2_12
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 420
+        width: 134
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ComeIn_2_13
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 415
+        width: 127
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ComeIn_2_14
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 405
+        width: 126
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ComeIn_2_15
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 222
+        width: 136
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ComeIn_2_16
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 227
+        width: 130
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ComeIn_2_17
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 218
+        width: 125
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ComeIn_2_18
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 225
+        width: 124
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ComeIn_2_19
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 225
+        width: 125
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ComeIn_2_20
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 31
+        width: 126
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ComeIn_2_21
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 35
+        width: 129
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ComeIn_2_22
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 32
+        width: 127
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ComeIn_2_23
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 33
+        width: 117
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ComeIn_2_24
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 36
+        width: 117
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

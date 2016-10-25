@@ -9,11 +9,13 @@ namespace RENEGADES.Audio
             //-------------------------------------------------
             //UI
             MainMenuClick,
-            Bullet_Fire,
             //-------------------------------------------------
             //Effects
+            Bullet_Fire,
             BloodSplatter,
             Explosion,
+            PlasmaBomb,
+            Build,
             //-------------------------------------------------
             //Monsters
             GhoulDeath,

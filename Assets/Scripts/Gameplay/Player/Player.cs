@@ -9,6 +9,9 @@ using UnityEngine;
 
 namespace RENEGADES.Gameplay.Players
 {
+    /// <summary>
+    /// base player class, controlling movement and animation and player UI top leave
+    /// </summary>
     public class Player : Friendly
     {
         private PlayerAnimator animator;
@@ -40,7 +43,6 @@ namespace RENEGADES.Gameplay.Players
         public override void SetHealth(float h)
         {
             base.SetHealth(100);
-            UpdateCrystals(200);
             if(playerHUD != null) PlayerHUD.SetMaxHealth(100);
         }
 

@@ -22,7 +22,7 @@ GameObject:
   - 114: {fileID: 114000010008737904}
   - 212: {fileID: 212000013934470104}
   - 95: {fileID: 95000012149557996}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Blood Explosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}

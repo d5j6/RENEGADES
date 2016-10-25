@@ -52,7 +52,7 @@ namespace RENEGADES.Gameplay.Players.Types
         {
             if (GameManager.Instance._ControllerManager.AnyControllersConnected())
             {
-                if (Input.GetAxis(GameInput.GetInput(GameInput.PlayerInput.PlantBomb)) > 0)
+                if (Input.GetAxis(GameInput.GetInput(GameInput.PlayerInput.CharacterSpecial)) > 0)
                 {
                     Planter.PlantBomb();
                 }

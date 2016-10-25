@@ -22,7 +22,7 @@ GameObject:
   - 114: {fileID: 114000014176308770}
   - 212: {fileID: 212000013403750162}
   - 95: {fileID: 95000013407275814}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Plasma Explosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -60,6 +60,54 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1000010725060836
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000013557128710}
+  - 114: {fileID: 114000012256360406}
+  m_Layer: 0
+  m_Name: Audio Manager Gameplay
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1000010943460302
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000012935732948}
+  - 82: {fileID: 82000013163661988}
+  m_Layer: 0
+  m_Name: Background Music
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1000013413987364
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000012356527764}
+  - 114: {fileID: 114000014065663580}
+  m_Layer: 0
+  m_Name: Turret Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1000013523020264
 GameObject:
   m_ObjectHideFlags: 0
@@ -123,6 +171,8 @@ Transform:
   - {fileID: 4000012669790046}
   - {fileID: 4000011341097894}
   - {fileID: 4000013985255750}
+  - {fileID: 4000013557128710}
+  - {fileID: 4000012356527764}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &4000011341097894
@@ -164,6 +214,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000010795775042}
   m_RootOrder: 0
+--- !u!4 &4000012356527764
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013413987364}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 4000010795775042}
+  m_RootOrder: 5
 --- !u!4 &4000012669790046
 Transform:
   m_ObjectHideFlags: 1
@@ -178,6 +241,33 @@ Transform:
   - {fileID: 4000012076989694}
   m_Father: {fileID: 4000010795775042}
   m_RootOrder: 1
+--- !u!4 &4000012935732948
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010943460302}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 4000013557128710}
+  m_RootOrder: 0
+--- !u!4 &4000013557128710
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010725060836}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 4000012935732948}
+  m_Father: {fileID: 4000010795775042}
+  m_RootOrder: 4
 --- !u!4 &4000013985255750
 Transform:
   m_ObjectHideFlags: 1
@@ -191,6 +281,81 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000010795775042}
   m_RootOrder: 3
+--- !u!82 &82000013163661988
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010943460302}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 243000011783595706, guid: a782712b34ec6a94db907ce00a2b198d,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: 6a520c44ebba68a4280230afc9c846ce, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.6
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &114000011539858430
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -220,6 +385,36 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 5
+--- !u!114 &114000012256360406
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010725060836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d22113d616d514d4d9850145b967d99b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClips:
+  - clip: {fileID: 8300000, guid: 3928c70fa778cf14d83af1e6dd55523e, type: 3}
+    group: {fileID: 243000012385325922, guid: a782712b34ec6a94db907ce00a2b198d, type: 2}
+  - clip: {fileID: 8300000, guid: 266ec9e5f20e4d84f953a5fce9358608, type: 3}
+    group: {fileID: 243000010203460432, guid: a782712b34ec6a94db907ce00a2b198d, type: 2}
+  - clip: {fileID: 8300000, guid: 36fec26cfd3bb2f4db43fac9fbbbf4bc, type: 3}
+    group: {fileID: 243000011948447476, guid: a782712b34ec6a94db907ce00a2b198d, type: 2}
+  - clip: {fileID: 8300000, guid: 09dc5bbf5b22954408d826b9399067dc, type: 3}
+    group: {fileID: 243000012385325922, guid: a782712b34ec6a94db907ce00a2b198d, type: 2}
+  - clip: {fileID: 8300000, guid: 0d1d1ce75f8c0714ea9f7fe8f66b7364, type: 3}
+    group: {fileID: 243000012385325922, guid: a782712b34ec6a94db907ce00a2b198d, type: 2}
+  - clip: {fileID: 8300000, guid: 54b02254eddca354f8b63ffb841b7b32, type: 3}
+    group: {fileID: 243000012093653266, guid: a782712b34ec6a94db907ce00a2b198d, type: 2}
+  - clip: {fileID: 8300000, guid: 0d99f0950436b134aa2b21318b5f1f5c, type: 3}
+    group: {fileID: 243000012093653266, guid: a782712b34ec6a94db907ce00a2b198d, type: 2}
+  - clip: {fileID: 8300000, guid: 012b1a30ad9375f4e9403a0f15d67781, type: 3}
+    group: {fileID: 243000011948447476, guid: a782712b34ec6a94db907ce00a2b198d, type: 2}
+  - clip: {fileID: 8300000, guid: 53fce093e48aed845b302545f88c47fd, type: 3}
+    group: {fileID: 243000012093653266, guid: a782712b34ec6a94db907ce00a2b198d, type: 2}
 --- !u!114 &114000012427651060
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -282,6 +477,9 @@ MonoBehaviour:
   - name: Plasma Explosion
     type: 5
     effect: {fileID: 114000014176308770, guid: 22677bdf3e5e2e94d8f22fba213d9501, type: 2}
+  - name: Build
+    type: 6
+    effect: {fileID: 114000010106617058, guid: 26339ed18b253bd448b816529a7ca19a, type: 2}
   defaultParticleMAT: {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!114 &114000013587986518
 MonoBehaviour:
@@ -299,6 +497,19 @@ MonoBehaviour:
   - type: 0
     monster: {fileID: 114000012417446580, guid: cba7b3c60ab0f6a4aa994e68ba11980f,
       type: 2}
+--- !u!114 &114000014065663580
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013413987364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4cd43a0746233e4cb5ff1fdc8763de0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  idealTransform: {fileID: 0}
+  turretData: {fileID: 11400000, guid: 9ae7e6fe9d3e49b4d946a631de9aeea7, type: 2}
 --- !u!114 &114000014281973800
 MonoBehaviour:
   m_ObjectHideFlags: 1

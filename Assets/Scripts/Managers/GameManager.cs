@@ -57,6 +57,12 @@ namespace RENEGADES.Managers
             get { return itemSpawner ?? (itemSpawner = FindObjectOfType<ItemGenerator>()); }
         }
 
+        private TurretGenerator turretSpawner;
+        public TurretGenerator TurretSpawner
+        {
+            get { return turretSpawner ?? (turretSpawner = FindObjectOfType<TurretGenerator>()); }
+        }
+
 
         private void Awake()
         {

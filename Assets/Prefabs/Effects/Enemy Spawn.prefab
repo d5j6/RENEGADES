@@ -22,7 +22,7 @@ GameObject:
   - 212: {fileID: 212000011216082018}
   - 95: {fileID: 95000014159639442}
   - 114: {fileID: 114000012112559074}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Enemy Spawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f4cd43a0746233e4cb5ff1fdc8763de0
+timeCreated: 1477423819
+licenseType: Pro
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - idealTransform: {instanceID: 0}
+  - turretData: {fileID: 11400000, guid: 9ae7e6fe9d3e49b4d946a631de9aeea7, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

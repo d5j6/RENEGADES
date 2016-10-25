@@ -22,7 +22,7 @@ GameObject:
   - 212: {fileID: 212000013270599012}
   - 95: {fileID: 95000013768925420}
   - 114: {fileID: 114000011088499344}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4eddcf554d268824c805e71aa9330786, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9780cdeaa29a8c74f9234aea6eec0a80, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

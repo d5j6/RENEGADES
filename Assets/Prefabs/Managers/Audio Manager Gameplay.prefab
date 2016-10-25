@@ -171,3 +171,5 @@ MonoBehaviour:
     group: {fileID: 243000012093653266, guid: a782712b34ec6a94db907ce00a2b198d, type: 2}
   - clip: {fileID: 8300000, guid: 0d99f0950436b134aa2b21318b5f1f5c, type: 3}
     group: {fileID: 243000012093653266, guid: a782712b34ec6a94db907ce00a2b198d, type: 2}
+  - clip: {fileID: 8300000, guid: 012b1a30ad9375f4e9403a0f15d67781, type: 3}
+    group: {fileID: 243000011948447476, guid: a782712b34ec6a94db907ce00a2b198d, type: 2}

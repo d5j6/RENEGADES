@@ -59,6 +59,7 @@ namespace RENEGADES.Gameplay.Weapons
         private void Explode()
         {
             GameManager.Instance.EffectSpawner.CreateEffect(Effects.EffectGenerator.EffectType.PlasmaExplosion, transform.position);
+            GameManager.Instance.AudioManager.PlaySound(Audio.Sounds.Sound.PlasmaBomb);
             DAMAGE();
             Destroy();
         }
@@ -68,7 +69,6 @@ namespace RENEGADES.Gameplay.Weapons
             Dictionary<Damageable, float> elementsAround = FindClosest.Find_Group<Damageable>(transform, DISTANCE);
             foreach(var element in elementsAround)
             {
-                Debug.Log(element.Key.name);
                 //damage based on distance
                 element.Key.ChangeHealth(-Mathf.Clamp(15-(element.Value*3),1,MAX_DAMAGE));
             }

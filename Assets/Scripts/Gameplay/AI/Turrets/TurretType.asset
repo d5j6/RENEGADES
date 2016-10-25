@@ -21,8 +21,11 @@ MonoBehaviour:
     turnSpeed: 4
     projectilePrefab: {fileID: 114000013363417180, guid: 538a95546332e17498566d159fec49ae,
       type: 2}
+    turretPrefab: {fileID: 114000011574270546, guid: a07aa239045059b4ea1cfddad5af294c,
+      type: 2}
     projectileSpeed: 15
     projectileDamage: 5
+    price: 40
   - name: Lancer
     key: 1
     sprite: {fileID: 21300004, guid: 36349a868b016ea40a344b4ef937e2f8, type: 3}
@@ -32,5 +35,8 @@ MonoBehaviour:
     turnSpeed: 2.5
     projectilePrefab: {fileID: 114000014148991610, guid: 653c7a6c8a7347948b9cdc09f629f6c5,
       type: 2}
+    turretPrefab: {fileID: 114000011118389608, guid: f36968cf19e42e745937e53259010a55,
+      type: 2}
     projectileSpeed: 200
     projectileDamage: 10
+    price: 100

@@ -22,7 +22,7 @@ GameObject:
   - 212: {fileID: 212000012701792392}
   - 95: {fileID: 95000011763143012}
   - 114: {fileID: 114000010179768536}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Blood Splat
   m_TagString: Untagged
   m_Icon: {fileID: 0}

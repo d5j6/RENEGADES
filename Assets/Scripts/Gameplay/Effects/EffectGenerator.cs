@@ -18,7 +18,8 @@ namespace RENEGADES.Gameplay.Effects
             FireExplosion,
             Spawn,
             EnemySpawn,
-            PlasmaExplosion
+            PlasmaExplosion,
+            Build
         }
 
         [System.Serializable]

@@ -30,8 +30,10 @@ namespace RENEGADES.Gameplay.AI.Turrets
             public float range;
             public float turnSpeed;
             public Projectile projectilePrefab;
+            public Turret turretPrefab;
             public float projectileSpeed;
             public float projectileDamage;
+            public float price;
         }
 
         public List<TurretBlueprint> TurretTypes;
