@@ -6,6 +6,7 @@ using RENEGADES.Gameplay.Controllers;
 using RENEGADES.Gameplay.Items;
 using RENEGADES.Gameplay.Effects;
 using RENEGADES.UI.Managers;
+using RENEGADES.UI.MainMenu;
 
 //Unity
 
@@ -25,6 +26,12 @@ namespace RENEGADES.Managers
         public LevelLoader _LevelLoad
         {
             get { return levelLoader ?? (levelLoader = GetComponent<LevelLoader>()); }
+        }
+
+        private MainMenuController mainMenu;
+        public  MainMenuController MainMenu
+        {
+            get { return mainMenu ?? (mainMenu = FindObjectOfType<MainMenuController>()); }
         }
 
         private BaseSoundController audioManager;
