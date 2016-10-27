@@ -6,6 +6,12 @@ namespace RENEGADES.UI.MainMenu.Welcome
     public class Welcome : UIPanel
     {
         private bool clicked = false;
+
+        public override void Init()
+        {
+            base.Init();
+        }
+
         public override void OnUpdate()
         {
             base.OnUpdate();

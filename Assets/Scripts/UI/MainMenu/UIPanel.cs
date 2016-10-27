@@ -6,10 +6,11 @@ using RENEGADES.Common.UI;
 
 namespace RENEGADES.UI.MainMenu
 {
+    [RequireComponent(typeof(SetFirstSelected))]
     public class UIPanel : UIWidget
     {
         private bool visible;
-        private const float FADE_SPEED = 5.0f;
+        private const float FADE_SPEED = 5f;
 
         public override void Init()
         {

@@ -46,6 +46,7 @@ namespace RENEGADES.UI.MainMenu.Navigation
         {
             MoveTo(placeLookup[place].position);
             RotateTo(placeLookup[place].eulerAngle);
+            if (place == Place.WelcomePage) return 0; //DONT WANT TO WAIT TO SHOW WELCOME PAGE AT THE BEGINNING
             return (MOVE_TIME >= ROTATE_TIME) ? MOVE_TIME : ROTATE_TIME;
         }
 
@@ -71,8 +72,11 @@ namespace RENEGADES.UI.MainMenu.Navigation
 
         private void OnDestroy()
         {
-            placeLookup.Clear();
-            placeLookup = null;
+            if (placeLookup != null)
+            {
+                placeLookup.Clear();
+                placeLookup = null;
+            }
         }
 
     }
