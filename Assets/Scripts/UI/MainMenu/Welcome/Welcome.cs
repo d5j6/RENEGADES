@@ -1,4 +1,4 @@
-﻿//
+﻿//Game
 using RENEGADES.Managers;
 
 namespace RENEGADES.UI.MainMenu.Welcome

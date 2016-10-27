@@ -51,10 +51,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 496596bc8d0b90c4a8743df8ad2ee428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idealTransform: {fileID: 0}
   UIPanels:
   - name: Welcome Page
     key: 0
-    prefab: {fileID: 0}
+    prefab: {fileID: 114000014106293734, guid: 53f7a2695e73f5341842e7933e7cd2ae, type: 2}
   - name: Main Menu
-    key: 0
-    prefab: {fileID: 114000012536368896, guid: 720a2d5caf155814a860a0bfc3202784, type: 2}
+    key: 1
+    prefab: {fileID: 114000012495168866, guid: 720a2d5caf155814a860a0bfc3202784, type: 2}
+  - name: Settings
+    key: 4
+    prefab: {fileID: 114000010718141506, guid: b34f898592da7ea499b293d628991dde, type: 2}
+  - name: High Scores Menu
+    key: 3
+    prefab: {fileID: 114000010662075736, guid: 6acdca62139410042a44019029eda2ab, type: 2}
+  - name: Character Select Menu
+    key: 2
+    prefab: {fileID: 114000013278232278, guid: 96aba80d206ed8648bf2cd4f24bee61b, type: 2}
+  - name: Credits Menu
+    key: 5
+    prefab: {fileID: 114000013054317534, guid: a8a378344c2f234428d424ba0e8dd49c, type: 2}

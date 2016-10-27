@@ -5,8 +5,9 @@ namespace RENEGADES.UI.Effects
 {
     public class Gravity : MonoBehaviour
     {
-
-        float floating = 1.0f;
+        [Header("Float Range Factor")]
+        [Range(0,2)]
+        public float floating = 0.25f;
 
         private RectTransform rect;
         private RectTransform Rect
