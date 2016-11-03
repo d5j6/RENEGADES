@@ -11,7 +11,7 @@ namespace RENEGADES.Gameplay.Basic
 
         public void Awake()
         {
-            InvokeRepeating("Generate", 0, 0.5f);
+            InvokeRepeating("Generate", 0, 2f);
         }
 
 

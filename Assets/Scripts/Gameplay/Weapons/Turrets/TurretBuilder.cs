@@ -31,6 +31,8 @@ namespace RENEGADES.Gameplay.Weapons.Turrets
 
         private const float BLOCK_DISTANCE = 0.75f;
 
+        private Vector3 buildPosition;
+
         private void Update()
         {
             Sprite.enabled = building;
@@ -94,14 +96,17 @@ namespace RENEGADES.Gameplay.Weapons.Turrets
 
         private void BUILD()
         {
+            if (_Player.GetCrystals() < 10) return;
+            _Player.UpdateCrystals(-10);
             GameManager.Instance.EffectSpawner.CreateEffect(EffectGenerator.EffectType.Build, transform.position);
             GameManager.Instance.AudioManager.PlaySound(Audio.Sounds.Sound.Build);
+            buildPosition = transform.position;
             Invoke("DelaySpawn", 0.5f);
         }
 
         private void DelaySpawn()
         {
-            GameManager.Instance.TurretSpawner.CreateTurret(AI.Turrets.TurretType.TurretKey.Basic, transform.position);
+            GameManager.Instance.TurretSpawner.CreateTurret(AI.Turrets.TurretType.TurretKey.Basic, buildPosition);
         }
 
 

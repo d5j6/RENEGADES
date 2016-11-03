@@ -17,5 +17,10 @@ namespace RENEGADES.Common.UI
         {
             Txt.text = s;
         }
+
+        public void SetColor(Color c)
+        {
+            Txt.color = c;
+        }
     }
 }

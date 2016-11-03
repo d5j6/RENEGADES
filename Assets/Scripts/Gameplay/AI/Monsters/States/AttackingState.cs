@@ -29,6 +29,7 @@ namespace RENEGADES.Gameplay.AI
 
         public void SetUp()
         {
+            if (monster.HEALTH <= 0) { ToDeadState(); }
             attackTimer = 0;
             monster._EnemyAnimator.SetAnimState(Constants.AnimationTriggers.EnemyAnimation.Attack);
         }
