@@ -8,10 +8,11 @@ namespace RENEGADES.Gameplay.Basic
 {
     public class Portal : MonoBehaviour
     {
-
+        private float rate;
         public void Awake()
         {
-            InvokeRepeating("Generate", 0, 2f);
+            rate = Random.Range(1, 3);
+            InvokeRepeating("Generate", 0, rate);
         }
 
 

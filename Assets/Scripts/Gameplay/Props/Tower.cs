@@ -29,6 +29,7 @@ namespace RENEGADES.Gameplay.Props
             GameManager.Instance.EffectSpawner.CreateEffect(Effects.EffectGenerator.EffectType.FireExplosion, transform.position);
             GameManager.Instance.AudioManager.PlaySound(Audio.Sounds.Sound.Explosion);
             Destroy(gameObject);
+            UnityEngine.SceneManagement.SceneManager.LoadScene(0);
 
         }
     }
