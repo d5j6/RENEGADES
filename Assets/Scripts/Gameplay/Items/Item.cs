@@ -29,8 +29,6 @@ namespace RENEGADES.Gameplay.Items
 
         private Lerper lerper = new Lerper(0.25f);
 
-        private float shit;
-
         private void Update()
         {
             OnUpdate();
@@ -84,7 +82,7 @@ namespace RENEGADES.Gameplay.Items
 
         public Player GetPlayer()
         {
-            FindPlayerInRange();
+            if(player == null) FindPlayerInRange();
             return player;
         }
 

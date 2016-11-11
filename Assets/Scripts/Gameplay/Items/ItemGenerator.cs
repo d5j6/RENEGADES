@@ -16,9 +16,12 @@ namespace RENEGADES.Gameplay.Items
 
         private const float SPAWN_RANGE = 0.5f;
 
-        public override void Init() { }
+        public override void Init() { CreatePoolers(); }
 
-        private void Update()
+        /// <summary>
+        /// Create Individual Pooler for each type of item because item functionality varies
+        /// </summary>
+        private void CreatePoolers()
         {
           
         }
@@ -55,7 +58,7 @@ namespace RENEGADES.Gameplay.Items
         //Get the number of items to spawn,potentialy none
         private int GetSpawnCount()
         {
-            return Mathf.Clamp(UnityEngine.Random.Range(-6, 5), 0, 4);
+            return Mathf.Clamp(Random.Range(-6, 5), 0, 4);
         }
 
     }

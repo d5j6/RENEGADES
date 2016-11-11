@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000011331279068}
-  - 114: {fileID: 114000013323966390}
+  - 114: {fileID: 114000010558519328}
   - 212: {fileID: 212000011841894092}
   - 95: {fileID: 95000013464844390}
   m_Layer: 8
@@ -59,7 +59,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114000013323966390
+--- !u!114 &114000010558519328
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -67,7 +67,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000011541067072}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2da225200e68dd43a93a25e47871875, type: 3}
+  m_Script: {fileID: 11500000, guid: 16df7dc9f07d3e24db351bb67a21aa84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   fadeOut: 0
@@ -100,7 +100,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9ea717cb9002ebd4da48fce580d4e21a, type: 3}
+  m_Sprite: {fileID: 21300020, guid: 619cef815fefbf8468c4c8b967af8f53, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

@@ -11,3 +11,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f284c427447e3c64b9b4b9560506d2b0, type: 3}
   m_Name: EffectBlueprint
   m_EditorClassIdentifier: 
+  blueprints:
+  - name: Blood Explosion
+    type: 1
+    animator: {fileID: 9100000, guid: 8f55229fbcbce5642a0d6c8dac6e3732, type: 2}
+    lifeTime: 10
+    fadeOutTime: 8
+  - name: Bloodsplat
+    type: 0
+    animator: {fileID: 9100000, guid: ae1a9a2dcabd91d43a8773e126e3dfd5, type: 2}
+    lifeTime: 1.5
+    fadeOutTime: 0
+  - name: Build
+    type: 6
+    animator: {fileID: 9100000, guid: 034b2902125b09244ba9636bfcbb1ccd, type: 2}
+    lifeTime: 1.5
+    fadeOutTime: 0
+  - name: Building Explosion
+    type: 2
+    animator: {fileID: 9100000, guid: beca857809bdc3344ab6aa5a0486872e, type: 2}
+    lifeTime: 0
+    fadeOutTime: 0
+  - name: Plasma Explosion
+    type: 5
+    animator: {fileID: 9100000, guid: 72b37adfe8a10a24f82f8bc46746c99c, type: 2}
+    lifeTime: 1.5
+    fadeOutTime: 0
+  - name: Spawn
+    type: 3
+    animator: {fileID: 9100000, guid: 8b8201f32ca825c48bfbf56c64d45cee, type: 2}
+    lifeTime: 0.75
+    fadeOutTime: 0

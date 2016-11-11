@@ -4,6 +4,9 @@ using System.Collections.Generic;
 
 namespace RENEGADES.Gameplay.Items
 {
+    /// <summary>
+    /// What item will spawn based on type
+    /// </summary>
     public class ItemDeterminer
     {
 

@@ -9,6 +9,11 @@ using System.Collections.Generic;
 
 namespace RENEGADES.Gameplay.Effects
 {
+    /// <summary>
+    /// Using a Generic Pooler for performance on effects
+    /// Animator,etc gets reset each time an object is created 
+    /// This uses a Scriptable object lookup
+    /// </summary>
     public class EffectGenerator : GenericPooler
     {
         [Header("Default Materials")]
