@@ -2,28 +2,29 @@
 using RENEGADES.Constants;
 using RENEGADES.Gameplay.Players;
 using RENEGADES.Common;
+using GameEngineering.Common;
 
 //Unity
 using UnityEngine;
 
 namespace RENEGADES.Gameplay.Weapons
 {
-    public class RangedAttack : MonoBehaviour
+    public class RangedAttack : GenericPooler
     {
 
         public Projectile element;
 
         private const float COOLDOWN = 0.25f;
-        public float timer;
+        private float timer;
 
         private bool coolingDown;
 
         private AnimationTriggers.PlayerAnimation currentTrigger;
 
-        private ObjectPooler pooler;
-        private ObjectPooler Pooler
+        public override void Init()
         {
-            get { return pooler ?? (pooler = GetComponent<ObjectPooler>()); }
+            base.Init();
+            SetIdealTransform(GameObject.Find("Pooled Object Container").transform);
         }
 
         private void Update()
@@ -52,8 +53,7 @@ namespace RENEGADES.Gameplay.Weapons
 
         private void Spawn()
         {
-            Plasma spawn = Pooler.GetPooledObject().GetComponent<Plasma>();
-            spawn.Init(transform.position);
+            Plasma spawn = GetPooledObject(transform.position) as Plasma;
             spawn.SetMoveSpeed(100);
             spawn.SetEulerAngles(currentTrigger);
             spawn.SetDamage(5);

@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3735643, g: 0.38112015, b: 0.35887682, a: 1}
+  m_IndirectSpecularColor: {r: 0.37356454, g: 0.38112053, b: 0.3588771, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -161,6 +161,10 @@ Prefab:
       propertyPath: m_Name
       value: Portal (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010889389670, guid: 71f10f138d5841f4f9b424a1fc1a0625, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 71f10f138d5841f4f9b424a1fc1a0625, type: 2}
   m_IsPrefabParent: 0
@@ -268,6 +272,10 @@ Prefab:
     - target: {fileID: 1000010889389670, guid: 71f10f138d5841f4f9b424a1fc1a0625, type: 2}
       propertyPath: m_Name
       value: Portal (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010889389670, guid: 71f10f138d5841f4f9b424a1fc1a0625, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 71f10f138d5841f4f9b424a1fc1a0625, type: 2}

@@ -18,7 +18,7 @@ namespace RENEGADES.Gameplay.Weapons
         public override void Init()
         {
             base.Init();
-            idealT = GameObject.Find("Pooled Object Container").transform;
+            SetIdealTransform(GameObject.Find("Pooled Object Container").transform);
         }
 
         private const int CRYSTAL_COST = 20;

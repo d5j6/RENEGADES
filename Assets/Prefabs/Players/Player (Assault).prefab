@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012060684366}
   - 114: {fileID: 114000010332111486}
-  - 114: {fileID: 114000011560764306}
   m_Layer: 10
   m_Name: Attacks
   m_TagString: Untagged
@@ -211,8 +210,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e71f3ccb1d671245af52484be08ef10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prefab: {fileID: 11453568, guid: 11f36b75b92f1084283f9fcf39d389cf, type: 2}
+  idealT: {fileID: 0}
   element: {fileID: 11453568, guid: 11f36b75b92f1084283f9fcf39d389cf, type: 2}
-  timer: 0
 --- !u!114 &114000010563119010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -224,20 +224,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 290dfe83f46383b449af83d31eb8e651, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114000011560764306
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012221958096}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52f5bac5fc7671d4589d74118364a1a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pooledObject: {fileID: 132022, guid: 11f36b75b92f1084283f9fcf39d389cf, type: 2}
-  pooledAmount: 5
-  willGrow: 1
 --- !u!114 &114000012127280626
 MonoBehaviour:
   m_ObjectHideFlags: 1

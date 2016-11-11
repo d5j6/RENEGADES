@@ -1,8 +1,12 @@
-﻿using UnityEngine;
+﻿//Unity
+using UnityEngine;
+
+//Game
+using GameEngineering.Common;
 
 namespace RENEGADES.Gameplay.Weapons
 {
-    public class Projectile : MonoBehaviour
+    public class Projectile : PooledObject
     {
         private Rigidbody2D rigid;
         private Rigidbody2D ElementRigidBody
