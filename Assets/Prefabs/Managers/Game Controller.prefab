@@ -457,30 +457,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ecd2599ef44ebd4d81e6f56928f7f94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idealTransform: {fileID: 0}
-  EffectsToSpawn:
-  - name: Blood Splat
-    type: 0
-    effect: {fileID: 114000010179768536, guid: ca9b7daf5926f324b988ca885ce80b61, type: 2}
-  - name: Blood Explosion
-    type: 1
-    effect: {fileID: 114000010008737904, guid: 28ece7588de1ec34491afb6fdfba22d4, type: 2}
-  - name: Fire Explosion
-    type: 2
-    effect: {fileID: 114000014249366320, guid: 695d2276c1112954baccf84e29091ffb, type: 2}
-  - name: Spawn
-    type: 3
-    effect: {fileID: 114000011088499344, guid: 78da4b9160c858545b6d18db642b64ad, type: 2}
-  - name: Enemy Spawn
-    type: 4
-    effect: {fileID: 114000012112559074, guid: a22a54db3f5c2a04092156b720217a52, type: 2}
-  - name: Plasma Explosion
-    type: 5
-    effect: {fileID: 114000014176308770, guid: 22677bdf3e5e2e94d8f22fba213d9501, type: 2}
-  - name: Build
-    type: 6
-    effect: {fileID: 114000010106617058, guid: 26339ed18b253bd448b816529a7ca19a, type: 2}
+  prefab: {fileID: 114000010558519328, guid: 7e83d74d16fb8984bb5ee7248c6425c0, type: 2}
+  idealT: {fileID: 0}
   defaultParticleMAT: {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
+  blueprint: {fileID: 11400000, guid: 91d4fe8f83eb88a43a927f9e1f03e0ba, type: 2}
 --- !u!114 &114000013587986518
 MonoBehaviour:
   m_ObjectHideFlags: 1

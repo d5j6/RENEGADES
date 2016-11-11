@@ -53,7 +53,7 @@ namespace RENEGADES.Gameplay.Controllers
         {
             Player newPlayer = Spawn(playerPrefab);
             Players.Add(newPlayer);
-            GameManager.Instance.EffectSpawner.CreateEffect(Effects.EffectGenerator.EffectType.Spawn, newPlayer.GetPosition());
+            GameManager.Instance.EffectSpawner.CreateEffect(EffectBlueprint.EffectType.Spawn, newPlayer.GetPosition());
             PlayerModule hud = GameManager.Instance.UISpawner.CreateWidget(UI.Managers.WidgetCreator.WidgetToSpawn.PlayerModule) as PlayerModule;
             newPlayer.PlayerHUD = hud;
 

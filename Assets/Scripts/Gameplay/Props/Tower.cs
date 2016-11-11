@@ -26,7 +26,7 @@ namespace RENEGADES.Gameplay.Props
         public override void Destroyed()
         {
             base.Destroyed();
-            GameManager.Instance.EffectSpawner.CreateEffect(Effects.EffectGenerator.EffectType.FireExplosion, transform.position);
+            GameManager.Instance.EffectSpawner.CreateEffect(EffectBlueprint.EffectType.FireExplosion, transform.position);
             GameManager.Instance.AudioManager.PlaySound(Audio.Sounds.Sound.Explosion);
             Destroy(gameObject);
             UnityEngine.SceneManagement.SceneManager.LoadScene(0);

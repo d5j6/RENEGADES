@@ -58,7 +58,7 @@ namespace RENEGADES.Gameplay.Weapons
 
         private void Explode()
         {
-            GameManager.Instance.EffectSpawner.CreateEffect(Effects.EffectGenerator.EffectType.PlasmaExplosion, transform.position);
+            GameManager.Instance.EffectSpawner.CreateEffect(EffectBlueprint.EffectType.PlasmaExplosion, transform.position);
             GameManager.Instance.AudioManager.PlaySound(Audio.Sounds.Sound.PlasmaBomb);
             DAMAGE();
             Destroy();

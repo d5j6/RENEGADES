@@ -140,7 +140,7 @@ namespace RENEGADES.Gameplay.AI
             Weapons.Projectile p = other.GetComponent<Weapons.Projectile>();
             if (p != null)
             {
-                GameManager.Instance.EffectSpawner.CreateEffect(EffectGenerator.EffectType.BloodSplat,p.transform.position);
+                GameManager.Instance.EffectSpawner.CreateEffect(EffectBlueprint.EffectType.BloodSplat,p.transform.position);
                 ChangeHealth(-p.GetDamage());
             }
         }

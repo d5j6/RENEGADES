@@ -93,7 +93,7 @@ namespace RENEGADES.Gameplay.Players
         public override void Destroyed()
         {
             base.Destroyed();
-            GameManager.Instance.EffectSpawner.CreateEffect(Effects.EffectGenerator.EffectType.BloodExplosion, transform.position);
+            GameManager.Instance.EffectSpawner.CreateEffect(EffectBlueprint.EffectType.BloodExplosion, transform.position);
             Destroy(gameObject);
         }
     }

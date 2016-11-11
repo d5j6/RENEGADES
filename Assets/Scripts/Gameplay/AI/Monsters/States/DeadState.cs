@@ -45,7 +45,7 @@ namespace RENEGADES.Gameplay.AI
         {
             isDead = true;
             //spawn blood explosion
-            GameManager.Instance.EffectSpawner.CreateEffect(Effects.EffectGenerator.EffectType.BloodExplosion, enemy.transform.position);
+            GameManager.Instance.EffectSpawner.CreateEffect(EffectBlueprint.EffectType.BloodExplosion, enemy.transform.position);
             enemy.RemoveFromBattleField();
         }
 
