@@ -23,14 +23,29 @@ namespace RENEGADES.Gameplay.Weapons
 
         private const int CRYSTAL_COST = 20;
 
+        private float bombCooldown = 0.5f;
+        private float bombTimer = 0;
+        public bool cooling = false;
+
         public override void OnUpdate()
         {
             base.OnUpdate();
+            if (cooling)
+            {
+                bombTimer += Time.deltaTime;
+                if (bombTimer > bombCooldown)
+                {
+                    cooling = false;
+                    bombTimer = 0;
+                }
+            }
         }
 
         public void PlantBomb()
         {
             if (_Player.GetCrystals() < CRYSTAL_COST) return;
+            if (cooling) return;
+            cooling = true; //we have succesfully planted a bomb
             Vector3 pos = new Vector3(transform.position.x, transform.position.y -0.75f, 0);
             GetPooledObject(pos);
             _Player.UpdateCrystals(-CRYSTAL_COST);

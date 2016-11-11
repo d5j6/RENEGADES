@@ -23,24 +23,14 @@ namespace RENEGADES.Gameplay.Players.Types
             get { return planter ?? (planter = GetComponentInChildren<BombPlanter>()); }
         }
 
-        private float bombCooldown = 0.5f;
-        private float bombTimer = 0;
-        public bool cooling = false;
+
 
         public override void OnUpdate()
         {
             base.OnUpdate();
             RangedAttackLoop();
             BombPlantLoop();
-            if(cooling)
-            {
-                bombTimer += Time.deltaTime;
-                if(bombTimer > bombCooldown)
-                {
-                    cooling = false;
-                    bombTimer = 0;
-                }
-            }
+
         }
 
 
@@ -63,12 +53,11 @@ namespace RENEGADES.Gameplay.Players.Types
 
         private void BombPlantLoop()
         {
-            if (cooling) return;
+            
             if (GameManager.Instance._ControllerManager.AnyControllersConnected())
             {
                 if (Input.GetAxis(GameInput.GetInput(GameInput.PlayerInput.CharacterSpecial)) > 0)
                 {
-                    cooling = true;
                     Planter.PlantBomb();
                 }
             }

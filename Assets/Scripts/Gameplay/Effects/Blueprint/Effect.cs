@@ -31,21 +31,24 @@ namespace RENEGADES.Gameplay.Effects
 
         private const float FADE_SPEED = 0.5f;
 
-
+        #region Pooler Methods
         public override void Show()
         {
             base.Show();
-            _Animator.Play("Play", -1, 0); //"Sadly theres no way that I know to reset the animation
+            _Animator.Play("Play",-1,0); //"Sadly theres no way that I know to reset the animation
+            fadeOut = false;
+            effectAlpha = 1;
+            SetAlpha(1);
+            timer = 0;
         }
 
         public override void Remove()
         {
             base.Remove();
-            SetAlpha(1);
-            effectAlpha = 1;
-            fadeOut = false;
-            timer = 0;
         }
+
+        #endregion
+
 
         private void Update()
         {
