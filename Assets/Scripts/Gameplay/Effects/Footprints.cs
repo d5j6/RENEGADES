@@ -1,5 +1,6 @@
 ﻿//App
 using RENEGADES.Common;
+using GameEngineering.Common;
 
 //Unity
 using UnityEngine;
@@ -7,23 +8,14 @@ using UnityEngine;
 namespace RENEGADES.Gameplay.Effects
 {
     //This script is used to create footprints behind a moving sprite character
-    public class Footprints : MonoBehaviour
+    public class Footprints : GenericPooler
     {
         [Header("Sprite for Footprint")]
         public Sprite footPrintSprite;
 
-        [Header("Footprint GameObject")]
-        public Footprint footPrintPrefab;
-
         [Header("Size")]
         [Range(0.0F, 2.0F)]
         public float size;
-
-        private ObjectPooler pooler;
-        private ObjectPooler Pooler
-        {
-            get { return pooler ?? (pooler = GetComponent<ObjectPooler>()); }
-        }
 
         private const float FOOTPRINT_TIMER = 0.2f;
         private const float DISTANCE_THRESHOLD = 0.05f;
@@ -36,9 +28,11 @@ namespace RENEGADES.Gameplay.Effects
 
         private const float FOOTPRINT_SEPERATION = 0.1f;
 
-        private void Awake()
+        public override void Init()
         {
+            base.Init();
             InvokeRepeating("CheckFootPrint_OnUpdate", 0, FOOTPRINT_TIMER);
+            SetIdealTransform(GameObject.Find("Pooled Object Container").transform);
             lastPosition = transform.position;
         }
 
@@ -55,7 +49,7 @@ namespace RENEGADES.Gameplay.Effects
         //Spawn our footprint at the appropriate position
         private void Spawn(float angle)
         {
-            Footprint print = Pooler.GetPooledObject().GetComponent<Footprint>();
+            
 
             //determine our offsets
             float offSetY = 0.0f, offSetX = 0.0f;
@@ -70,7 +64,8 @@ namespace RENEGADES.Gameplay.Effects
 
             spriteFlip = DetermineSpriteFlip();
 
-            print.transform.position = new Vector3(transform.position.x + offSetX, transform.position.y + offSetY, 0);
+            Footprint print = GetPooledObject(new Vector3(transform.position.x + offSetX, transform.position.y + offSetY, 0)) as Footprint;
+
             print.transform.localEulerAngles = new Vector3(0, 0, angle);
             print.SetContent(footPrintSprite, spriteFlip,size);
             alternateFeet = !alternateFeet;

@@ -76,11 +76,12 @@ namespace GameEngineering.Common
 
         private void Awake()
         {
-            objectPool = new ObjectPool<PooledObject>(startingAllocatedAmount, OnNew, OnGet, OnRemove);
             Init();
         }
 
-        public virtual void Init() { }
+        public virtual void Init() {
+            objectPool = new ObjectPool<PooledObject>(startingAllocatedAmount, OnNew, OnGet, OnRemove);
+        }
 
         private void Update()
         {
@@ -88,6 +89,11 @@ namespace GameEngineering.Common
         }
 
         public virtual void OnUpdate() { }
+
+        public void SetIdealTransform(Transform t)
+        {
+            idealT = t;
+        }
 
         public PooledObject GetPooledObject(Vector3 pos)
         {
@@ -105,7 +111,9 @@ namespace GameEngineering.Common
         private PooledObject OnNew()
         {
             if (idealT == null) idealT = transform;
-            return Instantiate(prefab, idealT) as PooledObject;
+            PooledObject p = Instantiate(prefab, idealT) as PooledObject;
+            p.SetPooler(this);
+            return p;
         }
 
         private void OnGet(PooledObject o)

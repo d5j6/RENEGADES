@@ -60,7 +60,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000010081149286}
   - 114: {fileID: 114000012815013988}
-  - 114: {fileID: 114000013355164488}
   m_Layer: 10
   m_Name: Footprints
   m_TagString: Untagged
@@ -227,23 +226,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0099d4433ae735347a1c88ef59e6f8bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prefab: {fileID: 11442040, guid: 01c38bbce0665f545869f21099b773ac, type: 2}
+  idealT: {fileID: 0}
   footPrintSprite: {fileID: 21300000, guid: 86f5af6d19a008649b38d16fb4eb8dfc, type: 3}
-  footPrintPrefab: {fileID: 11442040, guid: 01c38bbce0665f545869f21099b773ac, type: 2}
   size: 0.14
---- !u!114 &114000013355164488
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012312166768}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52f5bac5fc7671d4589d74118364a1a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pooledObject: {fileID: 120326, guid: 01c38bbce0665f545869f21099b773ac, type: 2}
-  pooledAmount: 10
-  willGrow: 1
 --- !u!212 &212000010769538914
 SpriteRenderer:
   m_ObjectHideFlags: 1

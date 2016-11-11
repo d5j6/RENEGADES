@@ -1,13 +1,13 @@
 ﻿//App
+using GameEngineering.Common;
 
 //Unity
 using UnityEngine;
 
 namespace RENEGADES.Gameplay.Effects
 {
-    public class Footprint : MonoBehaviour
+    public class Footprint : PooledObject
     {
-
         private SpriteRenderer sprite;
         private SpriteRenderer SpriteRender
         {
@@ -18,14 +18,15 @@ namespace RENEGADES.Gameplay.Effects
         private const float FADE_TIME = 1.0f;
         private const iTween.EaseType FADE_EASETYPE = iTween.EaseType.linear;
 
-        private void OnEnable()
+        public override void Show()
         {
+            base.Show();
             SpriteRender.color = new Color32(255, 255, 255, 255);
         }
 
-        private void OnDisable()
+        public override void Remove()
         {
-
+            base.Remove();
         }
 
         public void SetContent(Sprite sprite, bool flip,float size)
@@ -49,13 +50,12 @@ namespace RENEGADES.Gameplay.Effects
 
         private void Fade_Update(Color newValue)
         {
-            
             SpriteRender.color = newValue;
         }
 
         private void FadeOut_OnComplete()
         {
-            gameObject.SetActive(false);
+            GetPooler().RemovePooledObject(this);
         }
     }
 }
