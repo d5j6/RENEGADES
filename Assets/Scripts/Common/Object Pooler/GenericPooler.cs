@@ -80,7 +80,7 @@ namespace GameEngineering.Common
         }
 
         public virtual void Init() {
-            objectPool = new ObjectPool<PooledObject>(startingAllocatedAmount, OnNew, OnGet, OnRemove);
+            if(objectPool == null) objectPool = new ObjectPool<PooledObject>(startingAllocatedAmount, OnNew, OnGet, OnRemove);
         }
 
         private void Update()
@@ -97,6 +97,7 @@ namespace GameEngineering.Common
 
         public PooledObject GetPooledObject(Vector3 pos)
         {
+            if (objectPool == null) Init();
             spawnPosition = pos;
             var p = objectPool.Get();
             return p;

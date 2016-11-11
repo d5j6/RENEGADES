@@ -43,6 +43,7 @@ namespace RENEGADES.Gameplay.Players
         public override void SetHealth(float h)
         {
             base.SetHealth(100);
+            UpdateCrystals(200);
             if(playerHUD != null) PlayerHUD.SetMaxHealth(100);
         }
 

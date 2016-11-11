@@ -23,7 +23,7 @@ MonoBehaviour:
     lifeTime: 1.5
     fadeOutTime: 0
   - name: Build
-    type: 6
+    type: 5
     animator: {fileID: 9100000, guid: 034b2902125b09244ba9636bfcbb1ccd, type: 2}
     lifeTime: 1.5
     fadeOutTime: 0
@@ -33,7 +33,7 @@ MonoBehaviour:
     lifeTime: 0
     fadeOutTime: 0
   - name: Plasma Explosion
-    type: 5
+    type: 4
     animator: {fileID: 9100000, guid: 72b37adfe8a10a24f82f8bc46746c99c, type: 2}
     lifeTime: 1.5
     fadeOutTime: 0
