@@ -14,7 +14,6 @@ namespace RENEGADES.Gameplay.Weapons
         public override void Dispose()
         {
             base.Dispose();
-            Destroy(gameObject);
         }
 
     }

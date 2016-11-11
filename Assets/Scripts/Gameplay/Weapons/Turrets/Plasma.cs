@@ -58,7 +58,6 @@ namespace RENEGADES.Gameplay.Weapons
         public override void Dispose()
         {
             base.Dispose();
-            GetPooler().RemovePooledObject(this);
         }
 
     }

@@ -14,6 +14,12 @@ namespace RENEGADES.Gameplay.Weapons
             get { return rigid ?? (rigid = GetComponent<Rigidbody2D>()); }
         }
 
+        private TrailRenderer trail;
+        private TrailRenderer Trail
+        {
+            get { return trail ?? (trail = GetComponent<TrailRenderer>()); }
+        }
+
         private const float lifeTime = 3.0f;
         private float lifeTimeTimer;
         private float moveSpeed;
@@ -21,14 +27,15 @@ namespace RENEGADES.Gameplay.Weapons
 
         private float DAMAGE;
 
-        private void Awake()
+        public override void Show()
         {
-            
+            base.Show();
         }
 
-        public void SetPosition(Vector3 pos)
+        public override void Remove()
         {
-            transform.position = pos;
+            base.Remove();
+            Trail.Clear();
         }
 
         public void SetEulerAngle(float e)
@@ -82,7 +89,7 @@ namespace RENEGADES.Gameplay.Weapons
 
         public virtual void Dispose()
         {
-            gameObject.SetActive(false);
+            GetPooler().RemovePooledObject(this);
         }
 
         private void OnDestory()
