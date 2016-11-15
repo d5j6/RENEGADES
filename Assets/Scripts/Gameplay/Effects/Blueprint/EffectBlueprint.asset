@@ -30,7 +30,7 @@ MonoBehaviour:
   - name: Building Explosion
     type: 2
     animator: {fileID: 9100000, guid: beca857809bdc3344ab6aa5a0486872e, type: 2}
-    lifeTime: 0
+    lifeTime: 1.5
     fadeOutTime: 0
   - name: Plasma Explosion
     type: 4
