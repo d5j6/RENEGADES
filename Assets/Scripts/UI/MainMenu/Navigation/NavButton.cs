@@ -15,11 +15,6 @@ namespace RENEGADES.UI.MainMenu.Navigation
         public override void Button_OnSelected()
         {
             base.Button_OnSelected();
-            if(navPlace == NavigationController.Place.CharacterSelectPage)
-            {
-                UnityEngine.SceneManagement.SceneManager.LoadScene(1);
-                return;
-            }
             EnableInteraction(false);
             GameManager.Instance.AudioManager.PlaySound(Audio.Sounds.Sound.MainMenuClick);
             StartCoroutine(GameManager.Instance.MainMenu.TRANSITION(navPlace));
