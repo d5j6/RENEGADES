@@ -54,7 +54,16 @@ namespace RENEGADES.UI.MainMenu.CharacterSelect
         public void UpdateControllCount(int num)
         {
             controllCount += num;
+            PlaySound(num);
             isSelected = controllCount >= 1 ? true : false;
+        }
+
+        private void PlaySound(int num)
+        {
+            if (num > 0)
+            {
+                GameManager.Instance.AudioManager.PlaySound(playerType == GameSettings.PlayerType.Assault ? Audio.Sounds.Sound.Assault_Hey : Audio.Sounds.Sound.Engineer_Hey);
+            }
         }
 
 

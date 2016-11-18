@@ -47,7 +47,7 @@ namespace RENEGADES.UI.MainMenu.Navigation
             MoveTo(placeLookup[place].position);
             RotateTo(placeLookup[place].eulerAngle);
             if (place == Place.WelcomePage) return 0; //DONT WANT TO WAIT TO SHOW WELCOME PAGE AT THE BEGINNING
-            return (MOVE_TIME >= ROTATE_TIME) ? MOVE_TIME : ROTATE_TIME;
+            else return (MOVE_TIME >= ROTATE_TIME) ? MOVE_TIME : ROTATE_TIME;
         }
 
         private void MoveTo(Vector3 pos)

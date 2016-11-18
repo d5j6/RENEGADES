@@ -1,6 +1,7 @@
 ﻿//Game
 using RENEGADES.Managers;
 using RENEGADES.Constants;
+using RENEGADES.UI.MainMenu.Navigation;
 
 //Unity
 using UnityEngine;
@@ -19,6 +20,12 @@ namespace RENEGADES.UI.MainMenu.CharacterSelect
         private ControllerUI[] ControllerUIs
         {
             get { return controllerUIs ?? (controllerUIs = GetComponentsInChildren<ControllerUI>()); }
+        }
+
+        private NavButton backButton;
+        private NavButton BackButton
+        {
+            get { return backButton ?? (backButton = GetComponentInChildren<NavButton>()); }
         }
 
         [Header("Display Colors")]
@@ -51,8 +58,7 @@ namespace RENEGADES.UI.MainMenu.CharacterSelect
                 control.SetCharacter(character);
                 if (control.GetCharacter() != null)
                 {
-                    control.GetCharacter().UpdateControllCount(1);
-                  
+                    control.GetCharacter().UpdateControllCount(1);     
                 }
             }
 
@@ -63,7 +69,8 @@ namespace RENEGADES.UI.MainMenu.CharacterSelect
         public override void OnUpdate()
         {
             base.OnUpdate();
-            if (Input.GetKey(KeyCode.Space) || Input.GetButtonDown(GameInput.GetInput(GameInput.PlayerInput.START))) GAMEPREP();
+            if (Input.GetKeyDown(KeyCode.B) || Input.GetButtonDown(GameInput.GetInput(GameInput.PlayerInput.BButton))) BackButton.Button_OnSelected();
+            if (Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown(GameInput.GetInput(GameInput.PlayerInput.AButton))) GAMEPREP();
         }
 
         //Prep Players in game 

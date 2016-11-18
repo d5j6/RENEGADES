@@ -9,6 +9,8 @@ namespace RENEGADES.Audio
             //-------------------------------------------------
             //UI
             MainMenuClick,
+            Engineer_Hey,
+            Assault_Hey,
             //-------------------------------------------------
             //Effects
             Bullet_Fire,
