@@ -502,5 +502,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   idealTransform: {fileID: 0}
-  playerPrefab: {fileID: 114000012127280626, guid: b2301a18a7cb18149822d1e61826b88d,
-    type: 2}
+  Assault: {fileID: 114000012127280626, guid: b2301a18a7cb18149822d1e61826b88d, type: 2}
+  Engineer: {fileID: 114000011155759776, guid: ae45c2926f3021b4b811d8f413dbb232, type: 2}

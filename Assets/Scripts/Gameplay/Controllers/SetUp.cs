@@ -7,8 +7,6 @@ using RENEGADES.Managers;
 using UnityEngine;
 
 //C#
-using System.Collections.Generic;
-using System.Linq;
 
 namespace RENEGADES.Gameplay.Controllers
 {
@@ -18,14 +16,10 @@ namespace RENEGADES.Gameplay.Controllers
     public class SetUp : Spawner
     {
         [Header("Player Prefab")]
-        [Tooltip("Prefab for a Player")]
-        public Player playerPrefab;
+        [Tooltip("Prefab for Players")]
+        public Player Assault;
+        public Player Engineer;
 
-        private List<Player> players;
-        private List<Player> Players
-        {
-            get { return players ?? (players = FindObjectsOfType<Player>().ToList()); }
-        }
 
         public override void Init()
         {
@@ -34,35 +28,25 @@ namespace RENEGADES.Gameplay.Controllers
 
         private void SetUpPlayers()
         {
-            //spawns a default player
-            if (Players.Count == 0)
+            foreach(var P in GameManager.Instance._GameSettings.GetPlayers())
             {
-                CreatePlayer();
-            }
-            //spawns the rest of the players based on if there are more than one controller
-            if(GameManager.Instance._ControllerManager.GetControllerCount() > 1)
-            {
-                for(int i=1; i < GameManager.Instance._ControllerManager.GetControllerCount(); i++)
-                {
-                    CreatePlayer();
-                }
+                CreatePlayer(P.Key,P.Value);
             }
         }
 
-        private void CreatePlayer()
+        private void CreatePlayer(int playerNumber,GameSettings.PlayerType type)
         {
-            Player newPlayer = Spawn(playerPrefab);
-            Players.Add(newPlayer);
+            Player newPlayer = Spawn(( type == GameSettings.PlayerType.Assault) ? Assault : Engineer);
             GameManager.Instance.EffectSpawner.CreateEffect(EffectBlueprint.EffectType.Spawn, newPlayer.GetPosition());
             PlayerModule hud = GameManager.Instance.UISpawner.CreateWidget(UI.Managers.WidgetCreator.WidgetToSpawn.PlayerModule) as PlayerModule;
+            hud.SetContent(playerNumber,type);
             newPlayer.PlayerHUD = hud;
-
         }
 
 
         private void OnDestroy()
         {
-            players = null;
+
         }
 
 

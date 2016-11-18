@@ -6,13 +6,9 @@ namespace RENEGADES.Gameplay.PlayerInput
     public class ControllerManager : MonoBehaviour
     {
         private int count = 0;
-
-        private float CONNECTIONCHECK_REFRESHRATE = 0.35f;
-
-        
         private void Awake()
         {
-            InvokeRepeating("CHECK_CONTROLLERS", 0, CONNECTIONCHECK_REFRESHRATE);
+
         }
 
         private void CHECK_CONTROLLERS()
@@ -28,17 +24,19 @@ namespace RENEGADES.Gameplay.PlayerInput
 
         public int GetControllerCount()
         {
+            CHECK_CONTROLLERS();
             return count;
         }
 
         public bool AnyControllersConnected()
         {
+            CHECK_CONTROLLERS();
             return (count > 0) ? true : false;
         }
 
         private void OnDestroy()
         {
-            CancelInvoke("CHECK_CONTROLLERS");
+            
         }
         
     }

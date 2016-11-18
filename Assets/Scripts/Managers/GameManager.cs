@@ -16,6 +16,12 @@ namespace RENEGADES.Managers
     //singleton game manager
     public class GameManager : Singleton<GameManager>
     {
+        private GameSettings gameSettings;
+        public GameSettings _GameSettings
+        {
+            get { return gameSettings ?? (gameSettings = FindObjectOfType<GameSettings>()); }
+        }
+
         private ControllerManager controllerManager;
         public ControllerManager _ControllerManager
         {

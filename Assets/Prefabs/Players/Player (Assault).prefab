@@ -249,6 +249,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 114000010113798874, guid: 1029158ea3b4aa043b9e750690cd9413, type: 2}
   idealT: {fileID: 0}
+  cooling: 0
 --- !u!114 &114000013959820962
 MonoBehaviour:
   m_ObjectHideFlags: 1
