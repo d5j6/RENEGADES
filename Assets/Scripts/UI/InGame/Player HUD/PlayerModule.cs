@@ -1,4 +1,5 @@
 ﻿//Game
+using GameEngineering.UI.Common;
 using RENEGADES.Managers;
 using RENEGADES.Common.UI;
 
@@ -43,6 +44,24 @@ namespace RENEGADES.UI.Gameplay
             else { Debug.LogError("Player Text Not Assigned in Editor Gameobject"); }
             if (playerIcon != null) playerIcon.sprite = type == GameSettings.PlayerType.Assault ? AssaultTexture : EngineerTexture;
             else { Debug.LogError("Player Icon Not Assigned in Editor Gameobject"); }
+
+            SetPos(playerNumber);
+        }
+
+
+        //Set UI Module on the side of the screen
+        private void SetPos(int playerNumber)
+        {
+            if(playerNumber == 1)
+            {
+                Rect.SetAnchor(AnchorPresets.BottomLeft);
+                Rect.SetPivot(PivotPresets.BottomLeft);
+            }
+            else if(playerNumber == 2)
+            {
+                Rect.SetAnchor(AnchorPresets.BottomRight);
+                Rect.SetPivot(PivotPresets.BottomRight);
+            }
         }
 
         public void SetMaxHealth(float h)

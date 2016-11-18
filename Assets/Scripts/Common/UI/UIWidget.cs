@@ -28,6 +28,12 @@ namespace RENEGADES.Common.UI
             get { return grid ?? (grid = GenComponent.ComponentCheck<CanvasGroup>(gameObject)); }
         }
 
+        private RectTransform rect;
+        public RectTransform Rect
+        {
+            get { return rect ?? (rect = GetComponent<RectTransform>()); }
+        }
+
         public void EnableInteraction(bool enable)
         {
             Grid.blocksRaycasts = Grid.interactable = enable;

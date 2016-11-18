@@ -83,6 +83,7 @@
     <Compile Include="Assets\Scripts\Common\UI\GenericButton.cs" />
     <Compile Include="Assets\Scripts\Common\UI\GenericSlider.cs" />
     <Compile Include="Assets\Scripts\Common\UI\GenericText.cs" />
+    <Compile Include="Assets\Scripts\Common\UI\RectTransformExtensions.cs" />
     <Compile Include="Assets\Scripts\Common\UI\UIWidget.cs" />
     <Compile Include="Assets\Scripts\Constants\AnimationTriggers.cs" />
     <Compile Include="Assets\Scripts\Constants\GameInput.cs" />
