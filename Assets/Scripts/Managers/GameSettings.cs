@@ -18,7 +18,7 @@ namespace RENEGADES.Managers
         /// <summary>
         /// Default Dictionary with Player 1 as an Assault Character
         /// </summary>
-        private Dictionary<int, PlayerType> PLAYERS = new Dictionary<int, PlayerType> { { 1, PlayerType.Engineer }, { 2, PlayerType.Assault } };
+        private Dictionary<int, PlayerType> PLAYERS = new Dictionary<int, PlayerType> { { 1, PlayerType.Assault }};
 
         private void Awake()
         {
@@ -43,6 +43,11 @@ namespace RENEGADES.Managers
         public void AddPlayer(int player,PlayerType type)
         {
             PLAYERS.Add(player, type);
+        }
+
+        public void RemovePlayer(int player)
+        {
+          if(PLAYERS.ContainsKey(player)) PLAYERS.Remove(player);
         }
 
     }

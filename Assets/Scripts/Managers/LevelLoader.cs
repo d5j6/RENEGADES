@@ -24,6 +24,7 @@ namespace RENEGADES.Managers
         public void LoadLevel(Levels level)
         {
             SceneManager.LoadScene(LevelLookUp[level]);
+            GameManager.Instance.REFRESH();
         }
     }
 }

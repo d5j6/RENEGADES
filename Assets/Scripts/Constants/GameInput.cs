@@ -18,7 +18,8 @@ namespace RENEGADES.Constants
             DirectionY,
             Attack,
             CharacterSpecial,
-            Build
+            Build,
+            START
         }
 
         private static Hashtable XboxInput = new Hashtable()
@@ -30,6 +31,7 @@ namespace RENEGADES.Constants
             {PlayerInput.Attack,"RightTrigger" }, //Space for keyboard
             {PlayerInput.CharacterSpecial,"LeftTrigger" }, // X for keyboard
             {PlayerInput.Build,"X Button" },//C on xbox controller
+            {PlayerInput.START,"Start Button" },
 
         };
 

@@ -82,6 +82,21 @@ namespace RENEGADES.Managers
             DontDestroyOnLoad(transform.gameObject); //Dont Destroy on Load
         }
 
+
+        /// <summary>
+        /// Called when a new scene is loaded to fresh references to Managers that are not DontDestroyOnLoad Gameobjects
+        /// </summary>
+        public void REFRESH()
+        {
+            mainMenu = null;
+            audioManager = null;
+            monsterSpawner = null;
+            effectSpawner = null;
+            uiSpawner = null;
+            itemSpawner = null;
+            turretSpawner = null;
+        }
+
         private void OnDestroy()
         {
             controllerManager = null;

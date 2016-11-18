@@ -149,7 +149,10 @@
     <Compile Include="Assets\Scripts\UI\InGame\Player HUD\CrystalText.cs" />
     <Compile Include="Assets\Scripts\UI\InGame\Player HUD\HealthSlider.cs" />
     <Compile Include="Assets\Scripts\UI\InGame\Player HUD\PlayerModule.cs" />
+    <Compile Include="Assets\Scripts\UI\MainMenu\CharacterSelect\CharacterDisplay.cs" />
     <Compile Include="Assets\Scripts\UI\MainMenu\CharacterSelect\CharacterSelect.cs" />
+    <Compile Include="Assets\Scripts\UI\MainMenu\CharacterSelect\ControllerUI.cs" />
+    <Compile Include="Assets\Scripts\UI\MainMenu\CharacterSelect\StartGameText.cs" />
     <Compile Include="Assets\Scripts\UI\MainMenu\Connection\ConnectionBar.cs" />
     <Compile Include="Assets\Scripts\UI\MainMenu\Connection\ConnectionGlow.cs" />
     <Compile Include="Assets\Scripts\UI\MainMenu\Connection\ControllerConnect.cs" />
