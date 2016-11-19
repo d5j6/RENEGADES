@@ -33,13 +33,14 @@ namespace RENEGADES.UI.MainMenu.CharacterSelect
         {
             if(GameManager.Instance._ControllerManager.GetControllerCount() > 0) //Make Sure Controllers are connected
             {
-                Axis += Mathf.Clamp(Input.GetAxis(GameInput.GetInput(player, GameInput.PlayerInput.MovementX))*2500*Time.deltaTime,-500,500);
-                Selection.NotifyChange(Axis, player);
+                Axis += Input.GetAxis(GameInput.GetInput(player, GameInput.PlayerInput.MovementX));
+                Axis = Mathf.Clamp(Axis, -1, 1);
+                Selection.NotifyChange(Axis, player,0.9f,1,-1);
             }
             else
             {
                 if (player == 2) return;
-                Selection.NotifyChange(Input.mousePosition.x - (0.5f * Screen.width),player);
+                Selection.NotifyChange(Input.mousePosition.x - (0.5f * Screen.width),player,75,Screen.width,-Screen.width);
             }
         }
 

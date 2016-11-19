@@ -40,10 +40,14 @@ namespace RENEGADES.UI.MainMenu.CharacterSelect
             if (ControllerUIs.Length < 2 || CharacterDisplays.Length < 2) Debug.LogError("You are missing Controller or Char Display UI Elements in this Panel. It will not function properly");
         }
 
-        public void NotifyChange(float axis, int player)
+        public void NotifyChange(float axis, int player,float midBound,float highBound,float lowBound)
         {
+            Debug.Log(axis);
             //Get Character selected
-            CharacterDisplay character = (axis < 0) ? (axis < -75) ? CharacterDisplays[0] : null : (axis > 75) ? CharacterDisplays[1] : null;
+            CharacterDisplay character = null;
+            if (axis <= highBound && axis > midBound) character = CharacterDisplays[1];
+            else if (axis >= -lowBound && axis < -midBound) character =CharacterDisplays[0];
+
             ControllerUI control = ControllerUIs[player - 1];
             //Move Controller to Place
             control.transform.localPosition = (character != null)

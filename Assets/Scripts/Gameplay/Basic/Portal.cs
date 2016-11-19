@@ -17,7 +17,7 @@ namespace RENEGADES.Gameplay.Basic
 
 
         private int count = 1;
-        private float time = 4;
+        private float time = 2;
 
         public void Awake()
         {
