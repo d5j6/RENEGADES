@@ -1,5 +1,5 @@
 ﻿//Game
-using RENEGADES.Gameplay.Controllers;
+using RENEGADES.Gameplay.Generators;
 
 //Unity
 using UnityEngine;

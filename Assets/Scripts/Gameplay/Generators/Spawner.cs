@@ -5,7 +5,7 @@ using RENEGADES.UI.Managers;
 //C#
 
 
-namespace RENEGADES.Gameplay.Controllers
+namespace RENEGADES.Gameplay.Generators
 {
     public abstract class Spawner : MonoBehaviour
     {

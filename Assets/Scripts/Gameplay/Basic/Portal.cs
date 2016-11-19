@@ -6,6 +6,9 @@ using UnityEngine;
 
 namespace RENEGADES.Gameplay.Basic
 {
+    /// <summary>
+    /// used to test enemies spawning in spawnbox mode
+    /// </summary>
     public class Portal : MonoBehaviour
     {
         private float rate;
@@ -18,7 +21,7 @@ namespace RENEGADES.Gameplay.Basic
 
         private void Generate()
         {
-            GameManager.Instance.MonsterSpawner.CreateMonster(Controllers.EnemyGenerator.EnemyType.Ghoul, transform.position);
+            GameManager.Instance.MonsterSpawner.CreateMonster(Generators.EnemyGenerator.EnemyType.Ghoul, transform.position);
         }
     }
 }

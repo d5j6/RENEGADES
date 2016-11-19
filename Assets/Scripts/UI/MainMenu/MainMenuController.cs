@@ -2,7 +2,7 @@
 using UnityEngine;
 
 //Game
-using RENEGADES.Gameplay.Controllers;
+using RENEGADES.Gameplay.Generators;
 using RENEGADES.UI.MainMenu.Navigation;
 
 //C#

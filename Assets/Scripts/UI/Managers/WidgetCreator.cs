@@ -1,6 +1,6 @@
 ﻿//App
 using RENEGADES.Common.UI;
-using RENEGADES.Gameplay.Controllers;
+using RENEGADES.Gameplay.Generators;
 
 //Unity
 using UnityEngine;

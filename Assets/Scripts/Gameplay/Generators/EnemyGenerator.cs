@@ -7,7 +7,7 @@ using System.Collections.Generic;
 //Unity
 using UnityEngine;
 
-namespace RENEGADES.Gameplay.Controllers
+namespace RENEGADES.Gameplay.Generators
 {
     public class EnemyGenerator : Spawner
     {

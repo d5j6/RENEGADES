@@ -8,7 +8,7 @@ using UnityEngine;
 
 //C#
 
-namespace RENEGADES.Gameplay.Controllers
+namespace RENEGADES.Gameplay.Generators
 {
     /// <summary>
     /// Used to setup the start of a game

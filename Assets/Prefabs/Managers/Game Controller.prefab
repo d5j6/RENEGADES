@@ -149,6 +149,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000010795775042}
   - 114: {fileID: 114000014281973800}
+  - 114: {fileID: 114000013949607008}
   m_Layer: 0
   m_Name: Game Controller
   m_TagString: Untagged
@@ -477,6 +478,17 @@ MonoBehaviour:
   - type: 0
     monster: {fileID: 114000012417446580, guid: cba7b3c60ab0f6a4aa994e68ba11980f,
       type: 2}
+--- !u!114 &114000013949607008
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014008792774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5734245f850014948bd38bfe095c632b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000014065663580
 MonoBehaviour:
   m_ObjectHideFlags: 1
