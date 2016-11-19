@@ -4,6 +4,9 @@ using RENEGADES.Managers;
 //Unity
 using UnityEngine;
 
+//C#
+using System.Collections;
+
 namespace RENEGADES.Gameplay.Basic
 {
     /// <summary>
@@ -11,17 +14,33 @@ namespace RENEGADES.Gameplay.Basic
     /// </summary>
     public class Portal : MonoBehaviour
     {
-        private float rate;
+
+
+        private int count = 1;
+        private float time = 4;
+
         public void Awake()
         {
-            rate = Random.Range(1, 3);
-            InvokeRepeating("Generate", 0, rate);
+            StartCoroutine(Generate());
         }
 
-
-        private void Generate()
+        private IEnumerator Generate()
         {
-            GameManager.Instance.MonsterSpawner.CreateMonster(Generators.EnemyGenerator.EnemyType.Ghoul, transform.position);
+            for(int i=0; i < count; i++)
+            {
+                GameManager.Instance.MonsterSpawner.CreateMonster(Generators.EnemyGenerator.EnemyType.Ghoul, transform.position);
+                yield return new WaitForSeconds(time);
+            }
+            Again();
+
         }
+
+        private void Again()
+        {
+            count++;
+            time -= 0.1f;
+            StartCoroutine(Generate());
+        }
+
     }
 }

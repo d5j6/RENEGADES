@@ -2,6 +2,7 @@
 
 //C#
 using System.Collections;
+using System.Collections.Generic;
 
 //UNity
 
@@ -23,7 +24,7 @@ namespace RENEGADES.Constants
             BButton
         }
 
-        private static Hashtable XboxInput = new Hashtable()
+        private static Hashtable XboxInput_Player1 = new Hashtable()
         {
             {PlayerInput.MovementX,"LeftJoystickHorizontal" },
             {PlayerInput.MovementY,"LeftJoystickVertical" },
@@ -37,9 +38,27 @@ namespace RENEGADES.Constants
 
         };
 
-        public static string GetInput(PlayerInput input)
+        private static Hashtable XboxInput_Player2 = new Hashtable()
         {
-            return (string)XboxInput[input];
+            {PlayerInput.MovementX,"LeftJoystickHorizontal_2" },
+            {PlayerInput.MovementY,"LeftJoystickVertical_2" },
+            {PlayerInput.DirectionX,"RightJoyStickHorizontal_2" },
+            {PlayerInput.DirectionY,"RightJoyStickVertical_2" },
+            {PlayerInput.Attack,"RightTrigger_2" }, 
+            {PlayerInput.CharacterSpecial,"LeftTrigger_2" }, 
+            {PlayerInput.Build,"X Button_2" },
+
+        };
+
+        private static Dictionary<int, Hashtable> PlayerInputLookup = new Dictionary<int, Hashtable>
+        {
+            {1,XboxInput_Player1 },
+            {2,XboxInput_Player2 }
+        };
+
+        public static string GetInput(int player,PlayerInput input)
+        {
+            return (string)PlayerInputLookup[player][input];
         }
 
     }

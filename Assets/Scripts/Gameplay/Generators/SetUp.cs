@@ -37,6 +37,7 @@ namespace RENEGADES.Gameplay.Generators
         private void CreatePlayer(int playerNumber,GameSettings.PlayerType type)
         {
             Player newPlayer = Spawn(( type == GameSettings.PlayerType.Assault) ? Assault : Engineer);
+            newPlayer.SetPlayerNumber(playerNumber);
             GameManager.Instance.EffectSpawner.CreateEffect(EffectBlueprint.EffectType.Spawn, newPlayer.GetPosition());
             PlayerModule hud = GameManager.Instance.UISpawner.CreateWidget(UI.Managers.WidgetCreator.WidgetToSpawn.PlayerModule) as PlayerModule;
             hud.SetContent(playerNumber,type);

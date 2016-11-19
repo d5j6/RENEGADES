@@ -31,7 +31,7 @@ namespace RENEGADES.Gameplay.Players.Types
         {
             if (GameManager.Instance._ControllerManager.AnyControllersConnected())
             {
-                Builder.Building((Input.GetAxis(GameInput.GetInput(GameInput.PlayerInput.CharacterSpecial)) > 0) ? true : false);
+                Builder.Building((Input.GetAxis(GameInput.GetInput(GetPlayerNumber(),GameInput.PlayerInput.CharacterSpecial)) > 0) ? true : false);
             }
             else
             {

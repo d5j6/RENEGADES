@@ -85,7 +85,7 @@ namespace RENEGADES.Gameplay.Weapons.Turrets
             bool justBuilt = false;
             if (GameManager.Instance._ControllerManager.AnyControllersConnected())
             {
-                justBuilt = (Input.GetButtonDown(GameInput.GetInput(GameInput.PlayerInput.Build))) ? true : false;
+                justBuilt = (Input.GetButtonDown(GameInput.GetInput(_Player.GetPlayerNumber(),GameInput.PlayerInput.Build))) ? true : false;
             }
             else
             {

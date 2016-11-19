@@ -39,11 +39,22 @@ namespace RENEGADES.Gameplay.Players
         }
 
         private int CRYSTALS;
+        private int PLAYER_NUMBER = 1;
+
+        public void SetPlayerNumber(int num)
+        {
+            PLAYER_NUMBER = num;
+        }
+
+        public int GetPlayerNumber()
+        {
+            return PLAYER_NUMBER;
+        }
 
         public override void SetHealth(float h)
         {
             base.SetHealth(100);
-            UpdateCrystals(200);
+            UpdateCrystals(20);
             if(playerHUD != null) PlayerHUD.SetMaxHealth(100);
         }
 

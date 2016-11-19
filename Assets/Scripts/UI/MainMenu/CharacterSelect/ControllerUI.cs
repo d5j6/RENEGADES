@@ -1,5 +1,6 @@
 ﻿//Game
 using RENEGADES.Managers;
+using RENEGADES.Constants;
 
 //Unity
 using UnityEngine;
@@ -21,6 +22,8 @@ namespace RENEGADES.UI.MainMenu.CharacterSelect
 
         private CharacterDisplay currentCharacter;
 
+        private float Axis;
+
         private void Update()
         {
             MoveController();
@@ -30,7 +33,8 @@ namespace RENEGADES.UI.MainMenu.CharacterSelect
         {
             if(GameManager.Instance._ControllerManager.GetControllerCount() > 0) //Make Sure Controllers are connected
             {
-
+                Axis += Mathf.Clamp(Input.GetAxis(GameInput.GetInput(player, GameInput.PlayerInput.MovementX))*2500*Time.deltaTime,-500,500);
+                Selection.NotifyChange(Axis, player);
             }
             else
             {

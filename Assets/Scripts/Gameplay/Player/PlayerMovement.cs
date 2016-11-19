@@ -34,6 +34,12 @@ namespace RENEGADES.Gameplay.Players
 
         LookParams lookParams;
 
+        private Player player;
+        private Player _Player
+        {
+            get { return player ?? (player = GetComponent<Player>()); }
+        }
+
         private void Awake()
         {
             PlayerRigidBody.drag = DRAG;
@@ -83,10 +89,11 @@ namespace RENEGADES.Gameplay.Players
         //movement controls for Xbox controller
         private void XboxController()
         {
-            lookParams.LeftJoyStickX = Input.GetAxis(GameInput.GetInput(GameInput.PlayerInput.MovementX));
-            lookParams.LeftJoyStickY = -Input.GetAxis(GameInput.GetInput(GameInput.PlayerInput.MovementY));
-            lookParams.rightJoyStickX = Input.GetAxis(GameInput.GetInput(GameInput.PlayerInput.DirectionX));
-            lookParams.rightJoyStickY = -Input.GetAxis(GameInput.GetInput(GameInput.PlayerInput.DirectionY));
+            int playerNumber = _Player.GetPlayerNumber();
+            lookParams.LeftJoyStickX = Input.GetAxis(GameInput.GetInput(playerNumber,GameInput.PlayerInput.MovementX));
+            lookParams.LeftJoyStickY = -Input.GetAxis(GameInput.GetInput(playerNumber,GameInput.PlayerInput.MovementY));
+            lookParams.rightJoyStickX = Input.GetAxis(GameInput.GetInput(playerNumber,GameInput.PlayerInput.DirectionX));
+            lookParams.rightJoyStickY = -Input.GetAxis(GameInput.GetInput(playerNumber,GameInput.PlayerInput.DirectionY));
         }
 
         //Called in player class

@@ -39,7 +39,7 @@ namespace RENEGADES.Gameplay.Players.Types
 
             if (GameManager.Instance._ControllerManager.AnyControllersConnected())
             {
-                if (Input.GetAxis(GameInput.GetInput(GameInput.PlayerInput.Attack)) > 0)
+                if (Input.GetAxis(GameInput.GetInput(GetPlayerNumber(),GameInput.PlayerInput.Attack)) > 0)
                 {
                     RangedAttack.FIRE(this);
                 }
@@ -56,7 +56,7 @@ namespace RENEGADES.Gameplay.Players.Types
             
             if (GameManager.Instance._ControllerManager.AnyControllersConnected())
             {
-                if (Input.GetAxis(GameInput.GetInput(GameInput.PlayerInput.CharacterSpecial)) > 0)
+                if (Input.GetAxis(GameInput.GetInput(GetPlayerNumber(),GameInput.PlayerInput.CharacterSpecial)) > 0)
                 {
                     Planter.PlantBomb();
                 }

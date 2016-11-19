@@ -69,8 +69,8 @@ namespace RENEGADES.UI.MainMenu.CharacterSelect
         public override void OnUpdate()
         {
             base.OnUpdate();
-            if (Input.GetKeyDown(KeyCode.B) || Input.GetButtonDown(GameInput.GetInput(GameInput.PlayerInput.BButton))) BackButton.Button_OnSelected();
-            if (Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown(GameInput.GetInput(GameInput.PlayerInput.AButton))) GAMEPREP();
+            if (Input.GetKeyDown(KeyCode.B) || Input.GetButtonDown(GameInput.GetInput(1,GameInput.PlayerInput.BButton))) BackButton.Button_OnSelected();
+            if (Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown(GameInput.GetInput(1,GameInput.PlayerInput.AButton))) GAMEPREP();
         }
 
         //Prep Players in game 

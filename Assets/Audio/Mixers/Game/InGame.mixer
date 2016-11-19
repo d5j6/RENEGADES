@@ -95,7 +95,6 @@ AudioMixerGroupController:
   m_Effects:
   - {fileID: 244000011665234200}
   - {fileID: 244000013082907498}
-  - {fileID: 244000010326792064}
   m_UserColorIndex: 0
   m_Mute: 0
   m_Solo: 0
@@ -188,29 +187,6 @@ AudioMixerGroupController:
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
---- !u!244 &244000010326792064
-AudioMixerEffectController:
-  m_ObjectHideFlags: 3
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 
-  m_EffectID: 658f34cccc40f5343832f444d46271c0
-  m_EffectName: OculusSpatializer
-  m_MixLevel: cea5cd66750d6cd4aa9f9c6f52e74cd5
-  m_Parameters:
-  - m_ParameterName: Gain
-    m_GUID: 4fbbfb0a062e1f24c81f5b5e2854efa8
-  - m_ParameterName: UseISq
-    m_GUID: d1daf665052cdbb4ba27186358578752
-  - m_ParameterName: Near
-    m_GUID: 37fe3bd74ad984b40a2e3a236ec62a94
-  - m_ParameterName: Far
-    m_GUID: 38d3c4dd0acd7ee4ea38fef04dcc0730
-  - m_ParameterName: DsblRef
-    m_GUID: da75613388194814b92a85c74b846709
-  m_SendTarget: {fileID: 0}
-  m_EnableWetMix: 0
-  m_Bypass: 0
 --- !u!244 &244000010881887884
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
