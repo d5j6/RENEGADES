@@ -13,12 +13,6 @@ namespace RENEGADES.UI.MainMenu
     public class SetFirstSelected : MonoBehaviour
     {
 
-        private EventSystem eventSystem;
-        private EventSystem _EventSystem
-        {
-            get { return eventSystem ?? (eventSystem = FindObjectOfType<EventSystem>()); }
-        }
-
         public GameObject firstSelected;
 
         private void Awake()
@@ -28,9 +22,9 @@ namespace RENEGADES.UI.MainMenu
 
         private IEnumerator Refresh()
         {
-            _EventSystem.firstSelectedGameObject = null;
-            yield return new WaitForEndOfFrame();
-            _EventSystem.firstSelectedGameObject = firstSelected;
+            yield return null;
+            EventSystem.current.SetSelectedGameObject(firstSelected, new BaseEventData(EventSystem.current));
+
         }
 
     }

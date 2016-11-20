@@ -22,12 +22,6 @@ namespace RENEGADES.UI.MainMenu.CharacterSelect
             get { return controllerUIs ?? (controllerUIs = GetComponentsInChildren<ControllerUI>()); }
         }
 
-        private NavButton backButton;
-        private NavButton BackButton
-        {
-            get { return backButton ?? (backButton = GetComponentInChildren<NavButton>()); }
-        }
-
         [Header("Display Colors")]
         public Color textSelectedColor;
         public Color textDeSelectedColor;
@@ -49,7 +43,6 @@ namespace RENEGADES.UI.MainMenu.CharacterSelect
         /// <param name="outerBound">high bound of axis</param>
         public void NotifyChange(float axis, int player,float midBound,float outerBound)
         {
-            Debug.Log(axis);
             //Get Character selected
             CharacterDisplay character = null;
             if (axis <= outerBound  && axis > midBound) character = CharacterDisplays[1];
@@ -80,7 +73,6 @@ namespace RENEGADES.UI.MainMenu.CharacterSelect
         public override void OnUpdate()
         {
             base.OnUpdate();
-            if (Input.GetKeyDown(KeyCode.B) || Input.GetButtonDown(GameInput.GetInput(1,GameInput.PlayerInput.BButton))) BackButton.Button_OnSelected();
             if (Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown(GameInput.GetInput(1,GameInput.PlayerInput.AButton))) GAMEPREP();
         }
 

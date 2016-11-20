@@ -74,7 +74,7 @@ GameObject:
   m_Component:
   - 224: {fileID: 224000011316351076}
   - 222: {fileID: 222000013408275910}
-  - 114: {fileID: 114000011480103464}
+  - 114: {fileID: 114000010736368606}
   - 114: {fileID: 114000010301714118}
   - 114: {fileID: 114000010450961436}
   - 114: {fileID: 114000010506638988}
@@ -399,6 +399,18 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114000010736368606
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010408418472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e106c98fbae6544ba1cd9f602a84fdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  navPlace: 1
 --- !u!114 &114000010755119356
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -554,18 +566,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 2
   m_VerticalFit: 2
---- !u!114 &114000011480103464
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010408418472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e59389919660024599a876176b37834, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  navPlace: 1
 --- !u!114 &114000011529034976
 MonoBehaviour:
   m_ObjectHideFlags: 1

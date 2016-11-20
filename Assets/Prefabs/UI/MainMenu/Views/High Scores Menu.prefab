@@ -20,10 +20,10 @@ GameObject:
   m_Component:
   - 224: {fileID: 224000012099643036}
   - 222: {fileID: 222000012975014358}
-  - 114: {fileID: 114000011501046864}
   - 114: {fileID: 114000010178919136}
   - 114: {fileID: 114000014172854172}
   - 114: {fileID: 114000010677412616}
+  - 114: {fileID: 114000012998684186}
   m_Layer: 5
   m_Name: BACK BUTTON
   m_TagString: Untagged
@@ -132,18 +132,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114000011501046864
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010807621048}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e59389919660024599a876176b37834, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  navPlace: 1
 --- !u!114 &114000011791745008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -232,7 +220,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30e64de6a0a1ede4c8942aa556f7af39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstSelected: {fileID: 0}
+  firstSelected: {fileID: 1000010807621048}
+--- !u!114 &114000012998684186
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010807621048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e106c98fbae6544ba1cd9f602a84fdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  navPlace: 1
 --- !u!114 &114000013146420350
 MonoBehaviour:
   m_ObjectHideFlags: 1

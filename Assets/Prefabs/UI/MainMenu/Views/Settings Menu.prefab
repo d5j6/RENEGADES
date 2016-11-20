@@ -20,10 +20,10 @@ GameObject:
   m_Component:
   - 224: {fileID: 224000010249292656}
   - 222: {fileID: 222000012482259660}
-  - 114: {fileID: 114000011440443926}
   - 114: {fileID: 114000010112500136}
   - 114: {fileID: 114000010340630296}
   - 114: {fileID: 114000011026802552}
+  - 114: {fileID: 114000012911547418}
   m_Layer: 5
   m_Name: BACK BUTTON
   m_TagString: Untagged
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_uvLineOffset: 0
   m_hasFontAssetChanged: 0
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &114000011440443926
+--- !u!114 &114000012911547418
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -257,7 +257,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000010357643456}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e59389919660024599a876176b37834, type: 3}
+  m_Script: {fileID: 11500000, guid: 7e106c98fbae6544ba1cd9f602a84fdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   navPlace: 1
@@ -272,7 +272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30e64de6a0a1ede4c8942aa556f7af39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstSelected: {fileID: 0}
+  firstSelected: {fileID: 1000010357643456}
 --- !u!222 &222000012193955298
 CanvasRenderer:
   m_ObjectHideFlags: 1

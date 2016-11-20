@@ -166,6 +166,7 @@
     <Compile Include="Assets\Scripts\UI\MainMenu\HighScores\HighScores.cs" />
     <Compile Include="Assets\Scripts\UI\MainMenu\Main\MainMenu.cs" />
     <Compile Include="Assets\Scripts\UI\MainMenu\MainMenuController.cs" />
+    <Compile Include="Assets\Scripts\UI\MainMenu\Navigation\BackButton.cs" />
     <Compile Include="Assets\Scripts\UI\MainMenu\Navigation\NavButton.cs" />
     <Compile Include="Assets\Scripts\UI\MainMenu\Navigation\NavigationController.cs" />
     <Compile Include="Assets\Scripts\UI\MainMenu\Navigation\NavigationPoint.cs" />

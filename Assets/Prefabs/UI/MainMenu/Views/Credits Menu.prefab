@@ -92,10 +92,10 @@ GameObject:
   m_Component:
   - 224: {fileID: 224000010515752820}
   - 222: {fileID: 222000011540511262}
-  - 114: {fileID: 114000013352787606}
   - 114: {fileID: 114000010930217260}
   - 114: {fileID: 114000011217970284}
   - 114: {fileID: 114000013636388554}
+  - 114: {fileID: 114000010086884484}
   m_Layer: 5
   m_Name: BACK BUTTON
   m_TagString: Untagged
@@ -120,6 +120,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &114000010086884484
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013492537360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e106c98fbae6544ba1cd9f602a84fdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  navPlace: 1
 --- !u!114 &114000010930217260
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -325,18 +337,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fd64a46ae7a39c499f5f9c06e3aa526, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114000013352787606
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013492537360}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e59389919660024599a876176b37834, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  navPlace: 1
 --- !u!114 &114000013484747648
 MonoBehaviour:
   m_ObjectHideFlags: 1
