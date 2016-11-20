@@ -11,12 +11,6 @@ namespace RENEGADES.Gameplay.Weapons
     {
         private const float MOVESPEED =150;
 
-        public void Init(Vector3 pos)
-        {
-            transform.position = pos;
-            GameManager.Instance.AudioManager.PlaySound(Audio.Sounds.Sound.Bullet_Fire, transform.position);
-        }
-
         public void SetEulerAngles(AnimationTriggers.PlayerAnimation t)
         {
             transform.localEulerAngles = SetPosition(t);
@@ -52,6 +46,7 @@ namespace RENEGADES.Gameplay.Weapons
                     break;
             }
             SetMoveDirection(direction);
+            GameManager.Instance.AudioManager.PlaySound(Audio.Sounds.Sound.Bullet_Fire, transform.position); //PLAY SOUND
             return new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, eulerAngle);
         }
 

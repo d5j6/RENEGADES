@@ -614,6 +614,7 @@ GameObject:
   - 4: {fileID: 1051710748}
   - 212: {fileID: 1051710747}
   - 68: {fileID: 1051710749}
+  - 114: {fileID: 1051710750}
   m_Layer: 9
   m_Name: Background
   m_TagString: Untagged
@@ -685,6 +686,17 @@ EdgeCollider2D:
   - {x: 6.400409, y: 2.6104548}
   - {x: -6.3992267, y: 2.6432216}
   - {x: -6.3823056, y: -2.6279585}
+--- !u!114 &1051710750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1051710746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66947ebbca1c95149a321156e1c047cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1112392020 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000011303058770, guid: f36968cf19e42e745937e53259010a55,
