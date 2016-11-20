@@ -35,12 +35,12 @@ namespace RENEGADES.UI.MainMenu.CharacterSelect
             {
                 Axis += Input.GetAxis(GameInput.GetInput(player, GameInput.PlayerInput.MovementX));
                 Axis = Mathf.Clamp(Axis, -1, 1);
-                Selection.NotifyChange(Axis, player,0.9f,1,-1);
+                Selection.NotifyChange(Axis, player,0.9f,1);
             }
             else
             {
                 if (player == 2) return;
-                Selection.NotifyChange(Input.mousePosition.x - (0.5f * Screen.width),player,75,Screen.width,-Screen.width);
+                Selection.NotifyChange(Input.mousePosition.x - (0.5f * Screen.width),player,75,Screen.width);
             }
         }
 
