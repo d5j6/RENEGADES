@@ -35,12 +35,20 @@ namespace RENEGADES.UI.MainMenu
 
         private UIPanel currentPANEL;
 
+        public float value;
+
         public override void Init()
         {
             if (FindObjectOfType<UIPanel>()) Destroy(FindObjectOfType<UIPanel>().gameObject);
             SetUp();
             NavController.SetUp();
             StartCoroutine(TRANSITION(NavigationController.Place.WelcomePage));
+        }
+
+        public void Update()
+        {
+            value = Input.GetAxis(RENEGADES.Constants.GameInput.GetInput(1,Constants.GameInput.PlayerInput.CharacterSpecial));
+
         }
 
         private void SetUp()

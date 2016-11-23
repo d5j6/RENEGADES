@@ -93,13 +93,13 @@ InputManager:
     positiveButton: x
     altNegativeButton: 
     altPositiveButton: 
-    gravity: 1000
-    dead: 0.001
-    sensitivity: 1000
+    gravity: 0
+    dead: 0.05
+    sensitivity: 1
     snap: 0
     invert: 0
     type: 2
-    axis: 8
+    axis: 2
     joyNum: 1
   - serializedVersion: 3
     m_Name: X Button
@@ -234,16 +234,16 @@ InputManager:
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: 
+    positiveButton: x
     altNegativeButton: 
     altPositiveButton: 
-    gravity: 1000
-    dead: 0.001
-    sensitivity: 1000
+    gravity: 0
+    dead: 0.05
+    sensitivity: 1
     snap: 0
     invert: 0
     type: 2
-    axis: 8
+    axis: 2
     joyNum: 2
   - serializedVersion: 3
     m_Name: X Button_2

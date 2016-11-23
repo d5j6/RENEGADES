@@ -115,7 +115,6 @@
     <Compile Include="Assets\Scripts\Gameplay\Generators\SetUp.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Generators\Spawner.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Generators\TurretGenerator.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\Input\ControllerManager.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Items\Item.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Items\ItemBlueprint.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Items\ItemDeterminer.cs" />
@@ -123,6 +122,7 @@
     <Compile Include="Assets\Scripts\Gameplay\Items\Types\Crystal.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Items\Types\HealthPotion.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Items\Types\SpeedPotion.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Joysticks\ControllerManager.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Player\Player.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Player\PlayerAnimator.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Player\PlayerMovement.cs" />

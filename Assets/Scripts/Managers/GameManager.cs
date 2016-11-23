@@ -1,7 +1,7 @@
 ﻿//App
 using RENEGADES.Common;
 using RENEGADES.Audio;
-using RENEGADES.Gameplay.PlayerInput;
+using RENEGADES.Gameplay.Joysticks;
 using RENEGADES.Gameplay.Generators;
 using RENEGADES.Gameplay.Items;
 using RENEGADES.Gameplay.Effects;

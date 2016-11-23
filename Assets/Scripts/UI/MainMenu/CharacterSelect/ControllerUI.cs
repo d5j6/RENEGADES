@@ -31,7 +31,7 @@ namespace RENEGADES.UI.MainMenu.CharacterSelect
 
         private void MoveController()
         {
-            if(GameManager.Instance._ControllerManager.GetControllerCount() > 0) //Make Sure Controllers are connected
+            if(GameManager.Instance._ControllerManager.AnyControllersConnected()) //Make Sure Controllers are connected
             {
                 Axis += Input.GetAxis(GameInput.GetInput(player, GameInput.PlayerInput.MovementX));
                 Axis = Mathf.Clamp(Axis, -1, 1);
