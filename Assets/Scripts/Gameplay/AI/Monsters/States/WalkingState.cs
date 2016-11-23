@@ -30,13 +30,12 @@ namespace RENEGADES.Gameplay.AI
 
         public void SetUp()
         {
-            if (monster.HEALTH <= 0) { ToDeadState(); }
             monster._EnemyAnimator.SetAnimState(Constants.AnimationTriggers.EnemyAnimation.Walk);
         }
 
         public void UpdateState()
-        {  
-            if (monster.HEALTH <= 0) ToDeadState();
+        {
+            if (monster.HEALTH <= 0) { ToDeadState(); return; }
             Movement();
             CheckProximity();
         }

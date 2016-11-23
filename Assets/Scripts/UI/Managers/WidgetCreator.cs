@@ -15,12 +15,14 @@ namespace RENEGADES.UI.Managers
     {
         public enum WidgetToSpawn
         {
-            PlayerModule
+            PlayerModule,
+            RoundText
         }
 
         [System.Serializable]
         public struct Widget
         {
+            public string name;
             public WidgetToSpawn type;
             public UIWidget widget;
         }

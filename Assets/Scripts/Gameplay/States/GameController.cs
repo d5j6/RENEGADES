@@ -1,6 +1,9 @@
 ﻿//Unity
 using UnityEngine;
 
+//Game
+using RENEGADES.Gameplay.Props;
+
 
 namespace RENEGADES.Gameplay.States
 {
@@ -9,12 +12,44 @@ namespace RENEGADES.Gameplay.States
     /// </summary>
     public class GameController : MonoBehaviour
     {
+        /// <summary>
+        /// gameplay state interface
+        /// </summary>
         private IGameState CurrentState;
-        private RechargeState rechargeState;
-        private BattleState battleState;
-        private GameOverState gameOverState;
 
-        private void Awake()
+        /// <summary>
+        /// Recharge gameplay state
+        /// </summary>
+        /// 
+        private RechargeState rechargeState;
+        public RechargeState _RechargeState { get { return rechargeState; } }
+
+        /// <summary>
+        /// Battle Gameplay state
+        /// </summary>
+        private BattleState battleState;
+        public BattleState _BattleState { get { return battleState; } }
+
+        /// <summary>
+        /// Game over gameplay state
+        /// </summary>
+        private GameOverState gameOverState;
+        public GameOverState _GameOverState { get { return gameOverState; } }
+
+        /// <summary>
+        /// Called at the start of the game
+        /// </summary>
+        /// 
+
+        private Tower ourTower;
+        private Tower OurTower
+        {
+             get { return ourTower = FindObjectOfType<Tower>(); }
+        }
+
+        private RoundBlueprint _RoundBlueprint = new RoundBlueprint();
+
+        public void BEGIN()
         {
             CreateStates();
         }
@@ -24,7 +59,7 @@ namespace RENEGADES.Gameplay.States
             rechargeState = new RechargeState(this);
             battleState = new BattleState(this);
             gameOverState = new GameOverState(this);
-            CurrentState = rechargeState;
+            Change_State(rechargeState);
         }
 
         private void Update()
@@ -32,19 +67,40 @@ namespace RENEGADES.Gameplay.States
             CurrentState.OnUpdate();
         }
 
-        public void ToRecharge()
+        public void Change_State(IGameState state)
         {
-            CurrentState = rechargeState;
+            CurrentState = state;
+            CurrentState.Begin();
         }
 
-        public void ToBattle()
+        public RoundBlueprint GetBluePrint()
         {
-            CurrentState = battleState;
+            return _RoundBlueprint;
         }
 
-        public void ToGameOver()
+        /// <summary>
+        /// Returns true if at least one player is alive and tower is alive
+        /// </summary>
+        /// <returns></returns>
+        public bool GameOver()
         {
-            CurrentState = gameOverState;
+            if (OurTower == null) Debug.LogError("No Tower Found!");
+            if (OurTower.HEALTH <= 0) return true;
+            return false;
+        }
+
+
+
+        /// <summary>
+        /// Remove
+        /// </summary>
+        private void OnDestroy()
+        {
+            _RoundBlueprint = null;
+            rechargeState = null;
+            battleState = null;
+            gameOverState = null;
+            CurrentState = null;
         }
 
     }

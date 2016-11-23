@@ -13,6 +13,14 @@ namespace RENEGADES.Gameplay.States
             gameController = controller;
         }
 
+        /// <summary>
+        /// Called on State Start
+        /// </summary>
+        public void Begin()
+        {
+          
+        }
+
         public void Battle()
         {
             //Will never get called
@@ -20,17 +28,17 @@ namespace RENEGADES.Gameplay.States
 
         public void GameOver()
         {
-            gameController.ToGameOver();
+            gameController.Change_State(gameController._GameOverState);
         }
 
         public void Recharge()
         {
-            gameController.ToRecharge();
+            gameController.Change_State(gameController._RechargeState);
         }
 
         public void OnUpdate()
         {
-
+            if (gameController.GameOver()) { GameOver(); return; }
         }
 
     }

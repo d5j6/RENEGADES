@@ -2,6 +2,7 @@
 using RENEGADES.Gameplay.Players;
 using RENEGADES.UI.Gameplay;
 using RENEGADES.Managers;
+using RENEGADES.Gameplay.States;
 
 //Unity
 using UnityEngine;
@@ -20,10 +21,17 @@ namespace RENEGADES.Gameplay.Generators
         public Player Assault;
         public Player Engineer;
 
+        private GameController gameController;
+        private GameController _GameController
+        {
+            get { return gameController ?? (gameController = GetComponent<GameController>()); }
+        }
+
 
         public override void Init()
         {
             SetUpPlayers();
+            _GameController.BEGIN(); //begin game
         }
 
         private void SetUpPlayers()
@@ -34,6 +42,11 @@ namespace RENEGADES.Gameplay.Generators
             }
         }
 
+        /// <summary>
+        /// Create all players based on game setting player dictionary
+        /// </summary>
+        /// <param name="playerNumber"></param>
+        /// <param name="type"></param>
         private void CreatePlayer(int playerNumber,GameSettings.PlayerType type)
         {
             Player newPlayer = Spawn(( type == GameSettings.PlayerType.Assault) ? Assault : Engineer);

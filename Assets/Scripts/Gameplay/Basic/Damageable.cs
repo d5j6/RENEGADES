@@ -8,7 +8,7 @@ namespace RENEGADES.Gameplay.Basic
     {
 
         private SpriteRenderer sprite;
-        private SpriteRenderer Sprite
+        private SpriteRenderer _Sprite
         {
             get { return sprite ?? (sprite = GetComponent<SpriteRenderer>()); }
         }
@@ -70,7 +70,7 @@ namespace RENEGADES.Gameplay.Basic
 
         public Bounds GetBounds()
         {
-            return Sprite.bounds;
+            return _Sprite.bounds;
         }
 
         private void UpdateHealth(float h)
@@ -86,7 +86,7 @@ namespace RENEGADES.Gameplay.Basic
 
         public void SetColor(Color col)
         {
-            Sprite.color = col;
+            _Sprite.color = col;
         }
 
         public float GetMaxHealth()
@@ -96,9 +96,13 @@ namespace RENEGADES.Gameplay.Basic
 
         public void SetSprite(Sprite s)
         {
-            Sprite.sprite = s;
+            _Sprite.sprite = s;
         }
 
+        public SpriteRenderer GetSprite()
+        {
+            return _Sprite;
+        }
         public virtual void Destroyed()
         {
 

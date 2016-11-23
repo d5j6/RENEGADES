@@ -155,6 +155,7 @@
     <Compile Include="Assets\Scripts\UI\InGame\Player HUD\CrystalText.cs" />
     <Compile Include="Assets\Scripts\UI\InGame\Player HUD\HealthSlider.cs" />
     <Compile Include="Assets\Scripts\UI\InGame\Player HUD\PlayerModule.cs" />
+    <Compile Include="Assets\Scripts\UI\InGame\Pop Ups\NewRoundUI.cs" />
     <Compile Include="Assets\Scripts\UI\MainMenu\CharacterSelect\CharacterDisplay.cs" />
     <Compile Include="Assets\Scripts\UI\MainMenu\CharacterSelect\CharacterSelect.cs" />
     <Compile Include="Assets\Scripts\UI\MainMenu\CharacterSelect\ControllerUI.cs" />

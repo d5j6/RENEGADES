@@ -14,6 +14,14 @@ namespace RENEGADES.Gameplay.States
             gameController = controller;
         }
 
+        /// <summary>
+        /// Called on State Start
+        /// </summary>
+        public void Begin()
+        {
+
+        }
+
         public void Battle()
         {
             //once the games over you go back to the main menu

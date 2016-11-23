@@ -8,6 +8,9 @@ namespace RENEGADES.Gameplay.States
     public class RoundBlueprint
     {
         private int round;
+
+        private const int timeBetweenRounds = 5;
+
         public RoundBlueprint()
         {
             round = 1;
@@ -22,5 +25,11 @@ namespace RENEGADES.Gameplay.States
         {
             round++;
         }
+
+        public int GetTimeBetweenRound()
+        {
+            return timeBetweenRounds;
+        }
+
     }
 }

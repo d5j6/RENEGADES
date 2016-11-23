@@ -28,7 +28,7 @@ namespace RENEGADES.Gameplay.Props
             base.Destroyed();
             GameManager.Instance.EffectSpawner.CreateEffect(EffectBlueprint.EffectType.FireExplosion, transform.position);
             GameManager.Instance.AudioManager.PlaySound(Audio.Sounds.Sound.Explosion);
-            Destroy(gameObject);
+            GetSprite().enabled = false;
 
         }
     }

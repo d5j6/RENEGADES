@@ -2,12 +2,13 @@
 using UnityEngine;
 
 //Game
-using RENEGADES.Common;
+
 
 namespace RENEGADES.Common.UI
 {
     public class UIWidget : MonoBehaviour
     {
+
         private void Awake()
         {
             Init();
@@ -48,5 +49,6 @@ namespace RENEGADES.Common.UI
         {
             return Grid.alpha;
         }
+
     }
 }
