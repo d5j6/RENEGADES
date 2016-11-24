@@ -16,7 +16,8 @@ namespace RENEGADES.UI.Managers
         public enum WidgetToSpawn
         {
             PlayerModule,
-            RoundText
+            RoundText,
+            GameOverText
         }
 
         [System.Serializable]

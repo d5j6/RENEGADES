@@ -223,7 +223,7 @@ Material:
       second: {r: 0, g: 0, b: 100000, a: 100000}
     - first:
         name: _OutlineColor
-      second: {r: 0, g: 1, b: 0.13103461, a: 1}
+      second: {r: 0, g: 0, b: 0, a: 1}
     - first:
         name: _ReflectFaceColor
       second: {r: 0, g: 0, b: 0, a: 1}
@@ -281,7 +281,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74dfce233ddb29b4294c3e23c1d3650d, type: 3}
-  m_Name: Eordeoghlakat
+  m_Name: Pop_Up
   m_EditorClassIdentifier: 
   fontAssetType: 2
   m_fontInfo:
@@ -303,7 +303,7 @@ MonoBehaviour:
     Padding: 0
     AtlasWidth: 512
     AtlasHeight: 512
-  fontHashCode: -324863030
+  fontHashCode: -1181488491
   atlas: {fileID: 2800560}
   material: {fileID: 2132590}
   materialHashCode: -2007062271

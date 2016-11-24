@@ -36,11 +36,6 @@ namespace RENEGADES.Gameplay.States
         private GameOverState gameOverState;
         public GameOverState _GameOverState { get { return gameOverState; } }
 
-        /// <summary>
-        /// Called at the start of the game
-        /// </summary>
-        /// 
-
         private Tower ourTower;
         private Tower OurTower
         {
@@ -84,8 +79,7 @@ namespace RENEGADES.Gameplay.States
         /// <returns></returns>
         public bool GameOver()
         {
-            if (OurTower == null) Debug.LogError("No Tower Found!");
-            if (OurTower.HEALTH <= 0) return true;
+            if (OurTower == null) return true;
             return false;
         }
 

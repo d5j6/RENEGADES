@@ -63,7 +63,7 @@ namespace RENEGADES.Gameplay.Players
                 Keyboard();
             }
 
-            
+
         }
 
         //movement and look controllers for no Xbox controller

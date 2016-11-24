@@ -7,6 +7,9 @@ using UnityEngine;
 
 namespace RENEGADES.Gameplay.Props
 {
+    /// <summary>
+    /// Our Tower that we are defending
+    /// </summary>
     public class Tower : Friendly
     {
         private float colorCalc;
@@ -28,7 +31,7 @@ namespace RENEGADES.Gameplay.Props
             base.Destroyed();
             GameManager.Instance.EffectSpawner.CreateEffect(EffectBlueprint.EffectType.FireExplosion, transform.position);
             GameManager.Instance.AudioManager.PlaySound(Audio.Sounds.Sound.Explosion);
-            GetSprite().enabled = false;
+            Destroy(gameObject);
 
         }
     }

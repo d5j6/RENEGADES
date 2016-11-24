@@ -103,6 +103,11 @@ namespace RENEGADES.Gameplay.Basic
         {
             return _Sprite;
         }
+
+        public void Disable()
+        {
+            gameObject.SetActive(false);
+        }
         public virtual void Destroyed()
         {
 
