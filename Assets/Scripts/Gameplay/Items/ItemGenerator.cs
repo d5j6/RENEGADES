@@ -30,11 +30,11 @@ namespace RENEGADES.Gameplay.Items
         public void SpawnCluster(MonsterBlueprint.DIFFICULTY difficulty,Vector3 origin)
         {
             int itemCount = GetSpawnCount();
-            
             for (int i = 0; i < itemCount; i++)
             {
                 ItemDeterminer.RARITY rarity = ItemDeterminer.GetItem(difficulty);
                 List<ItemBlueprint.Blueprint> rareTypes = itemBlueprint.ItemTypes.Where(x => x.rarity == rarity).ToList();
+                Debug.Log((DeterminePosition(i, itemCount, origin)));
                 if(rareTypes.Count > 0)Spawn(rareTypes[Random.Range(0, rareTypes.Count)].Prefab, (DeterminePosition(i, itemCount, origin)));
             }
         }

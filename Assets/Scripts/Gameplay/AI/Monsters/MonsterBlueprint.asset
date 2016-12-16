@@ -23,3 +23,14 @@ MonoBehaviour:
     attackSpeed: 0.5
     damage: 10
     deathSound: 8
+  - name: Soldier
+    type: 1
+    difficulty: 1
+    monster: {fileID: 114797215400396750, guid: 29159002fdf252446863665c53573371,
+      type: 2}
+    speed: 2.5
+    health: 15
+    attackRange: 0.5
+    attackSpeed: 0.5
+    damage: 15
+    deathSound: 8

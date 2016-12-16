@@ -12,7 +12,7 @@ namespace RENEGADES.Gameplay.AI.Monsters
     [CreateAssetMenu]
     public class MonsterBlueprint : ScriptableObject
     {
-        public enum EnemyType { Ghoul }
+        public enum EnemyType { Ghoul,Soldier }
         public enum DIFFICULTY { Easy,Medium,Hard,Nightmare}
 
         [System.Serializable]
