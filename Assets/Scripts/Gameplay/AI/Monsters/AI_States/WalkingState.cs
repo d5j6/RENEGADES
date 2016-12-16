@@ -5,7 +5,7 @@ using RENEGADES.Common.Gameplay;
 //Unity
 using UnityEngine;
 
-namespace RENEGADES.Gameplay.AI
+namespace RENEGADES.Gameplay.AI.Monsters
 {
 
     public class WalkingState : IEnemyState
@@ -18,14 +18,12 @@ namespace RENEGADES.Gameplay.AI
         private float FindPlayerTimer;
         private const float WANDER = 0.5f;
 
-        private float speed;
 
         private Friendly ObjectToChase;
 
         public WalkingState(MonsterAI enemy)
         {
             monster = enemy;
-            speed = enemy._Attributes.SPEED;
         }
 
         public void SetUp()
@@ -63,7 +61,7 @@ namespace RENEGADES.Gameplay.AI
             if (ObjectToChase == null) FindObjectToChase();
             Vector3 raycastDir = (ObjectToChase.GetPosition()) - monster.GetPosition();
             RaycastHit2D hit = Physics2D.Raycast(monster.GetPosition(), raycastDir, Mathf.Infinity, ObjectToChase.GetLayer());
-            if (hit.distance < monster._Attributes.ATTACK_RANGE)
+            if (hit.distance < monster.blueprint.attackRange)
             {
                 ToAttackState();
             }
@@ -93,7 +91,7 @@ namespace RENEGADES.Gameplay.AI
 
         private void MoveTowards(Vector3 pos)
         {
-            monster.transform.position += -monster.transform.up* Time.smoothDeltaTime * speed;
+            monster.transform.position += -monster.transform.up* Time.smoothDeltaTime * monster.blueprint.speed;
         }
 
         /// <summary>

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa80f7841275c30419ce8cfa3d7c6749, type: 3}
+  m_Name: MonsterBlueprint
+  m_EditorClassIdentifier: 
+  Enemies:
+  - name: Ghoul
+    type: 0
+    difficulty: 0
+    monster: {fileID: 114546930328663892, guid: 80603f0a0b410bf47ae4fae08e2be3cf,
+      type: 2}
+    speed: 1
+    health: 10
+    attackRange: 0.5
+    attackSpeed: 0.5
+    damage: 10
+    deathSound: 8

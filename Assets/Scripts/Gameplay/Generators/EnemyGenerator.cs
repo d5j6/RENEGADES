@@ -1,5 +1,5 @@
 ﻿//App
-using RENEGADES.Gameplay.AI;
+using RENEGADES.Gameplay.AI.Monsters;
 
 //C#
 using System.Collections.Generic;
@@ -11,23 +11,33 @@ namespace RENEGADES.Gameplay.Generators
 {
     public class EnemyGenerator : Spawner
     {
-        public enum EnemyType { Ghoul}
+        public MonsterBlueprint blueprint;
 
-        [System.Serializable]
-        public struct EnemyBlueprint
+        private Dictionary<MonsterBlueprint.EnemyType, MonsterBlueprint.EnemyBlueprint> lookup;
+
+        public override void Init() { CreateLookup(); }
+
+        private void CreateLookup()
         {
-            public EnemyType type;
-            public MonsterAI monster;
+            if (lookup != null) return;
+            lookup = new Dictionary<MonsterBlueprint.EnemyType, MonsterBlueprint.EnemyBlueprint>();
+            foreach (MonsterBlueprint.EnemyBlueprint monster in blueprint.Enemies)
+            {
+                lookup.Add(monster.type, monster);
+            }
         }
 
-        public List<EnemyBlueprint> Enemies;
-
-        public override void Init(){ }
-
-        public void CreateMonster(EnemyType type,Vector3 pos)
+        public void CreateMonster(MonsterBlueprint.EnemyType type, Vector3 pos)
         {
-            int index = Enemies.FindIndex(x => x.type == type);
-            Spawn(Enemies[index].monster, pos);
+            if (lookup == null) CreateLookup();
+            MonsterAI ai = Spawn(lookup[type].monster, pos) as MonsterAI;
+            ai.BuildMonster(lookup[type]);
+        }
+
+        private void OnDestroy()
+        {
+            lookup.Clear();
+            lookup = null;
         }
 
     }

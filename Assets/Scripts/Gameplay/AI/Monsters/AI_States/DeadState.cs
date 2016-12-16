@@ -1,7 +1,7 @@
 ﻿//App
 using RENEGADES.Managers;
 
-namespace RENEGADES.Gameplay.AI
+namespace RENEGADES.Gameplay.AI.Monsters
 {
     public class DeadState : IEnemyState
     {

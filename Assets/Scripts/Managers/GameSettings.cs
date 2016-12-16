@@ -18,7 +18,7 @@ namespace RENEGADES.Managers
         /// <summary>
         /// Default Dictionary with Player 1 as an Assault Character
         /// </summary>
-        private Dictionary<int, PlayerType> PLAYERS = new Dictionary<int, PlayerType> { { 1, PlayerType.Engineer } };
+        private Dictionary<int, PlayerType> PLAYERS = new Dictionary<int, PlayerType> { { 1, PlayerType.Assault } };
 
         private void Awake()
         {

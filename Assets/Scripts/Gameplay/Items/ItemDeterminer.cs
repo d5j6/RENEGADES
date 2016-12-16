@@ -2,6 +2,9 @@
 using System;
 using System.Collections.Generic;
 
+//Game
+using RENEGADES.Gameplay.AI.Monsters;
+
 namespace RENEGADES.Gameplay.Items
 {
     /// <summary>
@@ -28,9 +31,9 @@ namespace RENEGADES.Gameplay.Items
         /// <summary>
         /// Determiner using Weighted Randomization to pick an item Rarity based on Monster Difficulty once a monster has died
         /// </summary>
-        private static Dictionary<AI.DIFFICULTY, List<ItemData>> Determiner = new Dictionary<AI.DIFFICULTY, List<ItemData>>()
+        private static Dictionary<MonsterBlueprint.DIFFICULTY, List<ItemData>> Determiner = new Dictionary<MonsterBlueprint.DIFFICULTY, List<ItemData>>()
         {
-            {AI.DIFFICULTY.Easy,
+            {MonsterBlueprint.DIFFICULTY.Easy,
             new List<ItemData>{
                 { new ItemData(RARITY.Common, 80) },
                 { new ItemData(RARITY.Uncommon, 20) },
@@ -38,7 +41,7 @@ namespace RENEGADES.Gameplay.Items
                 { new ItemData(RARITY.Exotic, 0) },
                 { new ItemData(RARITY.Legendary, 0) }} },
             //-----------------------------------------------//
-            {AI.DIFFICULTY.Normal,
+            {MonsterBlueprint.DIFFICULTY.Medium,
              new List<ItemData>{
                 { new ItemData(RARITY.Common, 50) },
                 { new ItemData(RARITY.Uncommon, 40) },
@@ -46,7 +49,7 @@ namespace RENEGADES.Gameplay.Items
                 { new ItemData(RARITY.Exotic, 0) },
                 { new ItemData(RARITY.Legendary, 0) }} },
             //-----------------------------------------------//
-            {AI.DIFFICULTY.Hard,
+            {MonsterBlueprint.DIFFICULTY.Hard,
             new List<ItemData>{
                 { new ItemData(RARITY.Common, 20) },
                 { new ItemData(RARITY.Uncommon, 50) },
@@ -54,7 +57,7 @@ namespace RENEGADES.Gameplay.Items
                 { new ItemData(RARITY.Exotic, 10) },
                 { new ItemData(RARITY.Legendary, 0) }} },
             //-----------------------------------------------//
-            {AI.DIFFICULTY.Nightmare,
+            {MonsterBlueprint.DIFFICULTY.Nightmare,
             new List<ItemData>{
                 { new ItemData(RARITY.Common, 0) },
                 { new ItemData(RARITY.Uncommon, 0) },
@@ -100,7 +103,7 @@ namespace RENEGADES.Gameplay.Items
             }
         }
 
-        public static RARITY GetItem(AI.DIFFICULTY difficulty)
+        public static RARITY GetItem(MonsterBlueprint.DIFFICULTY difficulty)
         {
             return Choose(Determiner[difficulty]).rarity;
         }

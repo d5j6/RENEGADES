@@ -1,5 +1,6 @@
 ﻿//Game
 using RENEGADES.Gameplay.Generators;
+using RENEGADES.Gameplay.AI.Monsters;
 
 //Unity
 using UnityEngine;
@@ -26,7 +27,7 @@ namespace RENEGADES.Gameplay.Items
           
         }
 
-        public void SpawnCluster(AI.DIFFICULTY difficulty,Vector3 origin)
+        public void SpawnCluster(MonsterBlueprint.DIFFICULTY difficulty,Vector3 origin)
         {
             int itemCount = GetSpawnCount();
             

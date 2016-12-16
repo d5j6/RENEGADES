@@ -1,4 +1,4 @@
-﻿namespace RENEGADES.Gameplay.AI
+﻿namespace RENEGADES.Gameplay.AI.Monsters
 {
     //interface for enemy states
     public interface IEnemyState 

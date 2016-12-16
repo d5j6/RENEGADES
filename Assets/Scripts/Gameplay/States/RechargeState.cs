@@ -29,7 +29,7 @@ namespace RENEGADES.Gameplay.States
         {
             roundTimer = 0;
             NewRoundUI newRoundTxt = GameManager.Instance.UISpawner.CreateWidget(UI.Managers.WidgetCreator.WidgetToSpawn.RoundText) as NewRoundUI;
-            newRoundTxt.SetContent(gameController.GetBluePrint().GetTimeBetweenRound(),gameController.GetBluePrint().GetRound());        
+            newRoundTxt.SetContent(gameController.GetBluePrint().GetTimeBetweenRound(), gameController.GetBluePrint().GetRound());
         }
 
 
@@ -52,7 +52,7 @@ namespace RENEGADES.Gameplay.States
         {
             if (gameController.GameOver()) { GameOver(); return; }
             roundTimer += Time.deltaTime;
-           if(roundTimer > gameController.GetBluePrint().GetTimeBetweenRound()) { Battle(); }
+            if (roundTimer > gameController.GetBluePrint().GetTimeBetweenRound()) { Battle(); }
         }
 
 

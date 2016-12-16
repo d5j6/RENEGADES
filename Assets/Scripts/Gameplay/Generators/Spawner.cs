@@ -38,10 +38,12 @@ namespace RENEGADES.Gameplay.Generators
         /// <typeparam name="T"></typeparam>
         /// <param name="obj"></param>
         /// <param name="pos"></param>
-        public virtual void Spawn<T>(T obj,Vector3 pos) where T :Component
+        public virtual T Spawn<T>(T obj, Vector3 pos) where T : Component
         {
-            Instantiate(obj,pos,Quaternion.identity, idealTransform);
+            T g = Instantiate(obj, pos, Quaternion.identity, idealTransform) as T;
+            return g;
         }
+
 
         /// <summary>
         /// Returns a spawned object

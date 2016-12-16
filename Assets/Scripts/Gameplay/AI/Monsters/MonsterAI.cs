@@ -3,12 +3,11 @@ using RENEGADES.UI.Gameplay;
 using RENEGADES.Managers;
 using RENEGADES.Common;
 using RENEGADES.Gameplay.Basic;
-using RENEGADES.Gameplay.Effects;
 
 //Unity
 using UnityEngine;
 
-namespace RENEGADES.Gameplay.AI
+namespace RENEGADES.Gameplay.AI.Monsters
 {
 
     public class MonsterAI : Enemy
@@ -53,26 +52,27 @@ namespace RENEGADES.Gameplay.AI
             get { return enemyHealth ?? (enemyHealth = GetComponentInChildren<HealthSlider>()); }
         }
 
-        public Attributes _Attributes;
+        #region MONSTER vars
+        public MonsterBlueprint.EnemyBlueprint blueprint;
+        #endregion
 
         /// <summary>
         /// Initialize
         /// </summary>
         public override void Init()
         {
-            _Attributes = new Attributes();
-            SetSpeed(0);
-            SetAttackRange(0);
-            SetAttackSpeed(0);
-            SetDamage(0);
-            SetDifficulty(DIFFICULTY.Easy);
-            EnemyHealthUI.SetHealth(HEALTH);
-
             attackingState = new AttackingState(this);
             walkingState = new WalkingState(this);
             deadState = new DeadState(this);
             currentState = walkingState;
             currentState.SetUp();
+        }
+
+        public void BuildMonster(MonsterBlueprint.EnemyBlueprint blueprint)
+        {
+            this.blueprint = blueprint;
+            SetHealth(blueprint.health);
+            EnemyHealthUI.SetHealth(HEALTH);
         }
 
         /// <summary>
@@ -98,35 +98,6 @@ namespace RENEGADES.Gameplay.AI
         public void SetRotation(Quaternion q)
         {
             transform.rotation = q;
-        }
-
-        /// <summary>
-        /// Set speed in child
-        /// </summary>
-        /// <param name="s"></param>
-        public virtual void SetSpeed(float s)
-        {
-            _Attributes.SPEED = s;
-        }
-
-        public virtual void SetAttackSpeed(float s)
-        {
-            _Attributes.ATTACK_SPEED = s;
-        }
-
-        public virtual void SetAttackRange(float r)
-        {
-            _Attributes.ATTACK_RANGE = r;
-        }
-
-        public virtual void SetDamage(float d)
-        {
-            _Attributes.DAMAGE = d;
-        }
-
-        public virtual void SetDifficulty(DIFFICULTY d)
-        {
-            _Attributes.difficulty = d;
         }
 
         /// <summary>
@@ -156,13 +127,13 @@ namespace RENEGADES.Gameplay.AI
         /// </summary>
         public virtual void RemoveFromBattleField()
         {
-            GameManager.Instance.ItemSpawner.SpawnCluster(_Attributes.difficulty, GetPosition()); //SPAWN CLUSTER OF ITEMS
+            GameManager.Instance.ItemSpawner.SpawnCluster(blueprint.difficulty, GetPosition()); //SPAWN CLUSTER OF ITEMS
+            GameManager.Instance.AudioManager.PlaySound(blueprint.deathSound);
             Destroy(gameObject);
         }
 
         private void OnDestroy()
         {
-            _Attributes = null;
         }
     }
 }

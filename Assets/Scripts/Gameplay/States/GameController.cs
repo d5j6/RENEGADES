@@ -36,12 +36,18 @@ namespace RENEGADES.Gameplay.States
         private GameOverState gameOverState;
         public GameOverState _GameOverState { get { return gameOverState; } }
 
+        /// <summary>
+        /// find the levels tower
+        /// </summary>
         private Tower ourTower;
         private Tower OurTower
         {
              get { return ourTower = FindObjectOfType<Tower>(); }
         }
 
+        /// <summary>
+        /// Create new roundBlueprint
+        /// </summary>
         private RoundBlueprint _RoundBlueprint = new RoundBlueprint();
 
         public void BEGIN()

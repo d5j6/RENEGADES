@@ -28,7 +28,7 @@ namespace RENEGADES.Gameplay.Basic
         {
             for(int i=0; i < count; i++)
             {
-                GameManager.Instance.MonsterSpawner.CreateMonster(Generators.EnemyGenerator.EnemyType.Ghoul, transform.position);
+                GameManager.Instance.MonsterSpawner.CreateMonster(AI.Monsters.MonsterBlueprint.EnemyType.Ghoul, transform.position);
                 yield return new WaitForSeconds(time);
             }
             Again();

@@ -16,10 +16,10 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 4000011341097894}
-  - 114: {fileID: 114000013587986518}
+  - component: {fileID: 4000011341097894}
+  - component: {fileID: 114000013587986518}
   m_Layer: 0
   m_Name: Enemy Manager
   m_TagString: Untagged
@@ -32,11 +32,11 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 4000012076989694}
-  - 114: {fileID: 114000011826524668}
-  - 114: {fileID: 114000012672778320}
+  - component: {fileID: 4000012076989694}
+  - component: {fileID: 114000011826524668}
+  - component: {fileID: 114000012672778320}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -49,10 +49,10 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 4000012132708596}
-  - 114: {fileID: 114000012909844664}
+  - component: {fileID: 4000012132708596}
+  - component: {fileID: 114000012909844664}
   m_Layer: 0
   m_Name: Effect Manager
   m_TagString: Untagged
@@ -65,10 +65,10 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 4000013557128710}
-  - 114: {fileID: 114000012256360406}
+  - component: {fileID: 4000013557128710}
+  - component: {fileID: 114000012256360406}
   m_Layer: 0
   m_Name: Audio Manager Gameplay
   m_TagString: Untagged
@@ -81,10 +81,10 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 4000012935732948}
-  - 82: {fileID: 82000013163661988}
+  - component: {fileID: 4000012935732948}
+  - component: {fileID: 82000013163661988}
   m_Layer: 0
   m_Name: Background Music
   m_TagString: Untagged
@@ -97,10 +97,10 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 4000012356527764}
-  - 114: {fileID: 114000014065663580}
+  - component: {fileID: 4000012356527764}
+  - component: {fileID: 114000014065663580}
   m_Layer: 0
   m_Name: Turret Manager
   m_TagString: Untagged
@@ -113,10 +113,10 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 4000013985255750}
-  - 114: {fileID: 114000012427651060}
+  - component: {fileID: 4000013985255750}
+  - component: {fileID: 114000012427651060}
   m_Layer: 0
   m_Name: Item Manager
   m_TagString: Untagged
@@ -129,10 +129,10 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 4000012669790046}
-  - 114: {fileID: 114000011539858430}
+  - component: {fileID: 4000012669790046}
+  - component: {fileID: 114000011539858430}
   m_Layer: 0
   m_Name: UI Manager
   m_TagString: Untagged
@@ -145,11 +145,11 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 4000010795775042}
-  - 114: {fileID: 114000014281973800}
-  - 114: {fileID: 114000013949607008}
+  - component: {fileID: 4000010795775042}
+  - component: {fileID: 114000014281973800}
+  - component: {fileID: 114000013949607008}
   m_Layer: 0
   m_Name: Game Controller
   m_TagString: Untagged
@@ -166,7 +166,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 4000012132708596}
   - {fileID: 4000012669790046}
@@ -176,6 +175,7 @@ Transform:
   - {fileID: 4000012356527764}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4000011341097894
 Transform:
   m_ObjectHideFlags: 1
@@ -185,10 +185,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000010795775042}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4000012076989694
 Transform:
   m_ObjectHideFlags: 1
@@ -198,10 +198,10 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000012669790046}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4000012132708596
 Transform:
   m_ObjectHideFlags: 1
@@ -211,10 +211,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000010795775042}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4000012356527764
 Transform:
   m_ObjectHideFlags: 1
@@ -224,10 +224,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000010795775042}
   m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4000012669790046
 Transform:
   m_ObjectHideFlags: 1
@@ -237,11 +237,11 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 4000012076989694}
   m_Father: {fileID: 4000010795775042}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4000012935732948
 Transform:
   m_ObjectHideFlags: 1
@@ -251,10 +251,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000013557128710}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4000013557128710
 Transform:
   m_ObjectHideFlags: 1
@@ -264,11 +264,11 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 4000012935732948}
   m_Father: {fileID: 4000010795775042}
   m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4000013985255750
 Transform:
   m_ObjectHideFlags: 1
@@ -278,10 +278,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000010795775042}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &82000013163661988
 AudioSource:
   m_ObjectHideFlags: 1
@@ -299,6 +299,7 @@ AudioSource:
   Loop: 1
   Mute: 0
   Spatialize: 0
+  SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -311,12 +312,14 @@ AudioSource:
   rolloffCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: 1
+    - serializedVersion: 2
+      time: 1
       value: 0
       inSlope: 0
       outSlope: 0
@@ -327,7 +330,8 @@ AudioSource:
   panLevelCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 0
       inSlope: 0
       outSlope: 0
@@ -338,7 +342,8 @@ AudioSource:
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 0
       inSlope: 0
       outSlope: 0
@@ -349,7 +354,8 @@ AudioSource:
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 1
       inSlope: 0
       outSlope: 0
@@ -370,8 +376,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   idealTransform: {fileID: 0}
   WIDGETS:
-  - type: 0
+  - name: Player Module
+    type: 0
     widget: {fileID: 114000011320290498, guid: 36c3d64dc0b421e4fa57d4d92a036844, type: 2}
+  - name: Round Text
+    type: 1
+    widget: {fileID: 114000011084978406, guid: 745950a72f65a024bacc873a32c8042c, type: 2}
+  - name: Game Over Text
+    type: 2
+    widget: {fileID: 114000014287899318, guid: bafdf8703b40d7040b84a25cd9faa64b, type: 2}
 --- !u!114 &114000011826524668
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -435,7 +448,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010165459234}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 1077351063, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
@@ -474,10 +487,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   idealTransform: {fileID: 0}
-  Enemies:
-  - type: 0
-    monster: {fileID: 114000012417446580, guid: cba7b3c60ab0f6a4aa994e68ba11980f,
-      type: 2}
+  blueprint: {fileID: 11400000, guid: ead6ccc467d6e5c4e91ea714eed130a0, type: 2}
 --- !u!114 &114000013949607008
 MonoBehaviour:
   m_ObjectHideFlags: 1
