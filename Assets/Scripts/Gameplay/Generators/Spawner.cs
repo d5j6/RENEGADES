@@ -33,7 +33,7 @@ namespace RENEGADES.Gameplay.Generators
         public abstract void Init();
 
         /// <summary>
-        /// basic spawn no return
+        /// basic spawn where position is set
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="obj"></param>

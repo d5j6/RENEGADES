@@ -15,7 +15,7 @@ namespace RENEGADES.Gameplay.Items
     {
         public ItemBlueprint itemBlueprint;
 
-        private const float SPAWN_RANGE = 0.5f;
+        private const float SPAWN_RANGE = .33f;
 
         public override void Init() { CreatePoolers(); }
 
@@ -34,8 +34,8 @@ namespace RENEGADES.Gameplay.Items
             {
                 ItemDeterminer.RARITY rarity = ItemDeterminer.GetItem(difficulty);
                 List<ItemBlueprint.Blueprint> rareTypes = itemBlueprint.ItemTypes.Where(x => x.rarity == rarity).ToList();
-                Debug.Log((DeterminePosition(i, itemCount, origin)));
-                if(rareTypes.Count > 0)Spawn(rareTypes[Random.Range(0, rareTypes.Count)].Prefab, (DeterminePosition(i, itemCount, origin)));
+
+               if(rareTypes.Count > 0)Spawn(rareTypes[Random.Range(0, rareTypes.Count)].Prefab, (DeterminePosition(i, itemCount, origin)));
             }
         }
 
@@ -50,8 +50,9 @@ namespace RENEGADES.Gameplay.Items
         private Vector3 DeterminePosition(int index, int Count, Vector3 origin)
         {
             float g = 0.5f * Mathf.PI / Count;
-            float x = SPAWN_RANGE * (Mathf.Cos(2 * Mathf.PI / Count * index + g)+origin.x);
-            float y = SPAWN_RANGE * (Mathf.Sin(2 * Mathf.PI / Count * index + g)+origin.y);
+            float x = SPAWN_RANGE * (Mathf.Cos(2 * Mathf.PI / Count * index + g)) + origin.x;
+            float y = SPAWN_RANGE * (Mathf.Sin(2 * Mathf.PI / Count * index + g)) + origin.y;
+            //return origin;
             return new Vector3(x, y, 0);
 
         }
@@ -59,7 +60,7 @@ namespace RENEGADES.Gameplay.Items
         //Get the number of items to spawn,potentialy none
         private int GetSpawnCount()
         {
-            return Mathf.Clamp(Random.Range(-6, 5), 0, 4);
+            return Mathf.Clamp(Random.Range(2, 5), 0, 4);
         }
 
     }
