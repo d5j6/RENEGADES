@@ -129,6 +129,8 @@ namespace RENEGADES.Gameplay.AI.Monsters
         {
             GameManager.Instance.ItemSpawner.SpawnCluster(blueprint.difficulty, GetPosition()); //SPAWN CLUSTER OF ITEMS
             GameManager.Instance.AudioManager.PlaySound(blueprint.deathSound);
+            //TODO Find another way to update enemey defeated count
+            GameManager.Instance._GameController.GetBluePrint().EnemeyDefeated();
             Destroy(gameObject);
         }
 

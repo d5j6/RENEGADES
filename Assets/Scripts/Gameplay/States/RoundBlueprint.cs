@@ -12,6 +12,7 @@ namespace RENEGADES.Gameplay.States
         private int round;
         private int enemyCount;
         private float genMaxTime;
+        private int enemiesDefeated;
 
         private const int timeBetweenRounds = 4;
         private const int gameOverTime = 5;
@@ -33,6 +34,12 @@ namespace RENEGADES.Gameplay.States
             round++;
             enemyCount += Random.Range(1, 5);
             genMaxTime -= Random.Range(0.1f, 0.2f);
+            enemiesDefeated = 0;
+        }
+
+        public void EnemeyDefeated()
+        {
+            enemiesDefeated++;
         }
 
         public int GetTimeBetweenRound()
@@ -53,6 +60,12 @@ namespace RENEGADES.Gameplay.States
         public float GetTimeUntilNextGen()
         {
             return Mathf.Clamp(Random.Range(0.0f, genMaxTime),0,10);
+        }
+
+        public bool AllEnemiesDefeated()
+        {
+            if (enemyCount == enemiesDefeated) return true;
+            return false;
         }
 
     }

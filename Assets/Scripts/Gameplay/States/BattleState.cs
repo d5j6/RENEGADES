@@ -7,7 +7,9 @@ using RENEGADES.Managers;
 
 namespace RENEGADES.Gameplay.States
 {
-
+    /// <summary>
+    /// Main Gameplay state of game that spawns enemies
+    /// </summary>
     public class BattleState : IGameState
     {
         private GameController gameController;
@@ -49,15 +51,17 @@ namespace RENEGADES.Gameplay.States
         public void OnUpdate()
         {
             if (gameController.GameOver()) { GameOver(); return; }
-            if(enemyCounter == gameController.GetBluePrint().GetEnemyCount()) { Recharge(); return; }
+            if (gameController.GetBluePrint().AllEnemiesDefeated()) { Recharge(); return; }
             SpawnTheHorde();
 
         }
 
         private void SpawnTheHorde()
         {
+            //weve spawned our alloted enemies
+            if (enemyCounter == gameController.GetBluePrint().GetEnemyCount()) { return; }
             enemyTimer += Time.deltaTime;
-            if(enemyTimer > genResetTime)
+            if (enemyTimer > genResetTime)
             {
                 int type = Random.Range(0, 11);
                 MonsterBlueprint.EnemyType t = type > 7 ? type > 9 ? MonsterBlueprint.EnemyType.Gorgan : MonsterBlueprint.EnemyType.Soldier : MonsterBlueprint.EnemyType.Ghoul;

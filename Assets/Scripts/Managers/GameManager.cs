@@ -5,6 +5,7 @@ using RENEGADES.Gameplay.Joysticks;
 using RENEGADES.Gameplay.Generators;
 using RENEGADES.Gameplay.Items;
 using RENEGADES.Gameplay.Effects;
+using RENEGADES.Gameplay.States;
 using RENEGADES.UI.Managers;
 using RENEGADES.UI.MainMenu;
 
@@ -20,6 +21,12 @@ namespace RENEGADES.Managers
         public GameSettings _GameSettings
         {
             get { return gameSettings ?? (gameSettings = FindObjectOfType<GameSettings>()); }
+        }
+
+        private GameController gameController;
+        public GameController _GameController
+        {
+            get { return gameController ?? (gameController = FindObjectOfType<GameController>()); }
         }
 
         private ControllerManager controllerManager;
