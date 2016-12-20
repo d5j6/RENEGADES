@@ -22,12 +22,6 @@ namespace RENEGADES.Gameplay.Generators
         //init
         public override void Init() { CreateLookup(); }
 
-        public void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.Q)) CreateMonster(MonsterBlueprint.EnemyType.Soldier);
-            if (Input.GetKeyDown(KeyCode.R)) CreateMonster(MonsterBlueprint.EnemyType.Ghoul);
-        }
-
         /// <summary>
         /// create lookup
         /// </summary>

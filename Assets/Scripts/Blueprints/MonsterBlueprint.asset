@@ -33,4 +33,15 @@ MonoBehaviour:
     attackRange: 0.5
     attackSpeed: 0.5
     damage: 15
-    deathSound: 8
+    deathSound: 9
+  - name: Gorgan
+    type: 2
+    difficulty: 2
+    monster: {fileID: 114573174506312416, guid: 5296ffec617e3784aaf99409c1c53a67,
+      type: 2}
+    speed: 0.5
+    health: 100
+    attackRange: 0.5
+    attackSpeed: 0.5
+    damage: 40
+    deathSound: 10

@@ -21,6 +21,8 @@ namespace RENEGADES.Audio
             //-------------------------------------------------
             //Monsters
             GhoulDeath,
+            SoldierDeath,
+            GorganDeath,
             //-------------------------------------------------
             //tanks
             BasicTankFire,

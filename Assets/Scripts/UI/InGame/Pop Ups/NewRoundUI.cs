@@ -27,7 +27,7 @@ namespace RENEGADES.UI.InGame.PopUps
         //increment timer (3..2..1..)
         private float incrementTimer;
         private float fadeTimer;
-        
+
 
         //itween punch anim times & fades
         private const float TEXT_ANIM_TIME = 0.5f;
@@ -54,7 +54,7 @@ namespace RENEGADES.UI.InGame.PopUps
             {
                 SetAlpha(alpha -= Time.deltaTime * FADE_TIME);
                 if (GetAlpha() == 0) Destroy(gameObject);
-                 return;
+                return;
             }
 
             incrementTimer += Time.deltaTime;

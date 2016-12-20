@@ -1,12 +1,20 @@
 ﻿//Unity
 using UnityEngine;
 
+//Game
+using RENEGADES.Gameplay.AI.Monsters;
+using RENEGADES.Managers;
+
 namespace RENEGADES.Gameplay.States
 {
 
     public class BattleState : IGameState
     {
         private GameController gameController;
+
+        private float enemyTimer;
+        private float genResetTime;
+        private int enemyCounter;
 
         public BattleState(GameController controller)
         {
@@ -18,7 +26,8 @@ namespace RENEGADES.Gameplay.States
         /// </summary>
         public void Begin()
         {
-          
+            enemyCounter = 0;
+            genResetTime = gameController.GetBluePrint().GetTimeUntilNextGen();
         }
 
         public void Battle()
@@ -33,12 +42,30 @@ namespace RENEGADES.Gameplay.States
 
         public void Recharge()
         {
+            gameController.GetBluePrint().IncrementRound();
             gameController.Change_State(gameController._RechargeState);
         }
 
         public void OnUpdate()
         {
             if (gameController.GameOver()) { GameOver(); return; }
+            if(enemyCounter == gameController.GetBluePrint().GetEnemyCount()) { Recharge(); return; }
+            SpawnTheHorde();
+
+        }
+
+        private void SpawnTheHorde()
+        {
+            enemyTimer += Time.deltaTime;
+            if(enemyTimer > genResetTime)
+            {
+                int type = Random.Range(0, 11);
+                MonsterBlueprint.EnemyType t = type > 7 ? type > 9 ? MonsterBlueprint.EnemyType.Gorgan : MonsterBlueprint.EnemyType.Soldier : MonsterBlueprint.EnemyType.Ghoul;
+                GameManager.Instance.MonsterSpawner.CreateMonster(t);
+                enemyTimer = 0;
+                genResetTime = gameController.GetBluePrint().GetTimeUntilNextGen();
+                enemyCounter++;
+            }
         }
 
     }
